@@ -1,0 +1,186 @@
+// =======================
+// Menu
+// =======================
+
+$main-color: $blue;
+.menu-wrap {
+  font-family: $alt-font;
+  padding: $spacer*2.4 $spacer/8 $spacer/2 $spacer/8;
+
+  p {
+    text-align: center;
+    font-size: $lead*1.2;
+    color: $white;
+    margin-bottom: $spacer/4;
+  }
+
+  .bigger {
+    font-size: $lead*1.8;
+    letter-spacing: 3px;
+  }
+}
+
+.accordion {
+
+  list-style-type: none;
+  width: 270px;
+ margin: 0 auto $spacer/2 auto;
+}
+
+
+ .accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 0 0 42px;
+ color: #fff;
+    opacity: 0.7;
+  font-size: $font-size*1.2;
+  position: relative;
+  transition: all 0.4s ease;
+
+  a {
+    color: #fff;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    text-decoration: none;
+    }
+  }
+}
+
+.accordion li:last-child { border-bottom: 0; }
+
+.accordion li span {
+  //font-family: 'casper';
+  // position: absolute;
+  // top: 15px;
+  // left: 8px;
+  //font-size: 2.4rem;
+  //color: #fff;
+  //   opacity: 0.8;
+  // transition: all 0.4s ease;
+
+  svg {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    fill: #fff;
+  top: 15px;
+  left: 8px;
+    opacity: 0.8;
+  transition: all 0.4s ease;
+
+  }
+
+}
+
+.accordion li span.chevron svg {
+  width: 30px;
+    height: 30px;
+    position: absolute;
+    fill: $white;
+  right: 12px;
+  left: auto;
+  top: 12px;
+  
+}
+
+.accordion li.open .link { color: $main-color; }
+
+.accordion li.open span { color: $main-color; }
+
+.accordion li.open span svg { fill: $main-color; }
+
+.accordion li.open span.chevron svg {
+  transform: rotate(180deg);
+  color: $main-color;
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+
+.submenu {
+  display: none;
+ padding:0;
+ margin: 10px 0 0 0;
+ //font-size: $secondary;
+}
+
+.submenu li {
+  border-bottom: 0;
+  list-style-type: none;
+  font-size: $font-size;
+  padding-bottom: 5px;
+  //padding-top: 2px;
+  margin: 0
+
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: $main-color;
+    opacity: 0.7;
+  padding-left: 42px;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  opacity: 1;
+    text-decoration: none;
+}
+
+@include media(600) {
+  .accordion {
+  width: 340px;
+}
+}
+
+@include media(700) {
+   .accordion {
+  width: 380px;
+}
+}
+
+@include media(900) {
+    .menu-wrap {
+      
+      p {
+    font-size: $lead*1.5;
+      }
+.bigger {
+    font-size: $lead*2;
+  }
+}
+
+.accordion .link {
+  padding: 17px 0 0 44px;
+  font-size: $font-size*1.5;
+
+}
+.accordion li span {
+  
+svg {
+    width: 26px;
+    height: 26px;
+  top: 20px;
+  left: 6px;
+
+  }
+
+}
+.accordion li span.chevron svg {
+  
+  top: 18px;
+  
+}
+.submenu li {
+  font-size: $font-size*1.1;
+  padding-bottom: 6px;
+
+}
+}
+

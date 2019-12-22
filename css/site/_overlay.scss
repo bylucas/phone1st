@@ -1,0 +1,95 @@
+
+// Fullscreen overlay
+
+  .fullscreen-overlay{
+    @include position(fixed, 0 null null 0);
+    background: rgba(0, 0, 0, 0.96);
+    @include size(100%);
+    z-index: 1200;
+    display: none;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    
+    .container{
+      height: 100%;
+    }
+  }
+
+  //Off Canvas
+
+#offcanvas-menu {
+    
+    .container {
+      width: 100%;
+    }
+    
+    .offcanvas-nav {
+      height: 100% !important;
+    }
+  }
+
+  // Offcanvas toggle
+
+  body {
+    
+    &.offcanvas-open {
+      //overflow-y: hidden !important;
+}
+
+    &.offcanvas-open {
+
+        .offcanvas-toggle{
+          
+          span:first-of-type{
+            opacity: 0;
+            transition: all .2s;
+          }
+          span:nth-child(2), span:nth-child(3){
+            position: absolute;
+            top: 30px / 2;
+            left: 0;
+            transition: all .5s;
+          }
+          span:nth-child(2){
+            transform: rotate(45deg);
+          }
+          span:nth-child(3){
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+
+.offcanvas-toggle{
+    display: block;
+    margin: 0;
+    position: relative;
+    @include size(30px);
+   
+    .toggle-line{
+      display: block;
+       @include size(25px, 2px);
+      //background: red;
+      margin-bottom: 6px;
+    }
+    span:first-of-type{
+      transition: all .2s;
+    }
+    span:nth-child(2), span:nth-child(3){
+      transition: all .5s;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+}
+
+@include media(900) {
+  .site-nav-right .toggles {
+    margin-top: 12px;
+}
+  .offcanvas-toggle .toggle-line {
+    @include size(30px, 2px);
+    margin-bottom: 7px;
+  }
+}

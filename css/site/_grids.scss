@@ -1,0 +1,200 @@
+// ============================================
+// Grids - Used with the Bourbon and Neat Post
+// ============================================
+
+@import "neat";
+
+
+//over-riding the default neat gutter setting
+$neat-grid: (
+  columns: 12,
+  gutter: 10px,
+
+);
+
+$small-grid: (
+  columns: 4,
+  gutter: 10px,
+  media: 600px,
+);
+
+$medium-grid: (
+  columns: 8,
+  gutter: 20px,
+  media: 740px,
+);
+
+$large-grid: (
+  columns: 8,
+  gutter: 20px,
+  media: 900px,
+);
+
+$box-color: #486cb8;
+$height: 120px;
+
+.one-sidebar {
+  @include grid-container;
+ background: $error-color;
+ margin-bottom: $spacer/2;
+}
+
+.one-sidebar-a {
+  @include grid-column(9);
+  background: $box-color;
+  height: $height;
+}
+
+.one-sidebar-b {
+  @include grid-column(3);
+  background: $box-color;
+  height: $height;
+}
+
+.two-sidebar {
+  @include grid-container;
+  background: $error-color;
+  overflow-x: hidden;
+  margin-bottom: $spacer/2;
+}
+
+.two-sidebar-inner {
+  @include grid-collapse();
+}
+
+.two-sidebar-a {
+  @include grid-column(3);
+  background: $box-color;
+  height: $height;
+}
+
+.two-sidebar-b {
+  @include grid-column(6);
+  background: $box-color;
+  height: $height;
+  
+}
+
+.two-sidebar-c {
+  @include grid-column(3);
+  background: $box-color;
+  height: $height;
+}
+
+.nested-columns {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+}
+
+.nested-columns-a {
+  @include grid-column(6);
+  background: $box-color;
+  height: 200px;
+}
+
+.nested-columns-b {
+  @include grid-column(6);
+}
+
+.nested-wrap {
+  @include grid-collapse();
+}
+
+.nested-columns-b-one {
+  @include grid-column(3 of 6);
+  background: $box-color;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.grid-four {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+}
+
+.box {
+  @include grid-column(4);
+  background: $box-color;
+  height: 60px;
+}
+
+.grid-five {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+}
+
+.box2 {
+  @include grid-column(3);
+  background: $box-color;
+  height: 60px;
+}
+
+.grid-six {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+}
+
+.box3 {
+  @include grid-column(3 of 15);
+  background: $box-color;
+  height: 60px;
+}
+
+.grid-seven {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+}
+
+.box4 {
+  @include grid-column(1 of 12);
+  @include grid-shift(1);
+  background: $box-color;
+  height: 60px;
+}
+
+.grid-eight {
+  @include grid-container;
+  margin-bottom: $spacer/2;
+  
+  p {
+    color: $white;
+    font-size: $third;
+}
+}
+
+.grid-eight-left {
+  @include grid-column(12);
+  background: $box-color;
+  padding: 10px 20px 0 20px;
+  margin-bottom: 15px;
+
+  @include grid-media($small-grid) {
+    @include grid-column(3);
+}
+
+  @include grid-media($medium-grid) {
+    @include grid-column(4);
+}
+
+  @include grid-media($large-grid) {
+    @include grid-column(2);
+}
+}
+
+.grid-eight-right {
+  @include grid-column(12);
+  background: $box-color;
+  padding: 10px 20px 0 20px;
+
+  @include grid-media($small-grid) {
+    @include grid-column(1);
+}
+
+  @include grid-media($medium-grid) {
+    @include grid-column(4);
+}
+
+  @include grid-media($large-grid) {
+    @include grid-column(6);
+}
+}

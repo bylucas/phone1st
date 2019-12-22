@@ -1,0 +1,304 @@
+
+.post-content {
+  padding: $spacer 0 0 0;
+
+p {
+  font-size: $font-size*1.1;
+  font-weight: 400;
+  color: $post-text-color;
+}
+
+h2 {
+  font-size: $font-size*1.6;
+}
+
+h3 {
+  font-size: $font-size*1.5;
+}
+
+h4 {
+  font-size: $font-size*1.4;
+}
+
+h5 {
+  font-size: $font-size*1.3;
+}
+
+h6 {
+  font-size: $font-size;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ol,
+ul {
+  padding-left: 1.3em;
+  padding-right: 1.5em;
+  margin: 0 0 $spacer 0;
+}
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0 0 5px 0;
+}
+ul {
+  list-style: disc;
+}
+ul ul {
+  list-style: circle;
+}
+ol {
+  list-style: decimal;
+}
+ul,
+ol {
+  max-width: 100%;
+}
+
+li {
+  margin: 0.4em 0;
+  //padding-left: 0.3em;
+  line-height: 1.5;
+  font-size: $font-size/1.05;
+}
+ul li ul li,
+ol li ol li {
+  font-size: $font-size/1.09;
+  margin: 0.4em 0;
+  line-height: 1.4;
+}
+
+
+blockquote {
+  margin: 0 0 $spacer 0;
+  padding: 0 1.6em;
+  border-left: $white-gray 0.5em solid;
+}
+blockquote p {
+  font-size: $font-size*1.2;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.pullquote {
+  padding: $spacer/2 0;
+  border-top: $white-gray 0.5em solid ;
+  border-bottom: $white-gray 0.5em solid ;
+  margin-bottom: $spacer;
+}
+
+hr {
+  margin-top: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+}
+
+.alignfull {
+  margin: 0 calc(50% - 50vw) $spacer;
+  max-width: 100vw;
+  width: 100vw;
+
+  img{
+    max-width: none;
+    width: 100vw;
+
+  }
+}
+
+pre {
+  padding: $spacer/2;
+  margin-bottom: $spacer;
+}
+
+
+dt {
+  font-size: $font-size*1.1;
+}
+
+dd {
+  font-size: $font-size;
+  margin-bottom: $spacer/8;
+}
+
+
+a.citation,
+a.footnote {
+  box-shadow: none;
+  font-size: 70%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+  outline: none;
+}
+.footnotes-sep {
+  margin-bottom: 30px;
+}
+.footnotes li,
+.footnotes li p {
+  font-size: $third;
+  
+}
+.footnotes p {
+  margin: 0;
+  line-height: 1.6;
+}
+.footnotes a {
+  box-shadow: none;
+}
+.footnote-backref {
+  color: $blue !important;
+  font-size: $third;
+  font-weight: 700;
+  outline: none;
+  a {
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+.footnote-ref {
+  color: $blue !important;
+  font-size: $third;
+  font-weight: 700;
+  a {
+    text-decoration: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.post-meta {
+  background: $white-gray;
+  padding: 10px;
+  font-size: $third;
+.author {
+    font-family: $alt-font;
+  }
+}
+  
+  }//post-content
+
+
+  @include media(700) {
+    .post-content {
+  padding: $spacer*2.5 0 $spacer/2 0;
+}
+  }
+
+///////////////////////////////////////////////
+@include media(900) {
+.post-content {
+  //padding: $spacer*2.5 0 $spacer 0;
+
+  p {
+  font-size: $font-size*1.3;
+}
+
+h2 {
+  font-size: $font-size*2;
+}
+
+h3 {
+  font-size: $font-size*1.9;
+}
+
+h4 {
+  font-size: $font-size*1.8;
+}
+
+h5 {
+  font-size: $font-size*1.7;
+}
+
+h6 {
+  font-size: $font-size*1.2;
+}
+
+ol,
+ul {
+  padding-left: 1.4em;
+  padding-right: 1.6em;
+  margin: 0 0 $spacer*1.5 $spacer/2;
+}
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0 0 7px 0;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  padding-left: 1.6em;
+}
+
+li {
+  font-size: $font-size*1.2;
+}
+ul li ul li,
+ol li ol li {
+  font-size: $font-size*1.1;
+
+}
+
+blockquote {
+  margin: 0 0 $spacer*1.5 0;
+  padding: 0 1.8em;
+  border-left: $white-gray 0.7em solid;
+}
+blockquote p {
+  font-size: $font-size*1.4;
+
+}
+
+hr {
+  margin-top: $spacer*2;
+  margin-bottom: $spacer*2;
+}
+
+.pullquote {
+  padding: $spacer/1.5 0;
+  border-top: $white-gray 0.7em solid ;
+  border-bottom: $white-gray 0.7em solid ;
+  margin-bottom: $spacer*1.5;
+}
+
+dt {
+  font-size: $font-size*1.3;
+}
+
+dd {
+  font-size: $font-size*1.1;
+}
+
+pre {
+  margin-bottom: $spacer*1.5;
+}
+
+img {
+  margin-top: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+}
+
+figure {
+  margin: $spacer*1.5 $spacer*2 $spacer $spacer*2;
+}
+
+.footnotes li,
+.footnotes li p {
+  font-size: $secondary;
+  
+}
+.footnote-backref {
+  font-size: $secondary;
+}
+.footnote-ref {
+  font-size: $secondary;
+}
+
+.post-meta {
+  font-size: $secondary;
+}
+}
+}

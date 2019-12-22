@@ -1,0 +1,270 @@
+//Post Extras
+
+//Extras for Introducing Scss post
+.scss-post {
+
+$midgrey: #738a94;  
+$blue: #3eb0ef;  
+$red: #f05230;  
+$border: 1px solid tint($red, 20%);  
+$radius: 6px;  
+$spacer: 4rem;  
+$width: $spacer/1.5;
+
+@mixin border-radius($radius) {  
+    border-top-left-radius: $radius;  
+    border-top-right-radius: $radius * 2;  
+    border-bottom-left-radius: $radius + 15;  
+    border-bottom-right-radius: $radius + 25;  
+}
+
+.box-scss {  
+    width: 80%;  
+    height: 100px;  
+    padding: $spacer;
+    margin: $width auto;  
+    @include background($red);  
+    @include border-radius(10px);
+
+    p {  
+    text-align: center;  
+    color: white;  
+    }
+}
+
+.box2-scss {  
+    border: $border; 
+    @include background($midgrey);  
+    max-width: 80%;  
+    padding: $spacer;  
+    margin: $spacer auto;
+
+        h1 {  
+            font-size: 32px;  
+            text-align: center;
+
+            a {  
+                color: $blue;
+
+                &:hover {  
+                    color: white;  
+                }// end hover  
+            }// end a  
+        }// end h1
+
+        p {  
+        text-align: center;  
+        color: white;  
+        }// end p  
+    }
+
+    .box3-scss {  
+    width: 80%;  
+    margin: $width auto;
+    border: $border;  
+    @include border-radius(10px);  
+    padding: $spacer/2;  
+    background-color: $midgrey;
+
+    p {  
+    text-align: center;  
+    color: white;  
+    }
+}
+
+.box4-scss {  
+    @extend .box3-scss;  
+    background-color: $blue;  
+}
+
+.box5-scss {  
+    @extend .box3-scss;  
+    background-color: $red;  
+}
+
+.box6-scss {  
+    $width: 300px + 10px; 
+    width: $width;  
+    margin: $width / 9 - 10px auto;  
+    border: $border;  
+    padding: $spacer;
+
+    p {  
+        font-size: $width / 9;  
+        text-align: center;  
+        line-height: 1.2;  
+    }
+}
+}
+
+// =======================
+// Bourbon Examples
+// =======================
+
+.bourbon {
+
+
+.links {
+  text-align: center;
+
+  a {
+  display: block;
+  font-size: $secondary;
+  padding-top: 4px;
+}
+}
+
+.mixin-box {
+  @include size(100%, 80px);
+  border: 3px solid $black;
+}
+
+.one {
+  @include border-color($error-color $alert-color null $success-color);
+}
+
+.two {
+  @include border-top-radius(8px);
+  @include border-bottom-radius(15px);
+  margin-bottom: $spacer;
+  @include media(900) {
+    margin-bottom: $spacer*1.5;
+  }
+}
+
+.two-a {
+  @include border-right-radius(8px);
+  @include border-left-radius(15px);
+}
+
+.three {
+  @include border-style(dashed double solid dotted);
+}
+
+.four {
+  @include border-width(1em 2rem 25px 20px);
+}
+
+.five {
+  border-style: none;
+  text-align: center;
+  padding-top: 12px;
+  $button-color: #2d72d9;
+  background-color: $button-color;
+  color: contrast-switch($button-color, #222, #eee);
+}
+
+.six {
+  border: $border;
+  @include ellipsis;
+}
+
+button.below {
+  @include size(180px, 40px);
+
+span {
+  @include hide-visually;
+}
+
+&:hover span {
+  @include hide-visually("unhide");
+}
+}
+
+.eight {
+  border: $border;
+
+ p {
+  @include margin(20px 3em 10vh null);
+}
+}
+
+//Globally change the base ratio
+$bourbon: (
+ "modular-scale-ratio": 1.2,
+);
+
+.nine p {
+  font-size: modular-scale(3);
+}
+
+.ten {
+  border: $border;
+  @include overflow-wrap;
+}
+
+.eleven {
+  border: $border;
+
+ p {
+  @include padding(50px 5% 10vh null);
+}
+}
+
+.twelve {
+  border: $border;
+  position: relative;
+  @include size(40px);
+  
+  div {
+  @include position(absolute, 10px null null 10px);
+  @include size(20px);
+  background: #b61e33;
+}
+}
+
+.thirteen {
+  border: $border;
+  @include size(40px);
+  background-color: shade(#ffbb52, 60%);
+}
+
+.fourteen {
+  border: $border;
+  @include size(5em);
+
+  div {
+  border: $border;
+  @include size(1em, 2em);
+}
+}
+
+.fifteen {
+  border: $border;
+  @include size(40px);
+  background-color: tint(#6ecaa6, 40%);
+}
+
+
+.sixteen {
+  border: $border;
+  @include size(4rem);
+  position: relative;
+
+  &::before {
+  @include triangle("up", 2rem, 2rem, #b25c9c);
+  position: absolute;
+  content: "";
+  top:-2rem;
+  left:1rem;
+}
+}
+
+@include media(700) {
+  .links {
+  @include grid-container;
+
+   a {
+  font-size: $secondary*1.2;
+}
+}
+
+.links-left {
+  @include grid-column(6);
+}
+
+.links-right {
+  @include grid-column(6);
+}
+}
+}

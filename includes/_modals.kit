@@ -1,0 +1,142 @@
+
+ <div id="modalOne" class="modal">
+
+  <div class="modal-content">
+    
+     <a class="close">&times;</a>
+    <section class="get-in-touch">
+   <h1>Get in touch/Subscribe</h1>
+   <h2>Leave a short message or subscribe for the latest news</h2>
+   <form id="contact-form" class="contact-form">
+<div class="form-field-wrap"> 
+      <div class="form-field">
+           
+         <input id="name" class="input-text js-input" type="text" required>
+         <label class="label" for="name">Name</label>
+      </div>
+      <div class="form-field">
+         <input id="email" class="input-text js-input" type="email" required>
+         <label class="label" for="email">E-mail</label>
+      </div>
+    </div><!-- form-feild-wrap -->
+      <div class="form-field">
+         <input id="message" class="input-text js-input" type="text">
+         <label class="label" for="message">Message</label>
+      </div>
+      <div class="form-field">
+         <button type="submit" class="submit-btn" sendMessage()>Send</button>
+      </div>
+      <p class="alert">Message Sent</p>
+   </form>
+</section>
+<p class="note">Contact via email <a class="link" href="mailto:h@bylucas.co.uk?Subject=Enquiry%20from%20the%20hPhone1st-website">h@bylucas.co.uk</a></p>
+ 
+</div>
+</div>
+<!-- //////////////////////// -->
+
+<div id="modalTwo" class="modal">
+  <div class="modal-content">
+    <a class="close">&times;</a>
+    <section class="sitemap">
+      <h1>Phone1st Sitemap</h1>
+      <h2>See all the pages and articles</h2>
+      <div class="sitemap-wrap">
+        <div class="sitemap-left">
+          <h3>Pages</h3>
+          <ul>
+            <li class="secondary"><a href="">About</a></li>
+            <li class="secondary"><a href="docs.html">All Articles</a></li>
+            <li class="secondary"><a href="basics.html">Basics</a></li>
+          </ul>
+        </div>
+
+         <div class="sitemap-right">
+          <h3>Articles</h3>
+          <ul>
+            <li class="secondary"><a href="<!-- $welcome-url -->"><!-- $welcome-title --></a></li>
+            <li class="secondary"><a href="<!-- $markdown-url -->"><!-- $markdown-title --></a></li>
+            <li class="secondary"><a href="<!-- $scss-url -->"><!-- $scss-title --></a></li>
+            <li class="secondary"><a href="<!-- $bourbon-url -->"><!-- $bourbon-title --></a></li>
+          </ul>
+        </div>
+
+      </div>
+</section>
+  </div>
+</div>
+
+<div id="modalThree" class="modal">
+  <div class="modal-content">
+    <a class="close">&times;</a>
+    <section class="sitemap">
+      
+      <h2>Privacy</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+  </div>
+</div>
+
+
+<script>
+/*jslint browser*/
+/*global window*/
+(function iife() {
+    "use strict";
+    function closestEl(el, selector) {
+        var doc = el.document || el.ownerDocument;
+        var matches = doc.querySelectorAll(selector);
+        var i;
+        while (el) {
+            i = matches.length - 1;
+            while (i >= 0) {
+                if (matches.item(i) === el) {
+                    return el;
+                }
+                i -= 1;
+            }
+            el = el.parentElement;
+        }
+        return el;
+    }
+    var modalBtns = document.querySelectorAll(".button");
+    modalBtns.forEach(function addBtnClickEvent(btn) {
+        btn.onclick = function showModal() {
+            var modal = btn.getAttribute("data-modal");
+            document.getElementById(modal).style.display = "block";
+        };
+    });
+
+    var closeBtns = document.querySelectorAll(".close");
+    closeBtns.forEach(function addCloseClickEvent(btn) {
+        btn.onclick = function closeModal() {
+            var modal = closestEl(btn, ".modal");
+            modal.style.display = "none";
+        };
+    });
+
+    window.onclick = function closeOnClick(event) {
+        if (event.target.className === "modal") {
+            event.target.style.display = "none";
+        }
+    };
+}());
+</script>
+
+      
+           
+
+          
+
+

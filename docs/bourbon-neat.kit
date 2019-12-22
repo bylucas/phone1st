@@ -1,0 +1,861 @@
+<!-- $title Make My Bourbon Neat -->
+<!-- $SEO-title Introducing Scss - Start using scss for smart, efficient stylesheets -->
+<!-- $description Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it. -->
+<!-- $keyword Scss, Sass, Css -->
+<!-- $url bourbon-neat.html -->
+<!-- $post-image ../img/bourbon-mixins-image.jpg -->
+
+<!-- @import ../includes/_header -->
+
+<article class="post">
+
+      <div class="parallax" style="background-image: url(<!-- $post-image -->)">
+            <div class="overlay">
+                  <div class="title-wrap">
+    <h1><!-- $title --></h1>
+  </div>
+</div>
+      </div>
+  
+  <div class="post-content inner bourbon">
+
+<blockquote><p>Make my bourbon neat is on it's way.</p></blockquote>
+
+<h2>To Come</h2>
+<p>Introduction</p>
+
+<p>The Bourbon mixin library has had quite a change for version 5, becoming a lot lighter. Below are the mixins available at present (<em>keep checking the Bourbon website for mixin information</em>). For more information about the <em>Bourbon mixin library</em> see <a href="https://github.com/thoughtbot/bourbon">Bourbon</a> on the Github website and <a href="http://bourbon.io/docs/">Bourbon Docs</a> on the Bourbon website.</p>
+    
+  <hr>
+  <div class="links">
+  <div class="links-left">
+    <a href="#border-color">Border Color</a>
+    <a href="#border-radius">Border Radius</a>
+    <a href="#border-style">Border Style</a>
+    <a href="#border-width">Border Width</a>
+    <a href="#buttons">Buttons</a>
+    <a href="#clearfix">Clearfix</a>
+    <a href="#contrast">Contrast Switch</a>
+    <a href="#ellipsis">Ellipsis</a>
+    <a href="#font-stacks">Font Stacks</a>
+    <a href="#hide-text">Hide Text</a>
+    <a href="#hide-visually">Hide Visually</a>
+    <a href="#margin">Margin</a>
+    <a href="#scale">Modular Scale</a>
+                
+  </div>
+  <div class="links-right">
+    <a href="#wrap">Overflow Wrap</a>
+    <a href="#padding">Padding</a>
+    <a href="#position">Position</a>
+    <a href="#prefixer">Prefixer</a>
+    <a href="#shade">Shade</a>
+    <a href="#size">Size</a>
+    <a href="#strip">Strip Unit</a>
+    <a href="#inputs">Text-inputs</a>
+    <a href="#tint">Tint</a>
+    <a href="#triangle">Triangle</a>
+    <a href="#value">Value Prefixer</a>
+    <a href="#grids">Grids</a>
+  </div>
+  </div>
+<hr>
+        
+<h2 id="border-color">Border Color</h2>
+<pre><code class="lang-scss">.element {
+@include border-color($error-color $alert-color null $success-color);
+}</code></pre>
+        
+<div class="mixin-box one"></div>
+<hr>
+<h2 id="border-radius">Border Radius</h2>
+<pre><code class="lang-scss">.element {
+@include border-top-radius(8px);
+@include border-bottom-radius(15px);
+}</code></pre>
+        
+<div class="mixin-box two"></div>
+
+<pre><code class="lang-scss">.element {
+@include border-right-radius(8px);
+@include border-left-radius(15px);
+}</code></pre>
+
+<div class="mixin-box two-a"></div>
+<hr>
+<h2 id="border-style">Border Style</h2>
+<pre><code class="lang-scss">.element {
+@include border-style(dashed double solid dotted);
+}</code></pre>
+        
+<div class="mixin-box three"></div>
+<hr>
+<h2 id="border-width">Border Width</h2>
+<pre><code class="lang-scss">.element {
+@include border-width(1em 2rem 25px 20px);
+}</code></pre>
+        
+<div class="mixin-box four"></div>
+<hr>
+<h2 id="buttons">Buttons</h2>
+<pre><code class="lang-scss">#{$all-buttons} {
+background-color: #f00;
+}
+//CSS Output
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+background-color: #f00;
+}
+#{$all-buttons-active} {
+background-color: #00f;
+}
+//CSS Output
+button:active,
+[type='button']:active,
+[type='reset']:active,
+[type='submit']:active {
+background-color: #00f;
+}
+#{$all-buttons-focus} {
+background-color: #0f0;
+}
+//CSS Output
+button:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus {
+background-color: #00f;
+}
+#{$all-buttons-hover} {
+background-color: #0f0;
+}
+//CSS Output
+button:hover,
+[type='button']:hover,
+[type='reset']:hover,
+[type='submit']:hover {
+background-color: #00f;
+}</code></pre>
+<hr>
+<h2 id="clearfix">Clearfix</h2>
+<pre><code class="lang-scss">.element {
+@include clearfix;
+}
+//CSS Output
+.element::after {
+clear: both;
+content: "";
+display: block;
+}</code></pre>
+<hr>
+<h2 id="contrast">Contrast Switch</h2>
+<p>Switches between two colors based on the contrast to another color.<br><em>See css/bourbon5/bourbon/library/_contrast-switch.scss</em></p>
+<pre><code class="lang-scss">.element {
+$button-color: #2d72d9;
+background-color: $button-color;
+color: contrast-switch($button-color, #222, #eee);
+}</code></pre>
+        
+<div class="mixin-box five">
+<p>Color Contrast Switch</p>
+</div>
+<hr>
+<h2 id="ellipsis">Ellipsis</h2>
+<pre><code class="lang-scss">.element {
+@include ellipsis;
+}</code></pre>
+        
+<div class="six">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed cumque at soluta molestiae laudantium saepe iure rem corporis neque quas ullam inventore vel sunt dolor consequatur, quam, tempore optio. Error.
+</div>
+<hr>
+<h2 id="font-stacks">Font Stacks</h2>
+<pre><code class="lang-scss">.element {
+font-family: $font-stack-helvetica;
+}
+//CSS Output
+.element {
+font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+_________
+.element {
+font-family: $font-stack-lucida-grande;
+}
+//CSS Output
+.element {
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif;
+}
+_________
+.element {
+font-family: $font-stack-verdana;
+}
+//CSS Output
+.element {
+font-family: "Verdana", "Geneva", sans-serif;
+}
+_________
+.element {
+font-family: $font-stack-system;
+}
+//CSS Output
+.element {
+font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+}
+_________
+.element {
+font-family: $font-stack-garamond;
+}
+//CSS Output
+.element {
+font-family: "Garamond", "Baskerville", "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+_________
+.element {
+font-family: $font-stack-georgia;
+}
+//CSS Output
+.element {
+font-family: "Georgia", "Times", "Times New Roman", serif;
+}
+_________
+.element {
+font-family: $font-stack-hoefler-text;
+}
+//CSS Output
+.element {
+font-family: "Hoefler Text", "Baskerville Old Face", "Garamond", "Times New Roman", serif;
+}
+_________
+.element {
+font-family: $font-stack-consolas;
+}
+//CSS Output
+.element {
+font-family: "Consolas", "monaco", monospace;
+}
+_________
+.element {
+font-family: $font-stack-courier-new;
+}
+// CSS Output
+.element {
+font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+_________
+.element {
+font-family: $font-stack-monaco;
+}
+//CSS Output
+.element {
+font-family: "Monaco", "Consolas", "Lucida Console", monospace;
+}</code></pre>
+<hr>
+<h2 id="hide-text">Hide Text</h2>
+<pre><code class="lang-scss">.element {
+@include hide-text;
+}
+//CSS Output
+.element {
+overflow: hidden;
+text-indent: 101%;
+white-space: nowrap;
+}</code></pre></p>
+<hr>
+<h2 id="hide-visually">Hide Visually</h2>
+<pre><code class="lang-scss">button.below {
+@include size(180px, 40px);
+span {
+@include hide-visually;
+}
+&:hover span {
+@include hide-visually("unhide");
+}
+}
+</code></pre>
+<p>The button below hides the text via a <code>&lt;span&gt;</code> using the style above, hover to view the text</p>
+<button class="below"><span>This title is hidden</span></button>
+<hr>
+<h2 id="margin">Margin</h2>
+<pre><code class="lang-scss">.element {
+@include margin(20px 3em 10vh null);
+}
+//CSS Output
+.element {
+margin-top: 20px;
+margin-right: 3em;
+margin-bottom: 10vh;
+}
+</code></pre>
+        
+<div class="eight">
+<p>This text is using the mixin above to set this paragraph margins in this box</p>
+</div>
+<hr>
+<h2 id="scale">Modular Scale</h2>
+<p>Increments up or down a defined scale and returns an adjusted value. This helps establish consistent measurements throughout your project.<br>
+For more information about Modular Scales start <a href="lehttp://bourbon.io/docs/#modular-scale">here</a></p>
+<pre><code class="lang-scss">//Globally change the base ratio
+$bourbon: (
+"modular-scale-ratio": 1.2,
+);
+.element {
+font-size: modular-scale(3);
+}
+//CSS Output
+.element {
+font-size: 1.728em;
+}
+</code></pre>
+            
+<div class="nine">
+<p>This text is using the style above to set the font size</p>
+</div>
+<hr>
+<h2 id="wrap">Overflow Wrap</h2>
+<p>Outputs the <em>overflow-wrap</em> property and its legacy name <em>word-wrap</em> to support browsers that do not yet use <em>overflow-wrap</em></p>
+<pre><code class="lang-scss">Accepted CSS values are normal, break-word, inherit, initial or unset.
+@example scss
+.wrapper {
+@include overflow-wrap;
+}
+//CSS Output
+.wrapper {
+word-wrap: break-word;
+overflow-wrap: break-word;
+}
+</code></pre>
+            
+<div class="ten">
+<p>Thisisaveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryverylongword</p>
+</div>
+<hr>
+<h2 id="padding">Padding</h2>
+<pre><code class="lang-scss">.element {
+@include padding(50px 5% 10vh null);
+}
+//CSS Output
+.element {
+padding-top: 50px;
+padding-right: 5%;
+padding-bottom: 10vh;
+}
+</code></pre>
+            
+<div class="eleven">
+<p>This text is using the mixin above to set this paragraph padding in this box</p>
+</div>
+<hr>
+<h2 id="position">Position</h2>
+<pre><code class="lang-scss">.element {
+@include position(absolute, 10px null null 10px);
+}
+//CSS Output
+.element {
+position: absolute;
+top: 10px;
+left: 10px;
+}
+</code></pre>
+            
+<div class="twelve">
+<div></div>
+</div>
+<hr>
+<h2 id="prefixer">Prefixer</h2>
+<pre><code class="lang-scss">.element {
+@include prefixer(appearance, none, ("webkit", "moz"));
+}
+//CSS Output
+.element {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}</code></pre>
+<hr>
+<h2 id="shade">Shade</h2>
+<pre><code class="lang-scss">.element {
+background-color: shade(#ffbb52, 60%);
+}
+//CSS Output
+.element {
+background-color: #664a20;
+}</code></pre>
+            
+<div class="thirteen"></div>
+<hr>
+<h2 id="size">Size</h2>
+<pre><code class="lang-scss">.first-element {
+@include size(5em);
+}
+//CSS Output
+.first-element {
+width: 5em;
+height: 5em;
+}
+.second-element {
+@include size(1em, 2em);
+}
+//CSS Output
+.second-element {
+width: 1em;
+height: 2em;
+}</code></pre>
+            
+<div class="fourteen">
+<div></div>
+</div>
+<hr>
+<h2 id="strip">Strip Unit</h2>
+<p>Strips the unit from a number</p>
+<pre><code class="lang-scss">$dimension: strip-unit(10em);
+//Output
+$dimension: 10;</code></pre>
+<hr>
+<h2 id="inputs">Text Inputs</h2>
+<pre><code class="lang-scss">#{$all-text-inputs} {
+border: 1px solid #ccc;
+}
+                    
+//CSS Output
+[type='color'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='email'],
+[type='month'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='time'],
+[type='url'],
+[type='week'],
+input:not([type]),
+textarea {
+    border: 1px solid #ccc;
+}
+---------------------------
+#{$all-text-inputs-active} {
+    border: 1px solid #aaa;
+}
+//CSS Output
+[type='color']:active,
+[type='date']:active,
+[type='datetime']:active,
+[type='datetime-local']:active,
+[type='email']:active,
+[type='month']:active,
+[type='number']:active,
+[type='password']:active,
+[type='search']:active,
+[type='tel']:active,
+[type='text']:active,
+[type='time']:active,
+[type='url']:active,
+[type='week']:active,
+input:not([type]):active,
+textarea:active {
+    border: 1px solid #aaa;
+}
+---------------------------
+#{$all-text-inputs-focus} {
+    border: 1px solid #1565c0;
+}
+//CSS Output
+[type='color']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='email']:focus,
+[type='month']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='text']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='week']:focus,
+input:not([type]):focus,
+textarea:focus {
+    border: 1px solid #1565c0;
+}
+------------------------------
+#{$all-text-inputs-hover} {
+    border: 1px solid #aaa;
+}
+//CSS Output
+[type='color']:hover,
+[type='date']:hover,
+[type='datetime']:hover,
+[type='datetime-local']:hover,
+[type='email']:hover,
+[type='month']:hover,
+[type='number']:hover,
+[type='password']:hover,
+[type='search']:hover,
+[type='tel']:hover,
+[type='text']:hover,
+[type='time']:hover,
+[type='url']:hover,
+[type='week']:hover,
+input:not([type]):hover,
+textarea:hover {
+    border: 1px solid #aaa;
+}
+---------------------------
+#{$all-text-inputs-invalid} {
+    border: 1px solid #00f;
+}
+//CSS Output
+[type='color']:invalid,
+[type='date']:invalid,
+[type='datetime']:invalid,
+[type='datetime-local']:invalid,
+[type='email']:invalid,
+[type='month']:invalid,
+[type='number']:invalid,
+[type='password']:invalid,
+[type='search']:invalid,
+[type='tel']:invalid,
+[type='text']:invalid,
+[type='time']:invalid,
+[type='url']:invalid,
+[type='week']:invalid,
+input:not([type]):invalid,
+textarea:invalid {
+    border: 1px solid #00f;
+}</code></pre>
+
+<hr>
+<h2 id="tint">Tint</h2>
+<pre><code class="lang-scss">.element {
+background-color: tint(#6ecaa6, 40%);
+}
+//CSS Output
+.element {
+background-color: #a8dfc9;
+}</code></pre>
+            
+<div class="fifteen"></div>
+<hr>
+<h2 id="triangle">Triangle</h2>
+<pre><code class="lang-scss">.element {
+&::before {
+@include triangle("up", 2rem, 1rem, #b25c9c);//direction, width, height, color of triangle
+content: "";
+}
+}
+                        
+//CSS Output
+.element::before {
+border-style: solid;
+height: 0;
+width: 0;
+border-color: transparent transparent #b25c9c;
+border-width: 0 1rem 1rem;//width or height /2 depends on direction - in this case arrow "up" width is halved
+content: "";
+}
+//style used for element below
+.element {
+border: $border;
+@include size(4rem);//size of box
+position: relative;
+&::before {
+@include triangle("up", 2rem, 2rem, #b25c9c);//width /2 on output
+position: absolute;
+content: "";
+top:-2rem;//positon triangle on box
+left:1rem;//positon triangle on box
+}
+}</code></pre>
+            
+<div class="sixteen"></div>
+<hr>
+            
+<h2 id="value">Value Prefixer</h2>
+<pre><code class="lang-scss">.element {
+@include value-prefixer(cursor, grab, ("webkit", "moz"));
+}
+//CSS Output
+.element {
+cursor: -webkit-grab;
+cursor: -moz-grab;
+cursor: grab;
+}</code></pre>
+
+<hr>
+
+<!-- -------------------------------------------------->
+
+<h2 id="grids">Neat Grids</h2>
+
+<p>Bourbon Neat has totally changed in version 2. <em>Phone1st uses CodeKit's copy of the Neat library</em>.</p>
+    <h3>Something to watch</h3>
+    <p>Take a look at <em>Page with one sidebar</em> and <em>Page with two sidebars</em>. Both have a <em>background color, red</em>. Notice the <em>Page with one sidebar</em> has margins left and right set to whatever the <em>gutter</em> is set to. This seems to be default which seems strange. The <em>Page with two sidebars</em> has no margins left or right but has an extra <em>div</em> element set to <em>collapse</em> the grid, which works a treat. Also see the <a href="http://neat.bourbon.io">Bourbon Neat</a> website for more examples and info.</p>
+<hr>
+<h5>Grid Variables</h5>
+<pre><code class="lang-scss">@import "neat";
+
+//over-riding the default neat gutter setting
+$neat-grid: (
+  columns: 12,
+  gutter: 10px,
+);
+//new grid settings
+$small-grid: (
+  columns: 4,
+  gutter: 10px,
+  media: 600px,
+);
+$medium-grid: (
+  columns: 8,
+  gutter: 20px,
+  media: 740px,
+);
+$large-grid: (
+  columns: 8,
+  gutter: 20px,
+  media: 900px,
+);
+$box-color: #486cb8;
+$height: 120px;</code></pre>
+<hr>
+  
+  <div class="grid-box">
+    <h5>Page with one sidebar</h5>
+  <div class="one-sidebar">
+  <div class="one-sidebar-a"></div>
+  <div class="one-sidebar-b"></div>
+  </div><!-- one-sidebar -->
+<pre><code class="lang-scss">.one-sidebar {
+ @include grid-container;
+ background: $error-color;//red
+}
+.one-sidebar-a {
+ @include grid-column(9);
+ background: $box-color;
+ height: $height;
+}
+.one-sidebar-b {
+ @include grid-column(3);
+ background: $box-color;
+ height: $height;
+}</code></pre>
+<hr>
+    <h5>Page with two sidebars</h5>
+  <div class="two-sidebar">
+  <div class="two-sidebar-inner">
+  <div class="two-sidebar-a"></div>
+  <div class="two-sidebar-b"></div>
+  <div class="two-sidebar-c"></div>
+  </div><!-- two-sidebar-inner -->
+  </div><!-- two-sidebar -->
+
+<pre><code class="lang-scss">.two-sidebar {
+ @include grid-container;
+ background: $error-color;
+ overflow-x: hidden;
+}
+.two-sidebar-inner {
+ @include grid-collapse();
+}
+.two-sidebar-a {
+ @include grid-column(3);
+ background: $box-color;
+ height: $height;
+}
+.two-sidebar-b {
+ @include grid-column(6);
+ background: $box-color;
+ height: $height;
+}
+.two-sidebar-c {
+ @include grid-column(3);
+ background: $box-color;
+ height: $height;
+}</code></pre>
+<hr>
+    <h5>Nested columns</h5>
+  <div class="nested-columns">
+  <div class="nested-columns-a"></div>
+  <div class="nested-columns-b">
+  <div class="nested-wrap">
+  <div class="nested-columns-b-one"></div>
+  <div class="nested-columns-b-one"></div>
+  <div class="nested-columns-b-one"></div>
+  <div class="nested-columns-b-one"></div>
+  <div class="nested-columns-b-one"></div>
+  <div class="nested-columns-b-one"></div>
+  </div><!-- nested-wrap -->
+  </div><!-- nested-columns-b -->
+  </div><!-- nested-columns -->
+<pre><code class="lang-scss">.nested-columns {
+ @include grid-container;
+}
+.nested-columns-a {
+ @include grid-column(6);
+ background: $box-color;
+ height: 200px;
+}
+.nested-columns-b {
+ @include grid-column(6);
+}
+.nested-wrap {//wrap the small boxes
+ @include grid-collapse();
+}
+.nested-columns-b-one {//small box
+ @include grid-column(3 of 6);
+ background: $box-color;
+ height: 60px;
+ margin-bottom: 10px;
+}</code></pre>
+
+<hr>
+    <h5>Three columns - <span class="secondary">3 into 12 ok</span></h5>
+  <div class="grid-four">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  </div>
+<pre><code class="lang-scss">.grid-four {
+ @include grid-container;
+}
+.box {
+ @include grid-column(4);
+ background: $box-color;
+ height: 60px;
+}</code></pre>
+
+<hr>
+    <h5>Four columns - <span class="secondary">4 into 12 ok</span></h5>
+  <div class="grid-five">
+  <div class="box2"></div>
+  <div class="box2"></div>
+  <div class="box2"></div>
+  <div class="box2"></div>
+  </div>
+<pre><code class="lang-scss">.grid-five {
+ @include grid-container;
+}
+.box2 {
+ @include grid-column(3);
+ background: $box-color;
+ height: 60px;
+}</code></pre>
+
+<hr>
+    <h5>Five columns - <span class="secondary">5 into 12 won't go</span></h5>
+    <p>simply use <code>@include grid-column(3 of 15);</code> and it works!</p>
+  <div class="grid-six">
+  <div class="box3"></div>
+  <div class="box3"></div>
+  <div class="box3"></div>
+  <div class="box3"></div>
+  <div class="box3"></div>
+  </div>
+<pre><code class="lang-scss">.grid-six {
+ @include grid-container;
+}
+.box3 {
+ @include grid-column(3 of 15);
+ background: $box-color;
+ height: 60px;
+}</code></pre>
+
+<hr>
+    <h5>And back to 12 columns and include Shift</h5>
+    <p><code>@include grid-column(1 of 12);</code> - <code>@include grid-shift(1);</code></p>
+  <div class="grid-seven">
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  <div class="box4"></div>
+  </div>
+<pre><code class="lang-scss">.grid-seven {
+ @include grid-container;
+}
+.box4 {
+ @include grid-column(1 of 12);
+ @include grid-shift(1);
+ background: $box-color;
+ height: 60px;
+}</code></pre>
+
+<hr>
+    <h5>More Media Breakpoints</h5>
+    <p>Set new media breakpoints which changes <code>grid-columns</code> to 4 and 8</p>
+  <div class="grid-eight">
+  <div class="grid-eight-left">
+    <p>At mobile this box is 100% wide
+    <br> At 600px this box will span 3 of 4 columns
+    <br> At 740px this box will span 4 of 8 columns
+    <br> At 900px this box will span 2 of 8 columns</p>
+  </div>
+  <div class="grid-eight-right">
+    <p>At mobile this box is 100% wide
+    <br> At 600px this box will span 1 of 4 columns
+    <br> At 740px this box will span 4 of 8 columns
+    <br> At 900px this box will span 6 of 8 columns</p>
+  </div>
+</div><!-- grid-box -->
+<pre><code class="lang-scss">.grid-eight {
+@include grid-container;
+p {
+ color: $white;
+ font-size: $third;
+}
+}
+//see the grid variables at the top of the page
+//for grid-media settings
+.grid-eight-left {
+ @include grid-column(12);
+ background: $box-color;
+ padding: 10px 20px 0 20px;
+ margin-bottom: 15px;
+ @include grid-media($small-grid) {//600px
+ @include grid-column(3);
+}
+ @include grid-media($medium-grid) {//740px
+ @include grid-column(4);
+}
+ @include grid-media($large-grid) {//900px
+ @include grid-column(2);
+}
+}
+
+.grid-eight-right {
+ @include grid-column(12);
+ background: $box-color;
+ padding: 10px 20px 0 20px;
+ @include grid-media($small-grid) {//600px
+ @include grid-column(1);
+}
+ @include grid-media($medium-grid) {//740px
+ @include grid-column(4);
+}
+ @include grid-media($large-grid) {//900px
+ @include grid-column(6);
+}
+}</code></pre>
+
+
+      
+  <hr>
+  <div class="post-meta"></span>Stored in <span class="author"><a href="basics.html">Basics</a></span> | written on <span class="author"><!-- $bourbon-date --></span></div>
+</div><!-- inner -->
+</article>
+<p class="lead">Take a look at the <em>latest</em> <strong>Documents</strong></p>
+
+      <!-- @import ../includes/_related -->
+
+<!-- @import ../includes/_footer -->	

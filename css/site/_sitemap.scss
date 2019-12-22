@@ -1,0 +1,41 @@
+
+
+.sitemap {
+  max-width: 500px;
+  margin: 0 auto;
+   padding: $spacer 5%;
+   text-align: center;
+  
+  h1 {
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-size: $font-size*1.4;
+  }
+
+  h2 {
+   padding-bottom: $spacer/2;
+  }
+
+  h3 {
+   font-size: 20px;
+  }
+
+  ul {
+    margin-bottom: $spacer;
+  }
+}
+
+
+
+   @include media(700) {
+
+    .sitemap-wrap {
+
+      display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-items: center;
+    }
+    
+   }

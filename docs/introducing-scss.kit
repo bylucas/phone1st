@@ -1,0 +1,331 @@
+<!-- $title Introducing Scss -->
+<!-- $SEO-title Introducing Scss - Start using scss for smart, efficient stylesheets -->
+<!-- $description Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it. -->
+<!-- $keyword Scss, Sass, Css -->
+<!-- $url introducing-scss.html -->
+<!-- $post-image ../img/introducing-scss.jpg -->
+
+<!-- @import ../includes/_header -->
+
+<article class="post">
+
+      <div class="parallax" style="background-image: url(<!-- $post-image -->)">
+            <div class="overlay">
+                  <div class="title-wrap">
+    <h1><!-- $title --></h1>
+  </div>
+</div>
+      </div>
+  
+  <div class="post-content inner scss-post">
+
+<blockquote><p>Start using scss for smart, efficient and quicker stylesheets. Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it. After reading this article, you will find the <a href="http://sass-lang.com/">Sass</a> website useful.</p></blockquote>
+
+<h2>What is Scss?</h2>
+
+<p>Scss enables the developer to write <em>quicker</em> and more <em>efficient</em> css. The idea is to use <em>partial</em> stylesheets for different sections i.e. <em>typography</em>, <em>forms</em>, <em>images</em>, <em>etc</em> and have a <em>main</em> stylesheet collect these <em>partial</em> stylesheets. Then output the <em>main</em> scss stylesheet, <em>via a pre-processor, (see below)</em>, to a css file. This together with <em>variables</em> and <em>mixins</em>, (<em>see below</em>), make writing css more efficient. It’s not difficult to pick up the basics which are all you need to get started.</p>
+
+<h2>Installing</h2>
+
+<p>Getting scss up and running couldn’t be simpler, either using the command line <a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> (<em>if your feeling brave</em>), or use a <em>pre-processing app</em>, <em>free</em> or <em>paid</em> (<em>low cost and worth it</em>). Check this <a href="http://sass-lang.com/install">page</a> for <em>installing</em>, available <em>apps</em> and <em>using scss</em> options.</p>
+
+<h2>Pre-Processors</h2>
+
+<p>Two examples of preprocessors are <a href="https://codekitapp.com/">CodeKit</a> (<em>Mac only</em>) and <a href="https://prepros.io/">Preprose</a> (<em>Mac and Windows</em>). Both are relatively cheap and good at what they do. They do other stuff besides <em>processing scss to css</em>, they compile all the cutting-edge languages like <em>Less</em>, <em>Stylus</em> and <em>coffeeScript</em>. They <em>live-refresh</em> your browsers. They <em>combine</em>, <em>minify</em> and <em>syntax-check javaScript</em> and <em>crunch</em> your images. <em>Well worth their price</em>.</p>
+
+<h2>Partials</h2>
+
+<p>The great thing about scss is the ability to create <em>partial files</em> and gather them <em>via a master stylesheet</em>. The partials can be collected in folders for better organisation and easier <em>navigation/access</em>. Partials begin their name with an <em>underscore(_)</em>.</p>
+
+<h2>@Import</h2>
+
+<p>The <em>partial files</em> are collected by using the <em>@import</em> option. Any stylesheet can import <em>partial</em> stylesheets but the <em>end/master</em> stylesheet has <em>no underscore(_)</em> in the name. This stylesheet will be <em>parsed by the preprocessor</em>, a typical master stylesheet is <em>style.scss</em> which will be parsed as <em>style.css</em>.</p>
+
+<figure>
+<img src="img/sass-file-map.jpg" alt="partials are collected by style.scss and output to style.css" />
+<figcaption>partials are collected by style.scss and output to style.css</figcaption>
+</figure>
+
+<h2>Variables</h2>
+
+<p><em>Variables</em> speed up your website development and are one of the best reasons for using scss. The <em>variables</em> stylesheet is where you set all the site basics, <em>typeface</em>, <em>font-size</em>, <em>colors</em>, <em>grid settings</em>, etc. You can completely change the look of your site from this stylesheet.</p>
+
+<p><em>Scenario</em>, you have a 100 page website with a corporate colour of blue, used in the headers as a background colour for the <em>company logo</em>, the colour is also used for some text colour in the body on every page. The boss changes the corporate colour to orange and wants this change implemented on his website. Using css the developer would have to manually change all the instances where the corporate colour occurs on all 100 pages. Using scss the developer would have set the corporate colour as a variable <em>$corporate-color: blue;</em> All the developer has to do is change the variable, <em>$corporate-color: orange;</em> Save the scss file and every instance of <em>$corporate-color;</em> is changed to orange.</p>
+
+<p><em>How long did that take?</em> The power of the <em>variable</em> is one of the best things about scss.</p>
+
+<pre><code class="lang-scss">// The variables stylesheet, you can completely change the look of a website from this stylesheet
+
+$midgrey: #738a94;  
+$blue: #3eb0ef;  
+$red: #f05230;  
+$border: 1px solid tint($red, 20%);  
+$radius: 6px;  
+$spacer: 4rem;  
+$width: $spacer/1.5;
+</code></pre>
+
+<h2>Mixins</h2>
+
+<p><em>Mixins</em> <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> are like shortcuts for writing repeat blocks of code and like <em>variables</em> help speed up website development.</p>
+
+<p>This background <em>mixin</em> sets a <em>background colour</em> with a <em>box shadow</em> using the same colour but <em>25%</em> darker.</p>
+
+<pre><code class="lang-scss">//@include background($red); or @include background();default $blue
+
+@mixin background($background-color: $blue) {  
+ background: $background-color;  
+ box-shadow: inset 0 0 4px darken($background-color, 25%);  
+}
+</code></pre>
+
+<p>We call this <em>mixin</em> using <em>@include background(value);</em></p>
+
+<p>The default background colour is $blue, <em>$background-color</em> can be set to any colour - <em>example @include background($red); or @include background(#fecd35);</em></p>
+
+<p><em>@include background();</em> No value set between the parenthesis sets the <em>default</em> color $blue.</p>
+
+<p>The following mixin does not have a <em>default radius size</em> so one must be set every time - <em>@include border-radius(10px);</em></p>
+
+<pre><code class="lang-scss">//@include border-radius(10px);no default radius
+
+@mixin border-radius($radius) {  
+    border-top-left-radius: $radius;  
+    border-top-right-radius: $radius * 2;  
+    border-bottom-left-radius: $radius + 15;  
+    border-bottom-right-radius: $radius + 25;  
+}
+</code></pre>
+
+<p>Example, the two above <em>Mixins</em>. <em>See the variables section at the top of the article for the variables in the example</em>.</p>
+
+<pre><code class="lang-scss">.box-scss {  
+    width: 80%;  
+    height: 100px;  
+    padding: $spacer;//see the variables at the top of the article  
+    margin: $width auto;  
+    @include background($red);  
+    @include border-radius(10px);
+
+    p {  
+    text-align: center;  
+    color: white;  
+    }
+}
+</code></pre>
+
+<p>Output CSS</p>
+
+<pre><code class="lang-css">.box-scss {  
+    width: 80%;  
+    height: 100px;  
+    padding: 4rem;  
+    margin: 2.6666666667rem auto;  
+    background: #3eb0ef;  
+    -webkit-box-shadow: inset 0 0 4px #0d6ca0;  
+    box-shadow: inset 0 0 4px #0d6ca0;  
+    border-top-left-radius: 10px;  
+    border-top-right-radius: 20px;  
+    border-bottom-left-radius: 25px;  
+    border-bottom-right-radius: 35px;  
+}
+
+.box-scss p {  
+    text-align: center;  
+    color: white;  
+}
+</code></pre>
+
+<p>Result</p>
+<div class="box-scss"><p>Two mixins are used background color and radius</p></div>
+
+<h2>Nesting</h2>
+
+<p>Scss allows you to <em>nest</em> selectors like <em>HTML</em>.</p>
+
+<pre><code class="lang-scss">.box2-scss {  
+    border: $border;//see the variables at the top of the article  
+    @include background($midgrey);  
+    max-width: 80%;  
+    padding: $spacer;  
+    margin: $spacer auto;
+
+        h1 {  
+            font-size: 32px;  
+            text-align: center;
+
+            a {  
+                color: $blue;
+
+                &:hover {  
+                    color: white;  
+                }// end hover  
+            }// end a  
+        }// end h1
+
+        p {  
+        text-align: center;  
+        color: white;  
+        }// end p  
+    }// end .div
+</code></pre>
+
+<p><strong><em>Note:</em></strong> Too much nesting can become complicated</p>
+
+<p>Output css - <em>see the variables in the variables section at the top of the article</em></p>
+
+<pre><code class="lang-css">.box2-scss {  
+    border: 1px solid #cbd7dd;  
+    background-color: #738a94;  
+    box-shadow: inset 0 0 4px #3b474d;  
+    max-width: 80%;  
+    padding: 4rem;  
+    margin: 4rem auto;  
+}
+
+.box2-scss h1 {  
+    font-size: 32px;  
+    text-align: center;  
+}
+
+.box2-scss h1 a {  
+    color: #3eb0ef;  
+}
+</code></pre>
+
+<p>Result</p>
+<div class="box2-scss"><h1><a href="">Example of Nesting</a></h1><p>Careful when nesting, it can get complicated</p></div>
+
+<h2>@Extend</h2>
+
+<p>Another very useful feature of scss is <em>@extend</em>. This feature allows the properties of the class <em>.box3-scss</em> to be shared with the classes <em>.box4-scss</em> and <em>box5-scss</em>. Check the very neat output of the <em>@extend</em> feature.</p>
+
+<pre><code class="lang-scss">.box3-scss {  
+    width: 80%;  
+    margin: $width auto;//see the variables at the top of the article  
+    border: $border;  
+    @include border-radius(10px);  
+    padding: $spacer/2;  
+    background-color: $midgrey;
+
+    p {  
+    text-align: center;  
+    color: white;  
+    }
+}
+
+.box4-scss {  
+    @extend .box3-scss;  
+    background-color: $blue;  
+}
+
+.box5-scss {  
+    @extend .box3-scss;  
+    background-color: $red;  
+}
+</code></pre>
+
+<p>Output css</p>
+
+<pre><code class="lang-css">.box3-scss, .box4-scss, .box5-scss {  
+    width: 80%;  
+    margin: 2.6666666667rem auto;  
+    border: 1px solid#cbd7dd;  
+    border-top-left-radius: 10px;  
+    border-top-right-radius: 20px;  
+    border-bottom-left-radius: 25px;  
+    border-bottom-right-radius: 35px;  
+    padding: 2rem;  
+    background-color: #738a94;  
+}
+
+.box3-scss p, .box4-scss p, .box5-scss p {  
+text-align: center;  
+color: white;  
+}
+
+.box4-scss {  
+    background-color: #3eb0ef;  
+}
+
+.box5-scss {  
+    background-color: #f05230;  
+}
+</code></pre>
+
+<p>Result</p>
+<div class="box3-scss"><p>div box 3</p></div>
+<div class="box4-scss"><p>Using &#8216;@extend&#8217; this div shares properties with div box 3</p></div>
+<div class="box5-scss"><p>Using &#8216;@extend&#8217; this div shares properties with div box 3</p></div>
+
+<h2>Operators</h2>
+
+<p>Scss allows the use of <em>math operators</em> like + - * / and %.</p>
+
+<pre><code class="lang-scss">.box6-scss {  
+    $width: 300px + 10px;// variable only applies to this class  
+    width: $width;  
+    margin: $width / 9 - 10px auto;  
+    border: $border;  
+    padding: $spacer;// see variables section at the top of the article
+
+    p {  
+        font-size: $width / 9;  
+        text-align: center;  
+        line-height: 1.2;  
+    }
+}
+</code></pre>
+
+<p><strong><em>Note:</em></strong> When a <em>variable</em> is set inside a class, it only applies to that class.</p>
+
+<p>Output css</p>
+
+<pre><code class="lang-css">.box6-scss {  
+    width: 310px;  
+    margin: 89.6666666667px auto;  
+    background: #cbd7dd;  
+    padding: 4rem;  
+}
+
+.box6 p {  
+    font-size: 36.5555555556px;  
+    text-align: center;  
+}
+</code></pre>
+
+<p>Result</p>
+<div class="box6-scss"><p> When a <em>variable</em> is set inside a class, it only applies to that class</p></div>
+
+<h2>And Finally</h2>
+
+<p>As you can see the <em>basics are easy</em> to pick up. So do yourself a favour and start using scss, a <em>smart way</em> to style your web pages. See the <a href="http://sass-lang.com/">Sass</a> website for more <em>information</em> and <em>examples</em> of scss.</p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>The Command Line can be quite daunting if your not used to it.  <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>The examples have been run through Autoprefixer using CodeKit.<br/>
+<strong><em>Autoprefixer?</em></strong><br/>
+<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> parses CSS files and adds vendor prefixes to CSS rules using the <a href="http://caniuse.com/">Can I Use</a> database to determine which prefixes are needed.<br/>
+<em>Instead of being a preprocessor – such as Sass and Stylus – Autoprefixer is a postprocessor. It doesn’t use any specific syntax and works with common CSS. Autoprefixer can be easily integrated with Sass and Stylus, since it runs after CSS is already compiled</em>. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+      
+  <hr>
+  <div class="post-meta"></span>Stored in <span class="author"><a href="basics.html">Basics</a></span> | written on <span class="author"><!-- $scss-date --></span></div>
+</div><!-- inner -->
+</article>
+<p class="lead">Take a look at the <em>latest</em> <strong>Documents</strong></p>
+
+      <!-- @import ../includes/_related -->
+
+<!-- @import ../includes/_footer -->	

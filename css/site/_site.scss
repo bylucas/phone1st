@@ -1,0 +1,44 @@
+// =======================
+// Site
+// =======================
+
+.main,
+header,
+article,
+footer,
+.home,
+.related {
+    @include clearfix;
+}
+
+.inner {
+	margin: 0 3%;
+}
+
+.main {
+	margin: 0;
+}
+
+.small {
+  font-size: $third;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer {
+	border-top: 1px solid $light-gray;
+	padding-top: $spacer/1.5;
+}
+
+
+.footer-info {
+font-size: $third;
+text-align: center;
+}
+
+@include media(900) {
+	.inner {
+	max-width: 840px;
+	margin: 0 auto;
+}
+}
