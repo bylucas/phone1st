@@ -16,7 +16,7 @@ footer,
 }
 
 .main {
-	margin: 0;
+	//margin: $spacer 0 0 0;
 }
 
 .small {
@@ -28,12 +28,19 @@ footer,
 .footer {
 	border-top: 1px solid $light-gray;
 	padding-top: $spacer/1.5;
+	padding-bottom: 5px;
 }
 
 
 .footer-info {
 font-size: $third;
 text-align: center;
+}
+
+@include media(700) {
+	.inner {
+	margin: 0 5%;
+}
 }
 
 @include media(900) {

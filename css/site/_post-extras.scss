@@ -20,8 +20,8 @@ $width: $spacer/1.5;
 
 .box-scss {  
     width: 80%;  
-    height: 100px;  
-    padding: $spacer;
+    height: 120px;  
+    padding: $spacer/4;
     margin: $width auto;  
     @include background($red);  
     @include border-radius(10px);

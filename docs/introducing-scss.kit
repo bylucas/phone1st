@@ -101,8 +101,8 @@ $width: $spacer/1.5;
 
 <pre><code class="lang-scss">.box-scss {  
     width: 80%;  
-    height: 100px;  
-    padding: $spacer;//see the variables at the top of the article  
+    height: 120px;  
+    padding: $spacer/4;//see the variables at the top of the article  
     margin: $width auto;  
     @include background($red);  
     @include border-radius(10px);
@@ -118,8 +118,8 @@ $width: $spacer/1.5;
 
 <pre><code class="lang-css">.box-scss {  
     width: 80%;  
-    height: 100px;  
-    padding: 4rem;  
+    height: 120px;  
+    padding: 1rem;  
     margin: 2.6666666667rem auto;  
     background: #3eb0ef;  
     -webkit-box-shadow: inset 0 0 4px #0d6ca0;  
@@ -150,24 +150,24 @@ $width: $spacer/1.5;
     padding: $spacer;  
     margin: $spacer auto;
 
-        h1 {  
-            font-size: 32px;  
-            text-align: center;
+    h1 {  
+     font-size: 32px;  
+     text-align: center;
 
-            a {  
-                color: $blue;
+      a {  
+       color: $blue;
 
-                &:hover {  
-                    color: white;  
-                }// end hover  
-            }// end a  
-        }// end h1
+        &:hover {  
+         color: white;  
+         }// end hover  
+      }// end a  
+    }// end h1
 
-        p {  
-        text-align: center;  
-        color: white;  
-        }// end p  
-    }// end .div
+    p {  
+     text-align: center;  
+     color: white;  
+    }// end p  
+}// end .div
 </code></pre>
 
 <p><strong><em>Note:</em></strong> Too much nesting can become complicated</p>
