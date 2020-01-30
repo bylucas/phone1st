@@ -1,10 +1,71 @@
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ 
+ <script src="https://unpkg.com/vue"></script>
  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/2.1.2/vuefire.min.js"></script>
+
+
 <script src="js/prism.js"></script>
 <script src="js/readTime-min.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="js/scripts-min.js"></script>
+
+<!-- vue template scripts -->
+<script type="text/x-template" id="spinner-loader">
+        <div class="sl-spinner" v-show="status" :style="spinnerStyle"></div>
+    </script>
+
+ <script type="text/x-template" id="backtotop">
+        <div class="goTop" v-if="isVisible" @click="backToTop">
+            Top
+        </div>
+    </script>
+
+    <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-container">
+                        <div class="modal-body">
+                            <slot name="header">
+                                <div class="modal-close" @click="$emit('close')">
+                                    X
+                                </div>
+                            </slot>
+                            <slot name="body">
+                                default body
+                            </slot>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </script>
+
+    <script type="text/x-template" id="contact">
+        <section class="contact-form">
+            <h2>Stay up to date!</h2>
+            <p class="hide">Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+            <div class="form-wrap">
+                <input type="text" id="name" v-model="newUser.name" placeholder="your name (required)" />
+
+                <input type="email" id="email" v-model="newUser.email" placeholder="youremail@example.com (required)" />
+
+                <textarea type="text" id="message" v-model="newUser.message" placeholder="leave a quick message (optional)" rows="3"></textarea>
+            </div>
+            <button v-on:click="submitForm" type="button">Subscribe</button>
+            <p>Or if you prefer you can contact me via the <em>regular email route</em> at <a href="mailto:h@bylucas.co.uk?Subject=Enquiry%20from%20the%20Phone1st-website">h@bylucas.co.uk</a></p>
+
+        </section>
+    </script>
+<!-- vue scripts -->
+
 <script src="js/app-min.js"></script>
+
+<!-- google-analytics -->
 
 <script>
 var _gaq=[['_setAccount','UA-139947881-1'],['_trackPageview']];

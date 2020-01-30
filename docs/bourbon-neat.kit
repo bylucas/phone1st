@@ -1,7 +1,7 @@
 <!-- $title Make My Bourbon Neat -->
-<!-- $SEO-title Introducing Scss - Start using scss for smart, efficient stylesheets -->
-<!-- $description Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it. -->
-<!-- $keyword Scss, Sass, Css -->
+<!-- $SEO-title Make my Bourbon Neat a look at the Bourbon and Neat libraries -->
+<!-- $description Bourbon, a lightweight library of sass mixins that help designers create quick, quality code. Neat built on top of Bourbon is a lightweight grid framework. -->
+<!-- $keyword Bourbon, Neat, Scss, Css -->
 <!-- $url bourbon-neat.html -->
 <!-- $post-image ../img/bourbon-mixins-image.jpg -->
 
@@ -12,19 +12,18 @@
       <div class="parallax" style="background-image: url(<!-- $post-image -->)">
             <div class="overlay">
                   <div class="title-wrap">
-    <h1><!-- $title --></h1>
+    <h1 class="rellax"><!-- $title --></h1>
   </div>
 </div>
       </div>
   
   <div class="post-content inner bourbon">
 
-<blockquote><p>Make my bourbon neat is on it's way.</p></blockquote>
+<blockquote><p><strong>Bourbon</strong>, a lightweight library of sass mixins from <a href="https://thoughtbot.com/">thoughtbot</a>, helps designers create quick, quality code. Being a small library it doesn't take long to pick-up. <strong>Neat</strong> is built on top of Bourbon, and is a lightweight grid framework for Sass. And like Bourbon, being lightweight it's easy to pick-up.  </p></blockquote>
 
-<h2>To Come</h2>
-<p>Introduction</p>
+<h2>Bourbon</h2>
 
-<p>The Bourbon mixin library has had quite a change for version 5, becoming a lot lighter. Below are the mixins available at present (<em>keep checking the Bourbon website for mixin information</em>). For more information about the <em>Bourbon mixin library</em> see <a href="https://github.com/thoughtbot/bourbon">Bourbon</a> on the Github website and <a href="http://bourbon.io/docs/">Bourbon Docs</a> on the Bourbon website.</p>
+<p>The Bourbon mixin library had quite a change for version 5, becoming a lot lighter. Now up-to version 6, <em>not much different from 5</em>, the mixins below are what's available at present (<em>keep checking the Bourbon website for mixin information</em>). For more information about the <em>Bourbon mixin library</em> see <a href="https://github.com/thoughtbot/bourbon">Bourbon</a> on the Github website and <a href="http://bourbon.io/docs/">Bourbon Docs</a> on the Bourbon website.</p>
     
   <hr>
   <div class="links">
@@ -568,8 +567,8 @@ position: relative;
 @include triangle("up", 2rem, 2rem, #b25c9c);//width /2 on output
 position: absolute;
 content: "";
-top:-2rem;//positon triangle on box
-left:1rem;//positon triangle on box
+top:-2rem;//position triangle on box
+left:1rem;//position triangle on box
 }
 }</code></pre>
             
@@ -593,9 +592,12 @@ cursor: grab;
 
 <h2 id="grids">Neat Grids</h2>
 
-<p>Bourbon Neat has totally changed in version 2. <em>Phone1st uses CodeKit's copy of the Neat library</em>.</p>
-    <h3>Something to watch</h3>
-    <p>Take a look at <em>Page with one sidebar</em> and <em>Page with two sidebars</em>. Both have a <em>background color, red</em>. Notice the <em>Page with one sidebar</em> has margins left and right set to whatever the <em>gutter</em> is set to. This seems to be default which seems strange. The <em>Page with two sidebars</em> has no margins left or right but has an extra <em>div</em> element set to <em>collapse</em> the grid, which works a treat. Also see the <a href="http://neat.bourbon.io">Bourbon Neat</a> website for more examples and info.</p>
+<p>Bourbon Neat, <em>a lightweight grid framework for Sass</em>, totally changed in version 2, now up-to version 6, it's easy to pick-up but unfortunately it's no longer maintained. Phone1st uses CodeKit's copy of the Neat library and shown here are some basic grid settings, but with <em>Flexbox</em> and <em>CSS Grids</em> are the grid framework's day's numbered?</p>
+<p>Don't forget to check the <a href="https://neat.bourbon.io/">Bourbon Neat</a> website for more information.</p>
+
+<h3>Something to watch</h3>
+
+<p>Take a look at <em>Page with one sidebar</em> and <em>Page with two sidebars</em>. Both have a <em>background color, red</em>. Notice the <em>Page with one sidebar</em> has margins left and right set to whatever the <em>gutter</em> is set to. This seems to be default which seems strange. The <em>Page with two sidebars</em> has no margins left or right but has an extra <em>div</em> element set to <em>collapse</em> the grid, which works a treat. Also see the <a href="http://neat.bourbon.io">Bourbon Neat</a> website for more examples and info.</p>
 <hr>
 <h5>Grid Variables</h5>
 <pre><code class="lang-scss">@import "neat";
@@ -848,14 +850,14 @@ p {
 }
 }</code></pre>
 
+<hr>
 
-      
-  <hr>
+<!-- @import ../includes/_subscribe -->
+
   <div class="post-meta"></span>Stored in <span class="author"><a href="basics.html">Basics</a></span> | written on <span class="author"><!-- $bourbon-date --></span></div>
 </div><!-- inner -->
 </article>
-<p class="lead">Take a look at the <em>latest</em> <strong>Documents</strong></p>
 
-      <!-- @import ../includes/_related -->
+<!-- @import ../includes/_related -->
 
 <!-- @import ../includes/_footer -->	

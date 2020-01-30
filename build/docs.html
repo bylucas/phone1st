@@ -35,26 +35,31 @@
 
 
 
+
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i|Source+Code+Pro|Ubuntu+Condensed&display=swap" />
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-	<div id="top" class="wrapper">
+	<div class="wrapper">
 
-		<div class="loader" id="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-  </div>
+		<div id="loader-wrapper">
+      <div id="app-loader">
+        <spinner :status="spinner.status" :color="spinner.color" :size="spinner.size" :depth="spinner.depth" :rotation="spinner.rotation" :speed="spinner.speed"></spinner>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+      <div id="app-top">
+      <backtotop></backtotop>
+    </div>
 
 		<div id="masthead" class="active-header"> 
      <div class="inner">       
        
       <nav class="site-nav">
     <div class="site-nav-left">
-               <a href="index.html" rel="home"><img src="img/phone1st-small-logo.png" alt="Phone1st logo" width="50px" height="50px" /><span>Documents</span></a>      
+               <a href="index.html" rel="home">Phone1st</a>      
     </div>
     <div class="site-nav-right">
        <ul class="toggles" id="header-list">
@@ -183,10 +188,7 @@
   </ul>
   
   
-  
-  
-  
-  
+  <div class="social-wrap">
   <div id="social-navigation" class="social-links">
   
       <a class="social-link social-link-fb" href="https://www.linkedin.com/in/bylucas/" target="_blank" rel="noopener"><svg version="1.1"
@@ -258,8 +260,17 @@
   	</a>
                      
   </div>
-          <a href="javascript:void(0);" class="button social-but" data-modal="modalOne">Contact/Subscribe</a>
-  </div> 
+         <section id="app-social-modal">
+  
+  			<div id="show-modal" class="social-subscribe" @click="showModal = true">Subscribe</div>
+  			<!-- use the modal component, pass in the prop -->
+  			<modal v-if="showModal" @close="showModal = false">
+  				<div slot="body">
+  					<contact></contact>
+  				</div>
+  			</modal>
+  		</section>
+  	</div>
   </div><!-- menu-wrap -->           
 
 </div><!-- fullscreen-overlay -->
@@ -269,7 +280,7 @@
  <div class="parallax" style="background-image: url(../img/bourbon-mixins-title-image.jpg)">
             <div class="overlay">
             	<div class="title-wrap">		
-    <h1>All Articles</h1>
+    <h1 class="rellax">All Articles</h1>
     <p>See all the articles currently on Phone1st</p>
   </div>
 </div>
@@ -285,7 +296,7 @@
 	    <div class="post-card-content">
 	        <div class="post-card-content-link">
 	            <header class="post-card-header">
-	                    <span class="post-card-tags"><a href="basics.html">#Basics</a> | 20 December 2019</span>
+	                    <span class="post-card-tags">20 December 2019</span>
 	                <div class="post-card-spacer"></div> 
 	                <h2><a href="welcome.html">Welcome to Phone1st</a></h2>
 	            </header>
@@ -308,12 +319,12 @@
 	    <div class="post-card-content">
 	        <div class="post-card-content-link">
 	            <header class="post-card-header">
-	                    <span class="post-card-tags"><a href="basics.html">#Basics</a> | 29 November 2019</span>
+	                    <span class="post-card-tags">29 November 2019</span>
 	                <div class="post-card-spacer"></div> 
 	                <h2><a href="guide-to-markdown.html">A Guide To Markdown and Multi-Markdown</a></h2>
 	            </header>
 	            <section class="post-card-excerpt">
-	                <p>Markdown and MultiMarkdown for writing quicker html articles and posts. Easy to pick up as you will see from this article which explains all you need to know to get you started. Give it a try, forget about the &#8216;html&#8217; tags and write quicker and cleaner posts/articles.</p>
+	                <p>Markdown and MultiMarkdown for writing quicker html articles and posts. Easy to pick up as you will see from this article which explains all you need to know to get you started.</p>
 	            </section>
 	        </div>
 	        <footer class="post-card-meta">
@@ -332,7 +343,7 @@
      <div class="post-card-content">
          <div class="post-card-content-link">
              <header class="post-card-header">
-                     <span class="post-card-tags"><a href="basics.html">#Basics</a> | 5 December 2019</span>
+                     <span class="post-card-tags">5 December 2019</span>
                  <div class="post-card-spacer"></div> 
                  <h2><a href="introducing-scss.html">Introducing Scss</a></h2>
              </header>
@@ -356,12 +367,13 @@
      <div class="post-card-content">
          <div class="post-card-content-link">
              <header class="post-card-header">
-                     <span class="post-card-tags"><a href="basics.html">#Basics</a> | 15 December 2019</span>
+                     <span class="post-card-tags">15 December 2019</span>
                  <div class="post-card-spacer"></div> 
                  <h2><a href="bourbon-neat.html">Make My Bourbon Neat</a></h2>
              </header>
              <section class="post-card-excerpt">
-                 <p>Make my Bourbon Neat is coming.</p>
+                 <p><strong>Bourbon</strong>, a lightweight library of sass mixins helps designers create quick, quality code. Being a small library it doesn't take long to pick-up. <strong>Neat</strong> is built on top of Bourbon, and is a lightweight grid framework for Sass. And like Bourbon, being lightweight it's easy to pick-up.</p></blockquote>
+ .</p>
              </section>
          </div>
          <footer class="post-card-meta">
@@ -376,19 +388,193 @@
 
 	</main>
 	<footer class="footer inner">
-	<!-- 	<button id="myBtn">Open Modal</button> -->
-		<p class="small"><a href="index.html">Home</a> | <a href="basics.html">Basics</a> | <a href="javascript:void(0);" class="button" data-modal="modalOne">Contact/Subscribe</a> | <a href="javascript:void(0);" class="button" data-modal="modalTwo">Sitemap</a> | <a href="javascript:void(0);" class="button" data-modal="modalThree">Privacy</a></p>
-		<a class="back-to-top" href="#top">Top</a>
+	<div id="app-footer-modal">
+		<p class="small"><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="basics.html">Basics</a> | <a @click="showModal = true">Subscribe</a> | <a @click="showModalSitemap = true">Sitemap</a> | <a @click="showModalPrivacy = true">Privacy</a></p>
+		
 		<p class="footer-info">&copy; 2019 bylucas <span>|</span> Phone1st Starter theme for html <a href="https://github.com/bylucas/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a> |<a href="https://phone1st-theme.netlify.com/"> Preview Phone1st</a></p>
+
+		<modal v-if="showModal" @close="showModal = false">
+				<div slot="body">
+					<contact></contact>
+				</div>
+			</modal>
+
+			<modal v-if="showModalSitemap" @close="showModalSitemap = false">
+				<div slot="body">
+					<section class="sitemap">
+					 <h1>Phone1st Sitemap</h1>
+					      <h2>See all the pages and articles</h2>
+					      <div class="sitemap-wrap">
+					        <div class="sitemap-left">
+					          <h3>Pages</h3>
+					          <ul>
+					            <li class="secondary"><a href="">About</a></li>
+					            <li class="secondary"><a href="docs.html">All Articles</a></li>
+					            <li class="secondary"><a href="basics.html">Basics</a></li>
+					          </ul>
+					        </div>
+					
+					         <div class="sitemap-right">
+					          <h3>Articles</h3>
+					          <ul>
+					            <li class="secondary"><a href="welcome.html">Welcome to Phone1st</a></li>
+					            <li class="secondary"><a href="guide-to-markdown.html">A Guide To Markdown and Multi-Markdown</a></li>
+					            <li class="secondary"><a href="introducing-scss.html">Introducing Scss</a></li>
+					            <li class="secondary"><a href="bourbon-neat.html">Make My Bourbon Neat</a></li>
+					          </ul>
+					        </div>
+					
+					      </div>
+					    </section>
+				</div>
+			</modal>
+
+			<modal v-if="showModalPrivacy" @close="showModalPrivacy = false">
+				<div slot="body">
+					<section class="privacy">
+					<h1>Privacy Policy</h1>
+					
+					<h3>Who we are</h3>
+					<p>Our name <strong>Phone1st</strong><br>
+					Our website address is: <strong>https://phone1st.org</strong></p>
+					
+					<h2>What personal data we collect and why we collect it</h2>
+					
+					<h3>Comments</h3>
+					<p>At present there are no comments on this website should this change, and we start to use comments this privacy policy will be updated to accommodate comments.</p>
+					
+					<h3>Media</h3>
+					<p>Visitors to the website can download and extract any location data from images on the website.</p>
+					
+					<h3>Contact forms</h3>
+					<p>We collect names, email address and a optional message from a subscription form which saves the information to Firebase. We will use your information to keep you informed of new articles or the latest news regarding the Phone1st website. We will answer any messages to the best of our ability and may contact you via email over your message. Your information will not be passed on to a third party. Firebase has its own Privacy Policy which can be viewed <a href="https://policies.google.com/privacy">here</a></p>
+					
+					<h3>Cookies</h3>
+					
+					<p>We don’t use cookies but search engines, social media sites may store cookies about this site on your browser.</p>
+					
+					<h3>Embedded content from other websites</h3>
+					
+					<p>Articles on this site may include embedded content (<em>e.g. videos, images, articles, etc.</em>). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>
+					
+					<p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>
+					
+					<h3>Analytics</h3>
+					
+					<p>This site uses Google Analytics. The Google Analytics Privacy Policy can be viewed <a href="https://policies.google.com/privacy">here</a></p>
+					
+					<h2>Who we share your data with?</h2>
+					
+					<p>Phone1st does not share any personal data with anyone.</p>
+					
+					<h3>How long we retain your data</h3>
+					
+					<p>If you use the subscription form, your name, email address and message are retained indefinitely or for the life of the website. This is so we can keep you informed of new articles and news associated with the Phone1st website.</p>
+					
+					<h3>What rights you have over your data</h3>
+					
+					<p>If you use the subscription form and have left data (<em>name, email address and message</em>), you can request the data to be deleted by contacting the administrator of the Phone1st website. Contact <a href="mailto:h@bylucas.co.uk">h@bylucas.co.uk</a> – your data will be deleted immediately, and you will receive no more article or news updates from Phone1st.</p>
+					
+					<h3>Where we send your data</h3>
+					
+					<p>We send your data to Firebase and Google Analytics. Your data is not used by a third party for marketing purposes.
+					</p>
+					
+					<h3>Social Media</h3>
+					
+					<p>There are links on the Phone1st website to social media sites who have their own privacy policies. These sites include <a href="https://www.linkedin.com/legal/privacy-policy">LinkedIn</a>, <a href="https://www.adobe.com/privacy.html">Behance</a> and <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">Github</a>. Click on the link to view their privacy policy.</p>
+					
+					<h3>Our contact information</h3>
+					
+					<p>If you have any concerns about your data or this privacy policy you can contact <a href="mailto:h@bylucas.co.uk">h@bylucas.co.uk</a>.</p>
+					
+					<h2>Additional information</h2>
+					
+					<h3>How we protect your data</h3>
+					
+					<p>Your data can be at risk to hackers. Do not send any sensitive information via the subscription form eg. <em>Payment information or passwords</em>.</p>
+					
+					<h3>What data breach procedures we have in place</h3>
+					
+					<p>We have no data breach procedures in place eg. <em>no data encryption</em>.</p>
+					
+					<h3>Additional Links</h3>
+					
+					<p>Any additional links to websites on Phone1st will have their own privacy policies which should be able to be viewed on their website.</p>
+					</section>
+				</div>
+			</modal>
+	</div>
 	</footer>
 	</div><!-- wrapper   -->
-	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	 
+	 <script src="https://unpkg.com/vue"></script>
 	 <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
 	  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
-	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/2.1.2/vuefire.min.js"></script>
+	
+	
 	<script src="js/prism.js"></script>
 	<script src="js/readTime-min.js"></script>
+	
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
+	<script src="js/scripts-min.js"></script>
+	
+	<!-- vue template scripts -->
+	<script type="text/x-template" id="spinner-loader">
+	        <div class="sl-spinner" v-show="status" :style="spinnerStyle"></div>
+	    </script>
+	
+	 <script type="text/x-template" id="backtotop">
+	        <div class="goTop" v-if="isVisible" @click="backToTop">
+	            Top
+	        </div>
+	    </script>
+	
+	    <script type="text/x-template" id="modal-template">
+	        <transition name="modal">
+	            <div class="modal-mask">
+	                <div class="modal-wrapper">
+	                    <div class="modal-container">
+	                        <div class="modal-body">
+	                            <slot name="header">
+	                                <div class="modal-close" @click="$emit('close')">
+	                                    X
+	                                </div>
+	                            </slot>
+	                            <slot name="body">
+	                                default body
+	                            </slot>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </transition>
+	    </script>
+	
+	    <script type="text/x-template" id="contact">
+	        <section class="contact-form">
+	            <h2>Stay up to date!</h2>
+	            <p class="hide">Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+	            <div class="form-wrap">
+	                <input type="text" id="name" v-model="newUser.name" placeholder="your name (required)" />
+	
+	                <input type="email" id="email" v-model="newUser.email" placeholder="youremail@example.com (required)" />
+	
+	                <textarea type="text" id="message" v-model="newUser.message" placeholder="leave a quick message (optional)" rows="3"></textarea>
+	            </div>
+	            <button v-on:click="submitForm" type="button">Subscribe</button>
+	            <p>Or if you prefer you can contact me via the <em>regular email route</em> at <a href="mailto:h@bylucas.co.uk?Subject=Enquiry%20from%20the%20Phone1st-website">h@bylucas.co.uk</a></p>
+	
+	        </section>
+	    </script>
+	<!-- vue scripts -->
+	
 	<script src="js/app-min.js"></script>
+	
+	<!-- google-analytics -->
 	
 	<script>
 	var _gaq=[['_setAccount','UA-139947881-1'],['_trackPageview']];
@@ -397,205 +583,6 @@
 	s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 
-	 <div id="modalOne" class="modal">
-	
-	  <div class="modal-content">
-	    
-	     <a class="close">&times;</a>
-	    <section class="get-in-touch">
-	   <h1>Get in touch/Subscribe</h1>
-	   <h2>Leave a short message or subscribe for the latest news</h2>
-	   <form id="contact-form" class="contact-form">
-	<div class="form-field-wrap"> 
-	      <div class="form-field">
-	           
-	         <input id="name" class="input-text js-input" type="text" required>
-	         <label class="label" for="name">Name</label>
-	      </div>
-	      <div class="form-field">
-	         <input id="email" class="input-text js-input" type="email" required>
-	         <label class="label" for="email">E-mail</label>
-	      </div>
-	    </div><!-- form-feild-wrap -->
-	      <div class="form-field">
-	         <input id="message" class="input-text js-input" type="text">
-	         <label class="label" for="message">Message</label>
-	      </div>
-	      <div class="form-field">
-	         <button type="submit" class="submit-btn" sendMessage()>Send</button>
-	      </div>
-	      <p class="alert">Message Sent</p>
-	   </form>
-	</section>
-	<p class="note">Contact via email <a class="link" href="mailto:h@bylucas.co.uk?Subject=Enquiry%20from%20the%20hPhone1st-website">h@bylucas.co.uk</a></p>
-	 
-	</div>
-	</div>
-	<!-- //////////////////////// -->
-	
-	<div id="modalTwo" class="modal">
-	  <div class="modal-content">
-	    <a class="close">&times;</a>
-	    <section class="sitemap">
-	       <h1>Phone1st Sitemap</h1>
-	            <h2>See all the pages and articles</h2>
-	            <div class="sitemap-wrap">
-	              <div class="sitemap-left">
-	                <h3>Pages</h3>
-	                <ul>
-	                  <li class="secondary"><a href="">About</a></li>
-	                  <li class="secondary"><a href="docs.html">All Articles</a></li>
-	                  <li class="secondary"><a href="basics.html">Basics</a></li>
-	                </ul>
-	              </div>
-	      
-	               <div class="sitemap-right">
-	                <h3>Articles</h3>
-	                <ul>
-	                  <li class="secondary"><a href="welcome.html">Welcome to Phone1st</a></li>
-	                  <li class="secondary"><a href="guide-to-markdown.html">A Guide To Markdown and Multi-Markdown</a></li>
-	                  <li class="secondary"><a href="introducing-scss.html">Introducing Scss</a></li>
-	                  <li class="secondary"><a href="bourbon-neat.html">Make My Bourbon Neat</a></li>
-	                </ul>
-	              </div>
-	      
-	            </div>
-	</section>
-	  </div>
-	</div>
-	
-	<div id="modalThree" class="modal">
-	  <div class="modal-content">
-	    <a class="close">&times;</a>
-	    <section class="privacy">
-	      
-	      <h1>Privacy Policy</h1>
-	      
-	      <h3>Who we are</h3>
-	      <p>Our name <strong>Phone1st</strong><br>
-	      Our website address is: <strong>https://phone1st.org</strong></p>
-	      
-	      <h2>What personal data we collect and why we collect it</h2>
-	      
-	      <h3>Comments</h3>
-	      <p>At present there are no comments on this website should this change, and we start to use comments this privacy policy will be updated to accommodate comments.</p>
-	      
-	      <h3>Media</h3>
-	      <p>Visitors to the website can download and extract any location data from images on the website.</p>
-	      
-	      <h3>Contact forms</h3>
-	      <p>We collect names, email address and a optional message from a subscription form which saves the information to Firebase. We will use your information to keep you informed of new articles or the latest news regarding the Phone1st website. We will answer any messages to the best of our ability and may contact you via email over your message. Your information will not be passed on to a third party. Firebase has its own Privacy Policy which can be viewed <a href="https://policies.google.com/privacy">here</a></p>
-	      
-	      <h3>Cookies</h3>
-	      
-	      <p>We don’t use cookies but search engines, social media sites may store cookies about this site on your browser.</p>
-	      
-	      <h3>Embedded content from other websites</h3>
-	      
-	      <p>Articles on this site may include embedded content (<em>e.g. videos, images, articles, etc.</em>). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>
-	      
-	      <p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>
-	      
-	      <h3>Analytics</h3>
-	      
-	      <p>This site uses Google Analytics. The Google Analytics Privacy Policy can be viewed <a href="https://policies.google.com/privacy">here</a></p>
-	      
-	      <h2>Who we share your data with?</h2>
-	      
-	      <p>Phone1st does not share any personal data with anyone.</p>
-	      
-	      <h3>How long we retain your data</h3>
-	      
-	      <p>If you use the subscription form, your name, email address and message are retained indefinitely or for the life of the website. This is so we can keep you informed of new articles and news associated with the Phone1st website.</p>
-	      
-	      <h3>What rights you have over your data</h3>
-	      
-	      <p>If you use the subscription form and have left data (<em>name, email address and message</em>), you can request the data to be deleted by contacting the administrator of the Phone1st website. Contact <a href="mailto:h@bylucas.co.uk">h@bylucas.co.uk</a> – your data will be deleted immediately, and you will receive no more article or news updates from Phone1st.</p>
-	      
-	      <h3>Where we send your data</h3>
-	      
-	      <p>We send your data to Firebase and Google Analytics. Your data is not used by a third party for marketing purposes.
-	      </p>
-	      
-	      <h3>Social Media</h3>
-	      
-	      <p>There are links on the Phone1st website to social media sites who have their own privacy policies. These sites include <a href="https://www.linkedin.com/legal/privacy-policy">LinkedIn</a>, <a href="https://www.adobe.com/privacy.html">Behance</a> and <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">Github</a>. Click on the link to view their privacy policy.</p>
-	      
-	      <h3>Our contact information</h3>
-	      
-	      <p>If you have any concerns about your data or this privacy policy you can contact <a href="mailto:h@bylucas.co.uk">h@bylucas.co.uk</a>.</p>
-	      
-	      <h2>Additional information</h2>
-	      
-	      <h3>How we protect your data</h3>
-	      
-	      <p>Your data can be at risk to hackers. Do not send any sensitive information via the subscription form eg. <em>Payment information or passwords</em>.</p>
-	      
-	      <h3>What data breach procedures we have in place</h3>
-	      
-	      <p>We have no data breach procedures in place eg. <em>no data encryption</em>.</p>
-	      
-	      <h3>Additional Links</h3>
-	      
-	      <p>Any additional links to websites on Phone1st will have their own privacy policies which should be able to be viewed on their website.</p>
-	      
-	    </section>
-	  </div>
-	</div>
-	
-	
-	<script>
-	/*jslint browser*/
-	/*global window*/
-	(function iife() {
-	    "use strict";
-	    function closestEl(el, selector) {
-	        var doc = el.document || el.ownerDocument;
-	        var matches = doc.querySelectorAll(selector);
-	        var i;
-	        while (el) {
-	            i = matches.length - 1;
-	            while (i >= 0) {
-	                if (matches.item(i) === el) {
-	                    return el;
-	                }
-	                i -= 1;
-	            }
-	            el = el.parentElement;
-	        }
-	        return el;
-	    }
-	    var modalBtns = document.querySelectorAll(".button");
-	    modalBtns.forEach(function addBtnClickEvent(btn) {
-	        btn.onclick = function showModal() {
-	            var modal = btn.getAttribute("data-modal");
-	            document.getElementById(modal).style.display = "block";
-	        };
-	    });
-	
-	    var closeBtns = document.querySelectorAll(".close");
-	    closeBtns.forEach(function addCloseClickEvent(btn) {
-	        btn.onclick = function closeModal() {
-	            var modal = closestEl(btn, ".modal");
-	            modal.style.display = "none";
-	        };
-	    });
-	
-	    window.onclick = function closeOnClick(event) {
-	        if (event.target.className === "modal") {
-	            event.target.style.display = "none";
-	        }
-	    };
-	}());
-	</script>
-	
-	      
-	           
-	
-	          
-	
-	
-	
 
 </body>
 

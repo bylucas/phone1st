@@ -79,7 +79,6 @@ a {
 @import "site/active-header";
 @import "site/toggle-button";
 @import "site/overlay";
-//@import "site/breadcrumbs";
 @import "site/parallax";
 @import "site/post";
 @import "site/grids";
@@ -91,6 +90,8 @@ a {
 @import "site/sitemap";
 @import "site/privacy";
 @import "site/home";
+@import "site/about";
+@import "site/about-tabs";
 @import "site/related";
 
 
@@ -132,7 +133,7 @@ a[href^="javascript:"]:after {
 
 pre,
 blockquote {
-	border: 1px solid #999;
+	border: 1px solid rgb(139, 121, 121);
 	page-break-inside: avoid;
 }
 // Printing Tables:

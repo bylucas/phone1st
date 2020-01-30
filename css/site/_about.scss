@@ -1,0 +1,75 @@
+
+
+.about-logo {
+	@include size(4.8rem);
+	border: 2px solid $white;
+	border-radius: 50px;
+	margin: 0;
+
+}
+
+.author-meta {
+	text-align: center;
+	font-size: $third;
+	color: $white;
+	vertical-align: middle;
+	svg {
+	@include size(.8rem);
+	fill: $white;
+	}
+
+	span {
+		font-size: $third;
+		margin: 0 3px;
+	}
+}
+
+.bio {
+	text-align: center;
+	padding: $spacer/3 $spacer/3 $spacer/2 $spacer/3;
+	@include margin($spacer 0);
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+
+	h2 {
+		font-family: $font;
+		font-weight: 300;
+		font-size: $font-size*1.5;
+		line-height: 1.4;
+		color: $medium-gray;
+
+	}
+}
+
+@include media(700) {
+
+	.about-logo {
+	@include size(5.8rem);
+
+}
+
+
+	.author-meta {
+	
+	font-size: $secondary;
+	
+	svg {
+	@include size(1rem);
+	
+	}
+
+	span {
+		font-size: $secondary;
+		margin: 0 3px;
+	}
+}
+}
+
+@include media(900) {
+
+	.about-logo {
+	@include size(6.2rem);
+
+}
+}

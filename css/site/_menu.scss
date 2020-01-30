@@ -41,25 +41,12 @@ $main-color: $blue;
   a {
     color: #fff;
     opacity: 0.7;
-
-    &:hover {
-      opacity: 1;
-    text-decoration: none;
-    }
   }
 }
 
 .accordion li:last-child { border-bottom: 0; }
 
 .accordion li span {
-  //font-family: 'casper';
-  // position: absolute;
-  // top: 15px;
-  // left: 8px;
-  //font-size: 2.4rem;
-  //color: #fff;
-  //   opacity: 0.8;
-  // transition: all 0.4s ease;
 
   svg {
     width: 25px;
@@ -128,10 +115,6 @@ $main-color: $blue;
   transition: all 0.25s ease;
 }
 
-.submenu a:hover {
-  opacity: 1;
-    text-decoration: none;
-}
 
 @include media(600) {
   .accordion {
@@ -154,6 +137,13 @@ $main-color: $blue;
 .bigger {
     font-size: $lead*2;
   }
+
+  .accordion .link a:hover,
+  .submenu a:hover {
+  opacity: 1;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
 }
 
 .accordion .link {

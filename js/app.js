@@ -1,138 +1,190 @@
-// as the page loads, call these scripts
-jQuery(document).ready(function ($) {
+/////////// LOADER ///////////
 
-$body              = $('body'),
-$mainHeader        = $('#masthead'),
-$offcanvasToggle   = $('.offcanvas-toggle'),
-$offcanvasMenu     = $('#offcanvas-menu'),
-lastScrollTop     = 0,
- timer             = 800;
+Vue.component('spinner', {
+  template: '#spinner-loader',
 
-// Wait for window load
-$(window).on("load", function (e) {
-	$('.loader').fadeOut(1000);
-});
+  props: {
+    status: {
+      type: Boolean,
+      default: true
+    },
 
-//Check to see if the window is top if not then display button
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 300) {
-    $('.back-to-top').fadeIn();
-    } else {
-    $('.back-to-top').fadeOut();
-}
-});
+    rotation: {
+      type: Boolean,
+      default: true
+    },
 
-// Page scrolling script
-	$('a[href*="#"]:not([href="#"], [title])').click(function () {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				$('html,body').animate({
-					scrollTop: target.offset().top
-				}, 1000);
-				return false;
-			}
-		}
-	});
-//////////////////
-	$(window).scroll(function(event){
-            if(timer) {
-                window.clearTimeout(timer);
-            }
+    size: {
+      type: Number,
+      default: 30
+    },
 
-            timer = window.setTimeout(function() {
-              var st = $(this).scrollTop();
-              if (st > lastScrollTop){
-                // Scroll down
-                if (st >= 10) {
-                  $mainHeader.removeClass('active-header');
-                }
-              } else {
-                // Scroll up
-                if (st <= 200) {
-                  $mainHeader.addClass('active-header');
-                } else {
-                  $mainHeader.addClass('active-header');
-                }
-              }
-              lastScrollTop = st;
-            }, 20);
-          });
+    depth: {
+      type: Number,
+      default: 3
+    },
 
-////////////////////////////////////////////////
+    speed: {
+      type: Number,
+      default: 1.0
+    },
 
-$offcanvasToggle.click( function(e) {
-            // Remove default action
-              e.preventDefault();
-            // Toggle open/close classes
-              // if ($body.hasClass('search-open')){
-              //   $body.removeClass('search-open');
-              //   $searchMenu.fadeOut(300);
-              $offcanvasMenu.delay(300).fadeToggle();
-              // } else {
-              //$offcanvasMenu.fadeToggle(300);
-              // }
-              $body.toggleClass('offcanvas-open');
-              //$mainHeader.toggleClass('remove-dark');
-               $mainHeader.addClass('active-header');
+    color: {
+      type: String,
+      default: '#6589b6'
+    }
+  },
 
-          });
+  data() {
+    return {
+      rotationAnimations: ['forward', 'backward'],
+      sizeUnits: 'px',
+      timeUnits: 's'
+    }
+  },
 
-//////////////////////////////////////
+  computed: {
+    rotationDirection() {
+        return this.rotation ? this.rotationAnimations[0] : this.rotationAnimations[1];
+      },
 
-//Menu
-   $(function() {
-  var Accordion = function(el, multiple) {
-    this.el = el || {};
-    this.multiple = multiple || false;
+      spinnerSize() {
+        return this.size + this.sizeUnits;
+      },
 
-    // Variables privadas
-    var links = this.el.find('.link');
-    // Evento
-    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+      spinnerDepth() {
+        return this.depth + this.sizeUnits;
+      },
+
+      spinnerSpeed() {
+        return this.speed + this.timeUnits;
+      },
+
+      spinnerStyle() {
+        return {
+          borderTopColor: this.hexToRGB(this.color, 0.15),
+          borderRightColor: this.hexToRGB(this.color, 0.15),
+          borderBottomColor: this.hexToRGB(this.color, 0.15),
+          borderLeftColor: this.color,
+          width: this.spinnerSize,
+          height: this.spinnerSize,
+          borderWidth: this.spinnerDepth,
+          animationName: this.rotationDirection,
+          animationDuration: this.spinnerSpeed
+        }
+      }
+  },
+  methods: {
+    hexToRGB(hex, alpha) {
+      var r = parseInt(hex.slice(1, 3), 16),
+        g = parseInt(hex.slice(3, 5), 16),
+        b = parseInt(hex.slice(5, 7), 16);
+
+      if (alpha) {
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      } else {
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+    }
   }
+});
 
-  Accordion.prototype.dropdown = function(e) {
-    var $el = e.data.el;
-      $this = $(this),
-      $next = $this.next();
-
-    $next.slideToggle();
-    $this.parent().toggleClass('open');
-
-    if (!e.data.multiple) {
-      $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+new Vue({
+  el: '#app-loader',
+  data: function () {
+    return {
+      spinner: {
+        size: 70,
+        status: true,
+        color: '#B1212F',
+        depth: 3,
+        rotation: true,
+        speed: 0.8
+      }
     };
-  } 
+  },
+  mounted: function () {
+    var body = document.body
+    setTimeout(function () {
+      body.classList.add('loaded')
+    }, 1000)
+  }
+})
 
-  var accordion = new Accordion($('#accordion'), false);
-});
+////////////// BACK TO THE TOP ///////////////
 
-//check form fields
-   $( '.js-input' ).keyup(function() {
-  if( $(this).val() ) {
-     $(this).addClass('not-empty');
-  } else {
-     $(this).removeClass('not-empty');
+Vue.component('backtotop', {
+  template: '#backtotop',
+  data: function () {
+    return {
+      isVisible: false
+    };
+  },
+  methods: {
+    initToTopButton: function () {
+      $(document).bind('scroll', function () {
+        var backToTopButton = $('.goTop');
+        if ($(document).scrollTop() > 250) {
+          backToTopButton.addClass('isVisible');
+          this.isVisible = true;
+        } else {
+          backToTopButton.removeClass('isVisible');
+          this.isVisible = false;
+        }
+      }.bind(this));
+    },
+    backToTop: function () {
+      $('html,body').stop().animate({
+        scrollTop: 0
+      }, 'slow', 'swing');
+    }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.initToTopButton();
+    });
   }
 });
 
-$('article').each(function() {
-
-  let _this = $(this);
-
-  _this.readingTime({
-    readingTimeTarget: _this.find('.eta'),
-    wordCountTarget: _this.find('.words'),
-    remotePath: _this.attr('data-file'),
-    remoteTarget: _this.attr('data-target')
-  });
+new Vue({
+  el: '#app-top',
 });
 
-});//end jquery
+///////// MODAL ///////////
+Vue.component('modal', {
+  template: '#modal-template'
+})
 
-//Subscribe form
+// modal on subcribe form on posts
+new Vue({
+  el: '#app-modal',
+  data: {
+    showModal: false
+  }
+})
+
+// modal on overlay with social
+new Vue({
+  el: '#app-social-modal',
+  data: {
+    showModal: false
+  }
+})
+
+// modal on footer x 3
+new Vue({
+  el: '#app-footer-modal',
+  data: {
+    showModal: false,
+    showModalSitemap: false,
+    showModalPrivacy: false
+  }
+})
+
+///////// CONTACT ///////////
+
+var emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
 // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyAi0HZMbjVLKrfYsCdj3To2osTNCBrg6z4",
@@ -147,49 +199,79 @@ $('article').each(function() {
   firebase.initializeApp(firebaseConfig);
 
 // Reference messages collection
-var db = firebase.firestore();
+const db = firebase.firestore();
 
-let formMessage = db.collection('users');
+var usersRef = db.collection('users');
 
-//listen for submit event//(1)
-document.getElementById('contact-form')
-  document.addEventListener('submit', formSubmit);
 
-//Submit form(1.2)
-function formSubmit(e) {
-  e.preventDefault();
-  // Get Values from the DOM
-  let name = document.querySelector('#name').value;
-  let email = document.querySelector('#email').value;
-  let message = document.querySelector('#message').value;
+Vue.component('contact', {
+  template: '#contact',
 
-  //send message values
-  sendMessage(name, email, message);
+  data: function () {
+    return {
+      newUser: {
+        name: '',
+        email: '',
+        message: ''
+      }
+    };
+  },
 
-  //Show Alert Message(5)
-  document.querySelector('.alert').style.display = 'block';
+  firebase: {
+    users: usersRef
+  },
 
-  //Hide Alert Message After Seven Seconds(6)
-  setTimeout(function() {
-    document.querySelector('.alert').style.display = 'none';
-  }, 6000);
+  methods: {
+    submitForm: function (event) {
+      (this.validate()) ? this.success(): this.fail();
+    },
+    validate: function () {
+      return (this.newUser.name != '' && (this.isAnEmail(this.newUser.email))) ? true : false;
+    },
 
-  //Form Reset After Submission(7)
-  document.getElementById('contact-form').reset();
-}
+    success: function () {
+      swal('Success', 'you did it', 'success');
+      this.addUser();
+      this.saveEntry();
 
-//Send Message to Firebase(4)
 
-function sendMessage(name, email, message) {
-   //let newFormMessage = formMessage;
-  formMessage.add({
-    name: name,
-    email: email,
-    message: message
-  });
+    },
 
-  
-}
+    addUser: function () {
+      usersRef.add(this.newUser)
+      if (this.success) {
+        this.newUser.name = ''
+        this.newUser.email = ''
+        this.newUser.message = ''
+      }
+    },
+
+    fail: function () {
+      swal('Opps', 'something is wrong', 'error');
+    },
+    isAnEmail: function (string) {
+      return (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(string)) ? true : false;
+    },
+
+    saveEntry: function () {
+      this.resetData();
+    },
+    resetData: function () {
+      this.newUser.name = '';
+      this.newUser.email = '';
+      this.newUser.messsage = ''
+    }
+  }
+})
+
+//Tabs on Author Portfolio page
+
+new Vue({
+  el: '#app-tab',
+  data: {
+    activetab: 0
+  }
+})
 
 
 

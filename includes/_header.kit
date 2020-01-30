@@ -4,24 +4,28 @@
 <!-- @import _meta -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i|Source+Code+Pro|Ubuntu+Condensed&display=swap" />
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-	<div id="top" class="wrapper">
+	<div class="wrapper">
 
-		<div class="loader" id="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-  </div>
+		<div id="loader-wrapper">
+      <div id="app-loader">
+        <spinner :status="spinner.status" :color="spinner.color" :size="spinner.size" :depth="spinner.depth" :rotation="spinner.rotation" :speed="spinner.speed"></spinner>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+      <div id="app-top">
+      <backtotop></backtotop>
+    </div>
 
 		<div id="masthead" class="active-header"> 
      <div class="inner">       
        
       <nav class="site-nav">
     <div class="site-nav-left">
-               <a href="index.html" rel="home"><img src="img/phone1st-small-logo.png" alt="Phone1st logo" width="50px" height="50px" /><span>Documents</span></a>      
+               <a href="index.html" rel="home">Phone1st</a>      
     </div>
     <div class="site-nav-right">
        <ul class="toggles" id="header-list">

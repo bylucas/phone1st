@@ -6,31 +6,42 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://bylucas.co.uk/</loc>
+  <loc>https://phone1st.org/</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://bylucas.co.uk/index.html</loc>
+  <loc>https://phone1st.org/index.html</loc>
   <changefreq>monthly</changefreq>
 </url>
 
 <url>
-  <loc>https://bylucas.co.uk/contact.html</loc>
+  <loc>https://phone1st.org/docs/about.html</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://bylucas.co.uk/basics.html</loc>
-  <changefreq>monthly</changefreq>
-</url>
-
 
 <url>
-  <loc>https://bylucas.co.uk/blog.html</loc>
+  <loc>https://phone1st.org/docs/basics.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://phone1st.org/docs/welcome.html</loc>
   <changefreq>monthly</changefreq>
 </url>
 
 <url>
-  <loc>https://bylucas.co.uk/sitemap.html</loc>
+  <loc>https://phone1st.org/docs/gude-to-markdown.html</loc>
   <changefreq>monthly</changefreq>
 </url>
+
+<url>
+  <loc>https://phone1st.org/docs/introducing-scss.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://phone1st.org/docs/bourbon-neat.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
+
 </urlset>

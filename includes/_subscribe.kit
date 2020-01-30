@@ -1,0 +1,28 @@
+<div class="subscribe-area">
+		<section class="call-modal">
+	<div id="app-modal">
+		<h3 id="show-modal" @click="showModal = true">Subscribe</h3>
+		<p>and get the latest posts delivered right to your inbox</p>
+		<!-- use the modal component, pass in the prop -->
+		<modal v-if="showModal" @close="showModal = false">
+			<div slot="body">
+				<contact></contact>
+			</div>
+		</modal>
+	</div>
+</section>
+
+<section class="social-area">
+			<h4>Follow bylucas</h4>
+		<div id="social-navigation" class="social-links">
+
+			<a class="social-link social-link-fb" href="<!-- $linkedin -->" target="_blank" rel="noopener"><!-- @import ../icons/linkedin.kit --></a>
+
+			 <a class="social-link social-link-fb" href="<!-- $behance -->" target="_blank" rel="noopener"><!-- @import ../icons/behance.kit --></a>
+
+			<a class="social-link social-link-fb" href="<!-- $github -->" target="_blank" rel="noopener"><!-- @import ../icons/github.kit --></a>
+
+		</div>
+
+			</section>
+		</div>

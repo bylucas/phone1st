@@ -1,9 +1,10 @@
 
 .parallax {
-    height: 250px;
+    height: 240px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
+    //background-attachment: fixed;
     //margin-top: 50px;
 }
 
@@ -15,7 +16,7 @@ justify-content: center;
 align-items: center;
   //width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   //color: black;
 }
 
@@ -27,7 +28,7 @@ align-items: center;
   font-size: $font-size*1.6;
   letter-spacing: 2px;
   color: $white-gray;
-  margin-bottom: 0;
+  margin: 0;
 }
 p {
   font-size: $font-size;
@@ -39,9 +40,9 @@ p {
 
 @include media(600) {
 
-//   .parallax {
-//   margin-bottom: $spacer*1.6;
-// }
+  .parallax {
+  height: 320px;
+}
 
   .overlay {
   //height: 260px;
@@ -51,7 +52,7 @@ p {
   padding: 0 40px;
   h1 {
   font-size: $font-size*2.7;
-  margin-top: $spacer*1.5;
+  //margin-top: $spacer*1.5;
 }
 p {
   font-size: $font-size*1.4;
@@ -67,7 +68,7 @@ p {
 .title-wrap {
   padding: 0 50px;
   h1 {
-  margin-top: $spacer*1.1;
+  //margin-top: $spacer*1.1;
   font-size: $font-size*3;
 }
 p {
@@ -80,7 +81,7 @@ p {
 
   .parallax {
     //margin-bottom: 0;
-    height: 650px;
+    height: 630px;
     background-attachment: fixed;
   }
    .overlay {
@@ -101,13 +102,13 @@ p {
 @include media(1100) {
 
    .parallax {
-  height: 700px;
+  //height: 700px;
 }
 .title-wrap {
   padding: 0;
   max-width: 800px;
   h1 {
-  //margin-top: $spacer*5.5;
+  margin-top: 0;
   font-size: $font-size*3.5;
 }
 p {
@@ -119,7 +120,7 @@ p {
 @include media(1300) {
 
    .parallax {
-  height: 800px;
+  //height: 800px;
 }
 .title-wrap {
   h1 {
@@ -135,7 +136,7 @@ p {
 @include media(1800) {
 
    .parallax {
-  height: 850px;
+  //height: 850px;
 }
 .title-wrap {
   h1 {

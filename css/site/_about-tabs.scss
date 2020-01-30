@@ -1,0 +1,151 @@
+// =======================
+// Tabs
+// =======================
+
+.author-portfolio {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	margin: 0 0 40px;
+	min-height: 300px;
+	background: #fff center center;
+	background-size: cover;
+	border-radius: 5px;
+	box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+	transition: all 0.5s ease;
+	text-align: center;
+	position: relative;
+	border-bottom: #EBF2F6 1px solid;
+}
+.tab-container {
+	margin: 0 auto;
+	position: relative;
+	padding: $spacer*1.5 $spacer/3 $spacer $spacer/3;
+}
+.tabs:not(:last-child) {
+	margin-bottom: 1.3rem;
+}
+.tabs {
+	display: flex;
+	justify-content: center;
+}
+.tabs ul {
+	li {
+		display: inline;
+		@include padding(0 14px);
+	}
+}
+.tabs a {
+	color: $medium-gray;
+}
+.active {
+	color: $blue !important;
+	svg {
+	fill: $blue !important;
+}
+}
+.tabs span {
+	text-align: center;
+}
+.tab-icon {
+	display: inline-block;
+	cursor: pointer;
+	svg {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
+}
+.tab-label {
+	display: block;
+	font-size: .9rem;
+	margin-top: 10px;
+}
+.tab-content {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+.tab-items {
+	height: 100%;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	transform-origin: 50% 50%;
+	transform: scaleY(1) translateZ(0);
+}
+.tab-item {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	div {
+		flex: 1 1 280px;
+		display: flex;
+		margin: $spacer $spacer/2;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		img {
+			margin: 0;
+		}
+	}
+	p {
+		font-size: .9rem;
+		margin-top: $spacer;
+		svg {
+			vertical-align: middle;
+			margin-left: 3px;
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+}
+.flip-enter-active {
+	transition: all .2s cubic-bezier(0.55, 0.085, 0.68, 0.53); //ease-in-quad
+}
+.flip-leave-active {
+	transition: all .25s cubic-bezier(0.25, 0.46, 0.45, 0.94); //ease-out-quad
+}
+.flip-enter,
+.flip-leave-to {
+	transform: scaleY(0) translateZ(0);
+	opacity: 0;
+}
+@include media(700) {
+	.tab-container {
+		padding: $spacer 0 $spacer/2 0;
+	}
+	.tabs ul {
+		li {
+			@include padding(0 20px);
+		}
+	}
+
+	.tab-item div {
+		flex: 1 1 190px;
+	}
+}
+
+@include media(900) {
+	.tabs ul {
+		li {
+			@include padding(0 30px);
+		}
+	}
+	.tabs a:hover {
+		color: $blue;
+		svg {
+			fill: $blue;
+		}
+	}
+	.tab-container {
+		padding: $spacer;
+	}
+	.tab-item div {
+		flex: 1 1 210px;
+	}
+	.tab-content p a.behance-link svg:hover {
+		fill: $blue;
+	}
+}
