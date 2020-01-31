@@ -35,7 +35,7 @@
 	h2 {
 		font-family: $font;
 		font-weight: 300;
-		font-size: $font-size*1.5;
+		font-size: $font-size*1.3;
 		line-height: 1.4;
 		color: $medium-gray;
 
@@ -48,6 +48,11 @@
 	@include size(5.8rem);
 
 }
+
+h2 {
+		font-size: $font-size*1.5;
+
+	}
 
 
 	.author-meta {

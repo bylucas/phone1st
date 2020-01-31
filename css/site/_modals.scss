@@ -143,6 +143,7 @@ cursor: pointer;
 .modal-container {
     width: 600px;
     border-radius: 4px;
+     max-height: calc(100vh - 150px);
 }
 
 

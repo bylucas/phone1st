@@ -99,6 +99,12 @@ p {
 }
 }
 
+@media only screen and (orientation: landscape) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
 @include media(1100) {
 
    .parallax {
