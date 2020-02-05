@@ -6,28 +6,28 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Introducing Scss - Start using scss for smart, efficient stylesheets | phone1st-bylucas</title>
+<title>Welcome to the phone1st starter theme for html | phone1st-bylucas</title>
 <meta name="HandheldFriendly" content="True" />
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="description" content="Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it.">
+<meta name="description" content="A light and basic html starter theme that starts phone first to get you off to a quick start with your web developments. Phone1st will save time and build quicker, smarter projects.">
 <meta name="author" content="h@bylucas.co.uk">
 <meta name="robots" content="INDEX,FOLLOW">
-<meta name="keywords" content="Scss, Sass, Css">
+<meta name="keywords" content="phone1st, theme, starter, develop">
 <link rel="canonical" href="https://www.phone1st.org/welcome.html" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:site_name" content="phone1st-bylucas" />
 <meta property="og:type" content="website" />
 
-<meta property="og:title" content="Introducing Scss - Start using scss for smart, efficient stylesheets" />
-<meta property="og:description" content="Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it." />
+<meta property="og:title" content="Welcome to the phone1st starter theme for html" />
+<meta property="og:description" content="A light and basic html starter theme that starts phone first to get you off to a quick start with your web developments. Phone1st will save time and build quicker, smarter projects." />
 <meta property="og:url" content="https://www.phone1st.org/welcome.html" />
 <meta property="og:image" content="https://www.phone1st.org/../img/phone1st-theme-header.jpg" />
 <meta property="og:image:width" content="580"/>
 <meta property="og:image:height" content="296"/>
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Introducing Scss - Start using scss for smart, efficient stylesheets" />
-<meta name="twitter:description" content="Forget about writing long winded css. The scss basics are easy to pick-up and once you start using scss you’ll keep using it." />
+<meta name="twitter:title" content="Welcome to the phone1st starter theme for html" />
+<meta name="twitter:description" content="A light and basic html starter theme that starts phone first to get you off to a quick start with your web developments. Phone1st will save time and build quicker, smarter projects." />
 <meta name="twitter:url" content="https://www.phone1st.org/welcome.html" />
 <meta name="twitter:image:src" content="https://www.phone1st.org/../img/phone1st-theme-header.jpg" />
 
@@ -288,10 +288,80 @@
       </div>
   
   <div class="post-content inner">
+<blockquote>
+<p>A light and basic html starter theme that starts <em>phone first</em> to get you off to a quick start with your web developments. The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. <strong>Once you start using Phone1st you&#8217;ll keep using it</strong>.</p></blockquote>
 
-<blockquote><p>Phone1st theme readme explained</p></blockquote>
+<p>All start-up files are in place ready for building your site. You can view the theme <a href="https://phone1st-theme.netlify.com/">here</a></p>
 
-<h2>To Come</h2>
+<h2>CodeKit</h2>
+
+<p><a href="https://codekitapp.com/">CodeKit</a> (<em>Mac only</em>) is a <em>pre-processing</em> app, another is <a href="https://prepros.io/">Preprose</a> (<em>Mac and Windows</em>) which can easily be used with Phone1st. Both are relatively cheap and good at what they do. They do other stuff besides <em>processing scss</em> to <em>css</em>, they compile all the cutting-edge languages like <em>Less</em>, <em>Stylus</em> and <em>coffeeScript</em>. They <em>live-refresh</em> your browsers. They <em>combine</em>, <em>minify</em> and <em>syntax-check javaScript</em> and <em>crunch</em> your <em>images</em>&#8230; <em>Well worth their price</em>.</p>
+
+<p>Phone1st scripts are set to minify and the css styles are set to compress on output to the <strong>build</strong> folder.</p>
+
+<p>The theme should build when added to Codekit, but if not:</p>
+
+<ul>
+<li><em>Set style.scss to path /build/css/style.css</em></li>
+<li><em>Set app.js to path /build/js/app-min.js</em></li>
+</ul>
+
+<p>To view the test page</p>
+
+<ul>
+<li><em>Set test.kit to path /build/test/test.html</em></li>
+<li><em>Set test.scss to path /build/test/test.css</em></li>
+<li><em>Set app.js to path /build/test/app-min.js</em></li>
+</ul>
+
+<h2>SCSS</h2>
+
+<p>Phone1st uses <em>Scss</em> to write css styles. If your not using scss you should be, <em>it’s a real time saver</em>. Scss enables the developer to write <em>quicker</em> and more <em>efficient</em> css. The idea is to use <em>partial</em> stylesheets for different sections i.e. <em>typography</em>, <em>form</em>s, <em>images</em>, <em>etc</em> and have a <em>main</em> stylesheet collect these <em>partial</em> stylesheets. Then output the <em>main</em> scss stylesheet, via a <em>pre-processor</em>, (eg <em>CodeKit</em>), to a css file. This together with <em>variables</em> and <em>mixins</em>, make writing css more efficient. It’s not difficult to pick up the basics which are all you need to get started. See the article <a href="introducing-scss.html">Introducing Scss</a> for a full introduction on Scss.</p>
+
+<h2>Test Folder/Page</h2>
+
+<p>See the <em>test</em> page before you start building your site. Use this page to set the basics, <em>typography</em>, <em>colours</em>, <em>font-size</em>, <em>margins</em>, <em>etc</em>. It saves a lot of time to set the basics and do some experimenting before starting on the layout and remember <em>you can remove this folder anytime and it won’t effect your site</em>.</p>
+
+<h2>No Menu</h2>
+
+<p>Because of the many <em>responsive menus</em> now available it’s pointless adding one to the theme. Many are pre-built and just need integrating into your design.</p>
+
+<h2>No Icon Library</h2>
+
+<p>Same reason as <em>no menu</em>, there are too many <em>icon libraries</em> around. Svg is becoming more and more popular and is replacing the need for icon libraries.</p>
+
+<h2>Basic SEO</h2>
+
+<p>The following <em>variables</em> for Meta Data are available with some <em>Facebook</em> and <em>Twitter</em> meta. These are optional and you should add or subtract what you require. This basic SEO is enough to satisfy the search engines and is easily controlled with the <em>page variables</em>. SEO requires a lot of thought and if your serious about page ranking then spending time researching SEO or even paying for expert SEO is required as it’s a massive subject. <em>Always check your page meta-data in the browser inspector</em>.</p>
+
+<p>Meta variables available on the pages:</p>
+
+<pre><code class="lang-html">&lt;!-- $title Page title --&gt; //Basic page title for use with navigation etc. eg Home About  
+&lt;!-- $SEO-title --&gt; //A more descriptive title - 60ish characters - this is read by search engines
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: Your sitename is added after the $SEO-title</p>
+</blockquote>
+
+<pre><code class="lang-html">&lt;!-- $description Page description --&gt; //120ish characters  
+&lt;!-- $keyword yourword, words --&gt; //word or words  
+&lt;!-- $url index.html --&gt; //exact url  
+&lt;!-- $post-image eg tile-wide.png --&gt; //image to use for Facebook and Twitter meta image ie post header image
+</code></pre>
+
+<p>See <em>includes/meta.kit</em>, set the <em>website path</em> and <em>sitename</em> at the top of the page.</p>
+
+<p>The <em>page variables</em> you set on your web pages along with your <em>website path</em> and <em>sitename</em> at the top of <em>meta.kit</em>, will be used to set the meta data.</p>
+
+<ul>
+<li>sitename is usually the name in your web address ie <em>www.mysitename.com</em></li>
+<li>your sitename would be <em>mysitename</em></li>
+</ul>
+
+<h2>Make it your own starter theme</h2>
+
+<p>Once you have tried <em>Phone1st</em> you will probably want to add or subtract from it to turn it into <em>your own starter theme</em>. This will save you time when starting your projects.</p>
 
 <hr>
 
