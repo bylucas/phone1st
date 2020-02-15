@@ -35,7 +35,7 @@
 .social-link svg {
     height: 2.4rem;
     width: 2.4rem;
-    fill: $white-gray;
+    fill: $white;
 }
 .social-link-fb svg {
     height: 1.4rem;
@@ -49,6 +49,15 @@
     font-style: italic;
     opacity: .7;
     padding-right: 15px;
+}
+
+//social icons in admin area
+.admin-area {
+    //margin-top: $spacer/4;
+
+.social-links a:last-of-type {
+    padding-right: 0;
+}
 }
 
 @include media(600) {

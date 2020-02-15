@@ -181,6 +181,7 @@ new Vue({
   }
 })
 
+
 ///////// CONTACT ///////////
 
 var emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -201,18 +202,18 @@ var emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(
 // Reference messages collection
 const db = firebase.firestore();
 
-var usersRef = db.collection('users');
+var usersRef = db.collection('phone1st');
+var usersRef2 = db.collection('phone1st-contact');
 
-
-Vue.component('contact', {
-  template: '#contact',
+//Phone1st Subscribe
+Vue.component('subscribe', {
+  template: '#subscribe',
 
   data: function () {
     return {
       newUser: {
         name: '',
-        email: '',
-        message: ''
+        email: ''
       }
     };
   },
@@ -242,6 +243,67 @@ Vue.component('contact', {
       if (this.success) {
         this.newUser.name = ''
         this.newUser.email = ''
+      }
+    },
+
+    fail: function () {
+      swal('Opps', 'something is wrong', 'error');
+    },
+    isAnEmail: function (string) {
+      return (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(string)) ? true : false;
+    },
+
+    saveEntry: function () {
+      this.resetData();
+    },
+    resetData: function () {
+      this.newUser.name = '';
+      this.newUser.email = ''
+    }
+  }
+})
+
+//Phone1st Contact form
+Vue.component('contact', {
+  template: '#contact',
+
+  data: function () {
+    return {
+      newUser: {
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      }
+    };
+  },
+
+  firebase: {
+    users: usersRef2
+  },
+
+  methods: {
+    submitForm: function (event) {
+      (this.validate()) ? this.success(): this.fail();
+    },
+    validate: function () {
+      return (this.newUser.name != '' && this.newUser.messsage != '' && (this.isAnEmail(this.newUser.email))) ? true : false;
+    },
+
+    success: function () {
+      swal('Success', 'you did it', 'success');
+      this.addUser();
+      this.saveEntry();
+
+
+    },
+
+    addUser: function () {
+      usersRef2.add(this.newUser)
+      if (this.success) {
+        this.newUser.name = ''
+        this.newUser.email = ''
+        this.newUser.phone = ''
         this.newUser.message = ''
       }
     },
@@ -259,9 +321,15 @@ Vue.component('contact', {
     resetData: function () {
       this.newUser.name = '';
       this.newUser.email = '';
+      this.newUser.phone = '';
       this.newUser.messsage = ''
     }
   }
+})
+
+new Vue({
+  el: '#app-about-contact',
+  
 })
 
 //Tabs on Author Portfolio page

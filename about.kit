@@ -5,6 +5,8 @@
 <!-- $url about.html -->
 <!-- $post-image img/author-title-image.jpg -->
 
+<!-- $class about -->
+
 <!-- @import includes/_header -->
 
  <div class="parallax" style="background-image: url(<!-- $post-image -->)">
@@ -16,6 +18,21 @@
     <div class="author-meta">
           <!-- @import icons/_location-main --> Manchester UK <span>|</span> <!-- @import icons/_post-stats --> <!-- $post-count -->
       </div>
+
+      <section class="admin-area">
+    <div id="social-navigation" class="social-links">
+
+      <a class="social-link social-link-fb" href="<!-- $facebook -->" target="_blank" rel="noopener"><!-- @import icons/facebook2.kit --></a>
+
+      <a class="social-link social-link-fb" href="<!-- $linkedin -->" target="_blank" rel="noopener"><!-- @import icons/linkedin.kit --></a>
+
+       <a class="social-link social-link-fb" href="<!-- $behance -->" target="_blank" rel="noopener"><!-- @import icons/behance.kit --></a>
+
+      <a class="social-link social-link-fb" href="<!-- $github -->" target="_blank" rel="noopener"><!-- @import icons/github.kit --></a>
+
+    </div>
+
+      </section>
    
   </div>
 </div>
@@ -28,9 +45,39 @@
   </div>
 
   <!-- @import includes/_about-portfolio -->
+  <!-- @import includes/_about-section -->
+  <!-- @import includes/_work-section -->
+  <!-- @import includes/_contact-section -->
 		
 </section>
 
 <!-- @import includes/_related -->
 
-<!-- @import includes/_footer -->	
+</main>
+  <footer class="footer inner">
+  <div id="app-footer-modal">
+    <p class="small"><a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="docs.html">All Articles</a> | <a href="basics.html">Basics</a> | <a @click="showModalSitemap = true">Sitemap</a> | <a @click="showModalPrivacy = true">Privacy</a></p>
+    
+    <p class="footer-info">&copy; 2020 bylucas <span>|</span> Phone1st Starter theme for html <a href="https://github.com/bylucas/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a> |<a href="https://phone1st-theme.netlify.com/"> Preview Phone1st</a></p>
+
+
+      <modal v-if="showModalSitemap" @close="showModalSitemap = false">
+        <div slot="body">
+          <!-- @import includes/_sitemap -->
+        </div>
+      </modal>
+
+      <modal v-if="showModalPrivacy" @close="showModalPrivacy = false">
+        <div slot="body">
+          <!-- @import includes/_privacy -->
+        </div>
+      </modal>
+  </div>
+  </footer>
+  </div><!-- wrapper   -->
+  <!-- @import includes/_scripts -->
+
+
+</body>
+
+</html>

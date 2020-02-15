@@ -26,7 +26,7 @@
 #masthead {
   @include position(fixed, 0 null null 0);
   padding: 5px;
-  z-index: 1210;
+  z-index: 20010;
   width: 100%;
   transform: translateY(-100%);
   transition: all .2s ease-in-out;

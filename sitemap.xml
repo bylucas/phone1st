@@ -9,21 +9,27 @@
   <loc>https://phone1st.org/</loc>
   <changefreq>weekly</changefreq>
 </url>
+
 <url>
   <loc>https://phone1st.org/index.html</loc>
   <changefreq>monthly</changefreq>
 </url>
 
 <url>
-  <loc>https://phone1st.org/docs/about.html</loc>
+  <loc>https://phone1st.org/about.html</loc>
   <changefreq>monthly</changefreq>
 </url>
+
 <url>
+  <loc>https://phone1st.org/docs/docs.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
 
 <url>
   <loc>https://phone1st.org/docs/basics.html</loc>
   <changefreq>monthly</changefreq>
 </url>
+
 <url>
   <loc>https://phone1st.org/docs/welcome.html</loc>
   <changefreq>monthly</changefreq>

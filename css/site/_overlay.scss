@@ -8,7 +8,7 @@
     z-index: 1200;
     display: none;
     -webkit-overflow-scrolling: touch;
-    overflow-y: scroll; 
+    overflow: scroll;
     
     .container{
       height: 100%;
@@ -31,10 +31,10 @@
   // Offcanvas toggle
 
   body {
-    
+
     &.offcanvas-open {
-      overflow: hidden;
-}
+      overflow-y: hidden !important;
+  }
 
     &.offcanvas-open {
 

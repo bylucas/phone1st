@@ -58,13 +58,16 @@ lastScrollTop     = 0,
 
 ////////////////////////////////////////////////
 
+
+
 $offcanvasToggle.click( function(e) {
             // Remove default action
               e.preventDefault();
             // Toggle open/close classes
-              $offcanvasMenu.delay(300).fadeToggle();
-              $body.toggleClass('offcanvas-open');
-              $mainHeader.addClass('active-header');
+              
+                $body.toggleClass('offcanvas-open');
+                $offcanvasMenu.delay(300).fadeToggle();
+               //$mainHeader.addClass('active-header');
 
           });
 

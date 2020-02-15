@@ -8,7 +8,7 @@
 All startup files are in place ready for building your site. You can view the theme [here](https://phone1st-theme.netlify.com/)
 
 ### Phone1st Documents
-This site promotes the Phone1st Starter theme for html. As well as promoting the Phone1st Theme the articles on this site promote web deveopment and web design in general.
+This site promotes the Phone1st Starter theme for html. As well as promoting the Phone1st Theme the articles on this site promote web development and web design in general.
 
 ### Contact Info:   
 email [h@bylucas.co.uk](mailto:h@bylucas.co.uk)  

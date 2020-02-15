@@ -37,6 +37,14 @@ font-size: $third;
 text-align: center;
 }
 
+//body $class
+.home a[href*="index.html"],
+.about a[href*="about.html"],
+.basics a[href*="basics.html"],
+.all-articles a[href*="docs.html"] {
+	color: red;
+}
+
 @include media(700) {
 	.inner {
 	margin: 0 5%;
