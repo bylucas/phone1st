@@ -79,7 +79,7 @@
 .tab-item {
 	position: relative;
 	display: flex;
-	flex-wrap: wrap;
+	//flex-wrap: wrap;
 	div {
 		flex: 1 1 280px;
 		display: flex;
@@ -129,7 +129,8 @@
 	}
 
 	.tab-item div {
-		flex: 1 1 190px;
+		flex: 1 1 180px;
+		margin: $spacer $spacer/4;
 	}
 }
 
