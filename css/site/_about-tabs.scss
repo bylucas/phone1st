@@ -79,7 +79,7 @@
 .tab-item {
 	position: relative;
 	display: flex;
-	//flex-wrap: wrap;
+	flex-wrap: wrap;
 	div {
 		flex: 1 1 280px;
 		display: flex;
@@ -114,6 +114,21 @@
 	transform: scaleY(0) translateZ(0);
 	opacity: 0;
 }
+
+@include media(600) {
+
+	.tab-container {
+	padding: $spacer*1.5 $spacer/3 $spacer/2 $spacer/3;
+}
+
+	.tab-item div {
+		flex: 1 1 155px;
+		margin: $spacer $spacer/4;
+	}
+}
+
+
+
 @include media(700) {
 
 	.author-portfolio {
