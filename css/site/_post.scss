@@ -166,29 +166,20 @@ a.footnote {
     box-shadow: none !important;
   }
 }
-
-.post-meta {
-  background: $white-gray;
-  padding: 10px;
-  font-size: $third;
-.author {
-    font-family: $alt-font;
-  }
-}
   
   }//post-content
 
 
   @include media(700) {
     .post-content {
-  padding: $spacer*2.5 0 $spacer/2 0;
+  padding: $spacer*1.5 0 $spacer/2 0;
 }
   }
 
 ///////////////////////////////////////////////
 @include media(900) {
 .post-content {
-  //padding: $spacer*2.5 0 $spacer 0;
+  padding: $spacer*2 0 $spacer/2 0;
 
   p {
   font-size: $font-size*1.3;
@@ -295,10 +286,6 @@ figure {
   font-size: $secondary;
 }
 .footnote-ref {
-  font-size: $secondary;
-}
-
-.post-meta {
   font-size: $secondary;
 }
 }

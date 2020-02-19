@@ -179,9 +179,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 @include media(900) {
-    .post-feed {
-    padding: $spacer*3 0 $spacer*1.5 0;
-}
+    
 .post-card-image-link:hover {
     opacity: 1;
 }
