@@ -54,7 +54,8 @@ background: $white-gray;
 
 .post-meta-header-share-tw,
 .post-meta-header-share-fb,
-.post-meta-header-share-li {
+.post-meta-header-share-li,
+.post-meta-header-share-em {
   display: block;
   align-items: center;
   width: 32px;
@@ -74,6 +75,10 @@ background: $white-gray;
 
 .post-meta-header-share-li {
   background: #2867B2;
+}
+
+.post-meta-header-share-em {
+  background: #0A121D;
 }
 
 @include media(700) {
@@ -101,7 +106,8 @@ background: $white-gray;
 
 .post-meta-header-share-tw:hover,
 .post-meta-header-share-fb:hover,
-.post-meta-header-share-li:hover {
+.post-meta-header-share-li:hover,
+.post-meta-header-share-em:hover {
   opacity: 1;
 }
 }
