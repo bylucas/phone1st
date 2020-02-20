@@ -5,6 +5,7 @@ $body              = $('body'),
 $mainHeader        = $('#masthead'),
 $offcanvasToggle   = $('.offcanvas-toggle'),
 $offcanvasMenu     = $('#offcanvas-menu'),
+
 lastScrollTop     = 0,
  timer             = 800;
 
@@ -100,6 +101,39 @@ $offcanvasToggle.click( function(e) {
 
   var accordion = new Accordion($('#accordion'), false);
 });
+
+/* ==========================================================================
+   Parallax cover
+   ========================================================================== */
+var html = $('html');
+var viewport = $(window);
+  var cover = $('.cover');
+  var coverPosition = 0;
+
+  function prlx() {
+    if (cover.length >= 1) {
+      var windowPosition = viewport.scrollTop();
+      (windowPosition > 0) ? coverPosition = Math.floor(windowPosition * 0.25): coverPosition = 0;
+      cover.css({
+        '-webkit-transform': 'translate3d(0, ' + coverPosition + 'px, 0)',
+        'transform': 'translate3d(0, ' + coverPosition + 'px, 0)'
+      });
+      (viewport.scrollTop() < cover.height()) ? html.addClass('cover-active'): html.removeClass('cover-active');
+    }
+  }
+  prlx();
+
+  viewport.on({
+    'scroll': function() {
+      prlx();
+    },
+    'resize': function() {
+      prlx();
+    },
+    'orientationchange': function() {
+      prlx();
+    }
+  });
 
 //Reading Time
 
