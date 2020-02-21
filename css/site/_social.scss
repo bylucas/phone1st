@@ -5,6 +5,7 @@
 // Social Icons
 .social-wrap {
     width: 280px;
+    text-align: center;
     border-top: 1px solid $medium-gray;
     border-bottom: 1px solid $medium-gray;
     @include margin($spacer/2 auto null auto);
@@ -22,6 +23,7 @@
 }
 .social-links a:last-of-type {
     //padding-right: 20px;
+
 }
 .social-link {
     display: flex;
@@ -56,7 +58,7 @@
     //margin-top: $spacer/4;
 
 .social-links a:last-of-type {
-    padding-right: 0;
+    //padding-right: 0;
 }
 }
 
