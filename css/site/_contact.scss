@@ -21,8 +21,8 @@
 .contact-form .form-wrap {
   margin-bottom: $spacer/2;
 }
-.swal-button {
-  padding: 0 10px;
+.catch {
+  @include margin(null auto);
 }
 
 @include media(700) {
