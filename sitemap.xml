@@ -50,4 +50,14 @@
   <changefreq>monthly</changefreq>
 </url>
 
+<url>
+  <loc>https://phone1st.org/reference.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://phone1st.org/js-notes.html</loc>
+  <changefreq>monthly</changefreq>
+</url>
+
 </urlset>

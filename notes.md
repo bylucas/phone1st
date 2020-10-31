@@ -13,3 +13,12 @@ Twitter - https://twitter.com/en/privacy
 
 ### Parallax needs attention
 Either sort out with Vue js or CSS
+
+### Code Snippets
+`&lt;`h1`&gt;`
+
+### Extras
+Change the mention of WordPress in the MarkDown Guide article.  
+Expand the Scss article with ???content section  
+Add links to new articles if required  
+Re-hash about page, maybe get rid or change Tabs area.

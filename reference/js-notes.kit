@@ -1,0 +1,1321 @@
+<!-- $title JS Notes -->
+<!-- $SEO-title Js Notes a reference to basic modern javascript -->
+<!-- $description A quick reference guide to modern javascript when you need a reminder of how to write that line of code. A good introduction to Javascript if your just starting. -->
+<!-- $keyword js, javascript, guide, reference -->
+<!-- $url js-notes.html -->
+<!-- $post-image img/js-notes.jpg -->
+<!-- $class reference -->
+<!-- $cat Reference -->
+<!-- $cat-url reference.html -->
+<!-- $date 22 October 2020 -->
+
+<!-- @include ../includes/_header -->
+
+<article class="post">
+ 
+ <!-- @import ../includes/_parallax -->
+  
+  <div class="post-content inner">
+
+<blockquote>
+  <p>A quick reference guide to modern javascript when you need a reminder of how to write that line of code. A good introduction to Javascript if your just starting.</p>
+</blockquote>
+
+<div class="links">
+  <div class="links-left">
+    <h3>Syntax Basics and Types</h3>
+  	<a href="#variables">Variables</a>
+  	<a href="#strings">Strings</a>
+  	<a href="#strings-methods">Common String Methods</a>
+  	<a href="#numbers">Numbers</a>
+  	<a href="#template-strings">Template Strings</a>
+    <p>===================</p>
+  	<a href="#arrays">Arrays</a>
+    <a href="#null-undefined">Null and Undefined</a>
+    <a href="#booleans-comparisons">Booleans and Comparisons</a>
+    <a href="#loose-comparison">Loose Comparison</a>
+    <a href="#type-conversion">Type Conversion</a>
+    <p>===================</p>
+    <h3>Control Flow</h3>
+    <a href="#for-loops">For Loops</a>
+    <a href="#while-loops">While Loops</a>
+    <a href="#do0while-loops">Do While Loops</a>
+    <p>===================</p>
+    <a href="#if-statements">If Statements</a>
+    <a href="#else-if-statements">Else If Statements</a>
+    <a href="#logical-not">Logical NOT</a>
+    <a href="#break-continue">Break and Continue</a>
+    <a href="#switch-statements">Switch Statements</a>
+    <a href="#variables-block-scope">Variables and Block-Scope</a>
+    <p>===================</p>
+     </div>
+
+    <div class="links-right">
+    <h3>Functions</h3>
+    <a href="#functions">Functions</a>
+    <a href="#arrow-functions">Arrow Functions</a>
+    <p>===================</p>
+    <a href="#callbacks-foreach">Callbacks and forEach</a>
+    <p>===================</p>
+    <h3>Objects</h3>
+    <a href="#object-literals">Object Literals</a>
+    <a href="#math-object">Math Object</a>
+    <a href="#primitive-values">Primitive Values</a>
+    <p>===================</p>
+    <h3>The Document Object Model</h3>
+    <a href="#selectors">Selectors</a>
+    <p class="hide-last">===================</p>
+  </div>
+  </div>
+<hr>
+
+<h2 id="variables">Variables</h2>
+<pre><code class="lang-js">//using let allows us to change the variable
+let age = 25;
+
+//No need to add the let to change same variable
+
+age = 30;
+
+//Using const will not allow the variable to be changed.
+//Only use const if you know you will not need to change variable
+
+const points = 100;
+
+//The old type of variable but is still valid.
+//Many developers still use var
+
+var score = 25
+
+//Spaces are not allowed in variables
+
+mySpace = "100"; //This is ok
+
+my Space = "100"; //This isn't ok
+
+5mySpace = "100"; //Starting with a number isn't allowed
+
+let const = 100; //Using javascript keywords isn't allowed
+
+let mySpace = 'big room'; //camelCase looks neater
+
+let myspace = 'big room'; //This also works
+
+let MYSPACE = 'big room' //And so does this</code></pre>
+
+<hr>
+
+<h2 id="strings">Strings</h2>
+<pre><code class="lang-js">let email = 'michael@michaelcain.co.uk';
+
+// string concatenation
+let firstName = 'Michael';
+let lastName = 'Cain';
+let fullName = firstName + ' ' + lastName;
+
+//Examples
+document.getElementById("demo").innerHTML = 'My name is ' + fullName;//My name is Michael Cain
+document.getElementById("demo2").innerHTML = 'My email is ' + email;//My email is michael@michaelcain.co.uk
+
+//getting individual characters of fullname
+document.getElementById("demo3").innerHTML = fullName[2];//c
+document.getElementById("demo4").innerHTML = fullName[8];//C
+
+// string length
+document.getElementById("demo5").innerHTML = fullName.length;//12
+
+// string methods
+document.getElementById("demo6").innerHTML = fullName.toUpperCase();//MICHAEL CAIN
+
+let result = fullName.toLocaleLowerCase();
+document.getElementById("demo7").innerHTML = result;//michael cain
+
+let index = email.indexOf('@');
+document.getElementById("demo8").innerHTML = 'index of the @ sign:' + index;//index of the @ sign:7</code></pre>
+
+<hr>
+
+<h2 id="string-methods">Common String Methods</h2>
+
+<pre><code class="lang-js">let email = 'michael@michaelcain.co.uk';
+
+let result = email.lastIndexOf('n');
+document.getElementById("demo").innerHTML = result;//18
+
+let result2 = email.slice(0,5);
+document.getElementById("demo1").innerHTML = result2;//micha
+
+let result3 = email.substr(5,12);
+document.getElementById("demo2").innerHTML = result3;//el@michealca
+
+let result4 = email.replace('m', 'w');
+document.getElementById("demo3").innerHTML = result4;//wichael@michaelcain.co.uk
+//replaces the first letter it comes to only
+
+let result5 = email.replace('e', 'w');
+document.getElementById("demo4").innerHTML = result5;//michawl@michealcain.co.uk
+//replaces the first letter it comes to only</code></pre>
+
+<hr>
+<h2 id="numbers">Numbers</h2>
+
+<pre><code class="lang-js">let radius = 10;
+let pi = 3.14;
+
+math operators: +, -, *, /, **, %, ++, --
+
+ + : Addition
+ - : Subtraction
+ * : Multiplication
+ / : Division
+ ** : Exponentiation (power)
+ % : Modulus (remainder)
+ ++ : Increment
+ -- : Decrement
+
+document.getElementById("demo").innerHTML = 10 / 2;//5
+
+let result = radius % 3;
+
+document.getElementById("demo1").innerHTML = result;//1
+
+let result2 = pi * radius**2;
+
+document.getElementById("demo2").innerHTML = result2;//314
+
+ order of operation - B I D M A S
+
+ Brackets
+ Indices
+ Divide
+ Multiply
+ Addition
+ Subtraction
+
+let result3 = 5 * (10 - 3)**2;
+document.getElementById("demo3").innerHTML = result3;//245
+
+//How its worked out:
+Brackets : 10 - 3 = 7
+Indices : 7 x 7 = 49
+Multiply : 5 x 49 = 245
+
+// shorthands
+let likes = 10;
+
+likes = likes + 1; answer 11
+likes++; answer 11
+
+likes = likes + 10; answer 20
+likes += 10; answer 20
+
+likes = likes * 2; answer 20
+likes *= 2; answer 20
+
+likes = likes / 2; answer 5
+likes /= 2; answer 5
+
+document.getElementById("demo4").innerHTML = likes;//5
+
+// NaN - not a number
+document.getElementById("demo5").innerHTML = 5 / 'hello';//NaN
+
+document.getElementById("demo6").innerHTML = 5 * 'hello';//NaN
+
+let result4 = 'the blog has ' + likes + ' likes.';
+//Likes = 5 from the shorthands section above
+document.getElementById("demo7").innerHTML = result4;//the blog has 5 likes</code></pre>
+
+<hr>
+
+<h2 id="template-strings">Template Strings</h2>
+
+<pre><code class="lang-js">const title = 'Best reads of 2020';
+const author = 'Michael';
+const likes = 30;
+
+// concatenation way
+
+let result = 'The blog called ' + title + ' by ' + author + ' has ' + likes + ' likes';
+document.getElementById("demo").innerHTML = result;//The blog called Best reads of 2020 by Michael has 30 likes
+
+// template string way
+
+let result2 = `The blog called ${title} by ${author} has ${likes} likes`;
+document.getElementById("demo1").innerHTML = result2;//The blog called Best reads of 2020 by Michael has 30 likes
+
+// creating html templates
+let html = `
+  &lt;h2&gt;${title}&lt;/h2&gt;
+  &lt;p&gt;By ${author}&lt;/p&gt;
+  &lt;span&gt;This blog has ${likes} likes&lt;/span&gt;
+`;
+
+document.getElementById("demo2").innerHTML = html;//see below</code></pre>
+
+<h2>Best reads of 2020</h2>
+<p style="margin-bottom: 0;">By Michael</p>
+<span>This blog has 30 likes</span>
+
+<hr>
+
+<h2 id="arrays">Arrays</h2>
+
+<pre><code class="lang-js">let people = ['peter', 'john', 'mike'];
+
+document.getElementById("demo").innerHTML = people;//peter,john,mike
+
+//Replace john with ken
+people[1] = 'ken';
+
+document.getElementById("demo15").innerHTML = people;//peter,ken,mike
+
+document.getElementById("demo2").innerHTML = people[1];//ken
+
+let ages = [20, 25, 30, 35];
+
+document.getElementById("demo3").innerHTML = ages[2];//30
+
+//arrays can be mixed but it's not good practice
+let random = ['frank', 'crystal', 30, 20];
+
+// array length
+document.getElementById("demo4").innerHTML = people.length;//3
+
+// array methods
+
+//join arrays with ','
+let result = people.join(',');
+
+document.getElementById("demo5").innerHTML = result;//peter,ken,mike
+
+//join arrays with '-'
+let result1 = people.join('-');
+
+document.getElementById("demo55").innerHTML = result1;//peter-ken-mike
+
+let result2 = people.indexOf('mike');
+
+document.getElementById("demo6").innerHTML = result2;//2
+
+//Join together - adds these two to the existing array
+let result3 = people.concat(['mel', 'crystal']);
+
+document.getElementById("demo7").innerHTML = result3;//peter,ken,mike,mel,crystal
+
+//add new value
+let result4 = people.push('robert');
+
+document.getElementById("demo8").innerHTML = result4;//4
+
+let result5 = people;
+
+document.getElementById("demo9").innerHTML = result5;//peter,ken,mike,robert
+
+//remove end value
+let result6 = people.pop();
+
+document.getElementById("demo10").innerHTML = result6;//robert</code></pre>
+
+<hr>
+
+<h2 id="null-undefined">Null and Undefined</h2>
+
+<pre><code class="lang-js">//Setting a value of null is intentionally leaving the value undefined whereas a variable that has no value is set to undefined by the browser.
+
+let age = null; //intentionally undefined
+
+let age; //no value set so browser sets undefined
+
+//In this example age is set to null so age will have no value,
+//but it still does the math in this case 0 + 3 = 3
+
+console.log(age, age + 3, `the age is ${age}`);
+//console returns: null 3 "the age is null"
+
+document.getElementById("demo").innerHTML = age + age + 3 + ` the age is ${age}`;//3 the age is null</code></pre>
+
+<hr>
+
+<h2 id="booleans-comparisons">Booleans and Comparisons</h2>
+
+<pre><code class="lang-js">//How booleans and comparisons work - true or false
+
+// methods can return booleans
+
+let email = 'michael@michaelcain.co.uk';
+let names = ['michael', 'fred', 'john'];
+
+let result = email.includes('@');
+
+document.getElementById("demo2").innerHTML = result;//true
+
+let result2 = names.includes('fred');
+
+document.getElementById("demo3").innerHTML = result2;//true
+
+
+// comparison operators
+
+let age = 25;
+
+document.getElementById("demo4").innerHTML = age == 25;//true
+
+document.getElementById("demo5").innerHTML = age == 30;//false
+
+document.getElementById("demo6").innerHTML = age != 30;//true
+
+document.getElementById("demo7").innerHTML = age > 20;//true
+
+document.getElementById("demo8").innerHTML = age < 20;//false
+
+document.getElementById("demo9").innerHTML = age <= 25;//true
+
+document.getElementById("demo10").innerHTML = age >= 25;//true
+
+
+let name = 'peter';
+
+document.getElementById("demo11").innerHTML = name == 'peter';//true
+
+document.getElementById("demo12").innerHTML = name == 'Peter';//false
+
+//p comes after c
+document.getElementById("demo13").innerHTML = name > 'crystal';//true
+
+//lowercase is greater than uppercase
+document.getElementById("demo14").innerHTML = name > 'Peter';//true
+
+document.getElementById("demo15").innerHTML = name > 'Crystal';//true</code></pre>
+
+<hr>
+
+<h2 id="loose-comparison">Loose Comparison</h2>
+
+<pre><code class="lang-js">//Loose comparison allow different types to be equal. Whereas with strict comparison, different types cannot be equal
+
+let age = 25;
+
+// loose comparison (different types can still be equal)
+
+document.getElementById("demo").innerHTML = age == 25;//true
+
+document.getElementById("demo2").innerHTML = age == '25';//true
+
+document.getElementById("demo3").innerHTML = age != 25;//false
+
+document.getElementById("demo4").innerHTML = age != '25';//false
+
+--------------
+
+// strict comparison (different types cannot be equal)
+
+document.getElementById("demo5").innerHTML = age === 25;//true
+
+document.getElementById("demo6").innerHTML = age === '25';//false
+
+document.getElementById("demo7").innerHTML = age !== 25;//false
+
+document.getElementById("demo8").innerHTML = age !== '25';//true</code></pre>
+
+<hr>
+
+<h2 id="type-conversion">Type Conversion</h2>
+
+<pre><code class="lang-js">let score = '100';
+
+document.getElementById("demo").innerHTML = score + 1;//1001 - This is not what we want
+
+document.getElementById("demo2").innerHTML = typeof score;//string
+
+//convert to number
+
+score = Number(score);
+
+document.getElementById("demo1").innerHTML = score + 1;//101 - Thats better
+
+document.getElementById("demo25").innerHTML = typeof score;//number
+
+let result = Number('hello');
+
+document.getElementById("demo3").innerHTML = result + typeof result;//NaNnumber
+
+let result2 = String(50);
+
+document.getElementById("demo4").innerHTML = result2 + typeof result2;//50string
+
+let result3 = Boolean(100);
+
+document.getElementById("demo5").innerHTML = result3 + typeof result3;//trueboolean
+
+let result4 = Boolean(0);
+
+//A boolean set to 0 is false
+
+document.getElementById("demo6").innerHTML = result4 + typeof result4;//falseboolean
+
+let result5 = Boolean('0');
+
+//boolean set to a string is true
+
+document.getElementById("demo7").innerHTML = result5 + typeof result5;//trueboolean
+
+let result6 = Boolean('');
+
+//boolean set to a string with no value is false
+
+document.getElementById("demo8").innerHTML = result6 + typeof result6;//falseboolean,</code></pre>
+
+<hr>
+
+<h2 id="for-loops">For Loops</h2>
+
+<pre><code class="lang-js">for loops don't need a semi-colon to end code blocks.
+
+//value - condition - final expression
+//let i = 0; i < 5; i++
+//i = 0 : while i is less than 5 : i + 1
+//when i = 5 finish loop, return 4 because 5 is not less than 5
+
+for(let i = 0; i < 5; i++){
+ console.log('loop: ', i);
+}//loop: 0loop: 1loop: 2loop: 3loop: 4
+
+const names = ['peter', 'fred', 'john'];
+
+for(let i = 0; i < names.length; i++){
+ console.log(names[i]);
+}//peterfredjohn
+
+//by template
+
+let html = `<div>${names[i]}</div>`;
+ console.log(html);
+}//<div>peter</div><div>fred</div><div>john</div></code></pre>
+
+<hr>
+
+<h2 id="while-loops">While Loops</h2>
+
+<pre><code class="lang-js">//while loops as the name implies loop while the condition is true. Like the for loop, no semi-colon to end the code block.
+
+const names = ['peter', 'fred', 'john', 'mel', 'frank', 'martin'];
+
+//set the value outside the while loop code block
+let i = 0;
+
+//set the condition
+while(i < 5){
+
+//do something
+console.log('loop: ', i);
+
+//final expression
+i++;//without this the loop would be infinite
+}
+
+//console returns: loop: 1loop: 2loop: 3loop: 4
+
+//most of the time you won't know the number of items in your source
+//ie. when accessing a database,so we find the total with .length
+
+while(i < names.length){
+console.log(names[i]);
+  i++;
+}
+
+//console returns: peterfredjohnmelfrankmartin
+
+//In this example i--
+i = 8;
+while(i > 5){
+console.log('loop: ', i);
+  i--;
+}
+//console returns: loop: 8loop: 7loop: 6</code></pre>
+
+<hr>
+
+<h2 id="do-while-loops">Do While Loops</h2>
+
+<pre><code class="lang-js">//do while loops run the code once even if the condition is false. Then if true will carry on with the loop. A semi-colon is needed at the end because the "while" is out of the "do" code block
+
+let i = 5;
+
+do{
+console.log('val of i is: ', i);
+  i++;
+} while(i < 5);//note semi-colon
+
+//console returns: val of i: 5</code></pre>
+
+<hr>
+
+<h2 id="if-statements">If Statements</h2>
+
+<pre class="lang-js"><code>const age = 25;
+
+if(age > 20){
+document.getElementById("demo").innerHTML = 'you are over 20 years old';
+}//you are over 20 years old
+
+const people = ['michael', 'fred', 'john', 'walter'];
+
+if(people.length > 3){
+document.getElementById("demo2").innerHTML = "that's a lot of people!";
+}//that's a lot of people!
+
+const password = 'p@ssword';
+
+if(password.length >= 8){
+document.getElementById("demo3").innerHTML = 'that password is long enough';
+}//that password is long enough</code></pre>
+
+<hr>
+
+<h2 id="else-if-statements">Else If Statements</h2>
+
+<pre class="lang-js"><code>//Using else if we can offer feedback to users even if the conditions are false.
+
+const password = 'p@ssword123456';
+
+if(password.length >= 12){
+
+console.log('that password is mighty strong');
+
+} else if(password.length >= 8){
+
+console.log('that password is long enough');
+
+} else {
+
+console.log('password should be at least 8 characters long');
+}//that password is mighty strong
+
+//using logical operator OR || and AND &&
+
+const password2 = 'p@ss12';
+
+//AND && both conditions must be true
+
+if(password2.length >= 12 && password2.includes('@')){
+console.log('that password is mighty strong');
+
+//OR || one set of conditions must be true
+//password2 must be 8 or more characters
+//OR contain character @ AND contain 5 or more characters
+
+} else if(password2.length >= 8 || password2.includes('@') && password2.length > 5){
+console.log('that password is strong enough');
+
+} else {
+
+console.log('that password is not strong enough');
+}//that password is strong enough</code></pre>
+
+<hr>
+
+<h2 id="logical-not">Logical Not (!)</h2>
+
+<pre class="lang-js"><code>//The Logical NOT (!) switchs the boolean value
+
+const user = false;
+
+if(!user){
+console.log('you must be logged in to continue');
+}//you must be logged in to continue
+
+//!true = false
+console.log(!true);//false
+
+//!false = true
+// console.log(!false);//true</code></pre>
+
+<hr>
+
+<h2 id="break-continue">Break and Continue</h2>
+
+<pre class="lang-js"><code>const scores = [50, 25, 0, 30, 100, 20, 10];
+
+ for (let i = 0; i < scores.length; i++) {
+
+  if (scores[i] === 0) {
+      continue;
+   }
+      console.log('your score:', scores[i]);
+
+  if (scores[i] === 100) {
+      console.log('congrats, you got the top score!');
+      break;
+   }
+ }
+ //console returns:your score: 50your score: 25your score: 30your score: 100
+//congrats, you got the top score!</code></pre>
+
+<hr>
+
+<h2 id="switch-statements">Switch Statements</h2>
+
+<pre class="lang-js"><code>//Used as an alternative to if statements
+
+const grade = 'D';
+
+switch(grade){
+  case 'A':
+    console.log('you got A!');
+    break;
+  case 'B':
+    console.log('you got B!');
+    break;
+  case 'C':
+    console.log('you got C!');
+    break;
+  case 'D':
+    console.log('you got D!');
+    break;
+  case 'E':
+    console.log('you got E!');
+    break;
+  default:
+    console.log('not a valid grade');
+}//you got D!
+
+// using if statements
+ 
+ if(grade === 'A'){
+  console.log('you got A!');
+ } else if(grade === 'B'){
+  console.log('you got B!');
+ } else if(grade === 'C'){
+  console.log('you got C!');
+ } else if(grade === 'D'){
+  console.log('you got D!');
+ } else if(grade === 'E'){
+  console.log('you got E!');
+ } else {
+   console.log('not a valid grade');
+}//you got D!</code></pre>
+
+<hr>
+
+<h2 id="variables-block-scope">Variables and Block Scope</h2>
+
+<pre class="lang-js"><code>//When a variable is defined in the script root it has a global scope. When a variable is defined in a code block it has a block scope
+
+let age = 30;//global scope
+let age = 40;//not allowed will return an error age already defined
+
+if(true){
+
+  age = 60;//will change age global scope
+  //let age = 40;//block scope (local)
+  let name = 'peter';
+  console.log('inside 1st code block: ', age, name);
+  //console returns: inside 1st code block: 60peter
+
+  if(true){
+
+  let age = 50;//block scope (local)
+  console.log('inside 2nd code block: ', age, name);
+  //console returns: inside 2nd code block: 50peter
+  }
+}
+
+console.log('outside code block: ', age, name);
+//console returns: outside code block: 60
+//global age got changed to 60
+//name is block scope(local)
+
+//Note: Old variable 'var' ignores block scope</code></pre>
+
+<hr>
+
+<h2 id="functions">Functions</h2>
+
+<pre class="lang-js"><code>//A function is a block of code that is defined once but can be used (called), multiple times.
+
+// function declaration
+
+function greet(){
+  console.log('hello there');
+}//no semi-colon for this type of function
+
+greet();//hello there
+
+// function expression
+//These functions are stored in a variable (speak)
+//variables can be used again - flexible function
+
+const speak = function(){
+  console.log('good day!');
+};//this type of function requires semi-colon
+
+speak();//good day!
+
+// arguments & parameters
+
+const speaking = function(name = 'peter', time = 'night'){
+  document.getElementById("demo3").innerHTML = `good ${time}, ${name}!`;
+};
+
+speaking();//good night, peter!
+
+speaking('john', 'morning');//good morning, john!
+
+speaking('fred');//good night, fred!
+
+// return statements
+
+const calcArea = function(radius){
+  let area = 3.14 * radius**2;
+  return area;
+}
+
+const area = calcArea(5);
+document.getElementById("demo4").innerHTML = 'area is: ' + area;
+//area is: 78.5</code></pre>
+
+<hr>
+
+<h2 id="arrow-functions">Arrow Functions</h2>
+
+<pre class="lang-js"><code>// regular function
+const calcArea = function(radius){
+ return 3.14 * radius**2;
+}
+
+//arrow function
+const calcArea = radius => 3.14 * radius**2;
+
+const area = calcArea(5);
+document.getElementById("demo").innerHTML = 'area is: ' + area;
+//area is: 78.5
+
+//practise arrow functions
+
+//regular function
+ const greet = function(){
+ return 'hello, world';
+}
+
+const greet = () => 'hello, world';
+
+greet();//hello, world
+
+//regular function
+const bill = function(products, tax){
+ let total = 0;
+ for(let i = 0; i < products.length; i++){
+ total += products[i] + products[i] * tax;
+ }
+ return total;
+}
+
+const bill = (products, tax) => {
+ let total = 0;
+ for(let i = 0; i < products.length; i++){
+ total += products[i]  + products[i] * tax;
+ }
+ return total;
+}
+
+document.getElementById("demo3").innerHTML = bill([10,15,30], 0.2);//66
+
+const name = 'peter';
+
+//function
+
+const greeting = () => {
+  return 'hello';
+};
+
+let resultOne = greeting();
+console.log(resultOne);//hello
+
+//method
+
+let resultTwo = name.toUpperCase();
+console.log(resultTwo);//PETER</code></pre>
+
+<hr>
+
+<h2 id="callbacks-foreach">Callbacks and forEach</h2>
+
+<pre class="lang-js"><code>let people = ['peter', 'fred', 'john'];
+
+people.forEach(person => {
+console.log(`hello ${person}`);
+});//hello peterhello fredhello john
+
+const logPerson = (person, index) => {
+console.log(`${index} - hello ${person}`);
+}
+people.forEach(logPerson);
+//0 - hello peter1 - hello fred2 - hello john
+
+const ul = document.querySelector('.people');
+
+let html = ``;
+
+people.forEach(person => {
+  // create html template for each person
+  html += `&lt;li style="color: purple"&gt;${person}&lt;/li&gt;`;
+});
+
+ul.innerHTML = html;</code></pre>
+
+
+<ul class="people"></ul>
+
+<hr>
+
+<h2 id="object-literals">Object Literals</h2>
+
+<pre class="lang-js"><code>let user = {
+  name: 'michael',
+  age: 30,
+  email: 'michael@michaelcain.co.uk',
+  location: 'london',
+  blogs: [{title: 'the only way is my way', likes: 30}, {title: 'tomorrow never comes', likes:50}],
+
+  login: function(){
+   document.getElementById("demo7").innerHTML = 'the user logged in';
+  },
+  
+  logout: function(){
+   document.getElementById("demo8").innerHTML = 'the user logged out';
+  },
+  
+  logBlogs(){
+// access the blogs here
+   console.log(this);
+   console.log('this user has written these blogs:');
+
+const ul = document.querySelector('.blogs');
+
+let html = ``;
+
+document.getElementById("demo9").innerHTML = 'this user has written these blogs:';
+
+this.blogs.forEach(blog => {
+html += `&lt;li style="color: red"&gt;${blog.title} has ${blog.likes} likes&lt;/li&gt;`; 
+})
+ul.innerHTML = html;
+}
+};
+
+document.getElementById("demo").innerHTML = 'User: ' + user;//User: [object Object]
+
+document.getElementById("demo2").innerHTML = 'Age: ' + user.age;//Age: 30
+
+user.age = 35;
+document.getElementById("demo3").innerHTML = 'Age: ' + user.age;//Age: 35
+
+document.getElementById("demo4").innerHTML = 'User: ' + user['name'];//User: michael
+
+user['name'] = 'john';
+document.getElementById("demo5").innerHTML = 'User: ' + user['name'];//User: john
+
+console.log(typeof user);//object
+
+user.login();//the user logged in
+user.logout();// the user logged out
+user.logBlogs();//see below</code></pre>
+
+<div id="demo9"></div>
+<ul class="blogs"></ul>
+
+<hr>
+
+<h2 id="math-object">Math Object</h2>
+
+<pre class="lang-js"><code>console.log(Math.PI);//3.141592653589793
+console.log(Math.E);//2.718281828459045
+
+const area = 7.7;
+console.log(Math.round(area));//8
+console.log(Math.floor(area));//7
+console.log(Math.ceil(area));//8
+console.log(Math.trunc(area));//7
+
+// random numbers
+const random = Math.random();
+console.log(random);//0.16975287358800228
+console.log(Math.round(random * 100));//17</code></pre>
+
+<hr>
+
+<h2 id="primitive-values">Primitive Values</h2>
+
+<pre class="lang-js"><code>let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne}`, ` scoreTwo: ${scoreTwo}`);
+//scoreOne: 50 scoreTwo: 50
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`, ` scoreTwo: ${scoreTwo}`);
+//scoreOne: 100 scoreTwo: 50
+
+// reference values
+userOne = { name: 'mike', age: 30 };
+userTwo = userOne;
+console.log(userOne, userTwo);
+//age: 30 name: "mike", age: 30 name: "mike"
+
+userOne.name = 'peter';
+console.log(userOne, userTwo);
+//age: 30 name: "peter", age: 30 name: "peter"</code></pre>
+
+<hr>
+
+<h2 id="selectors">Selectors</h2>
+
+<pre class="lang-js"><code>const para = document.querySelector('div.error');
+
+// query multiple elements at once
+const paras = document.querySelectorAll('p');
+const errors = document.querySelectorAll('.error');
+
+// get an element by ID
+const title= document.getElementById('page-title');
+
+// get elements by their class name
+const myclass = document.getElementsByClassName('myclass');
+
+// get elements by their tag name
+const links = document.getElementsByTagName('a');
+
+
+const para = document.querySelector('p');
+
+para.innerText = 'Hello and welcome';
+
+const paras = document.querySelectorAll('p');
+
+ paras.forEach(p => {
+ p.innerText = 'new text!';
+ });
+
+const content = document.querySelector('.content');
+content.innerHTML = '&lt;h2&gt;this is a new h2&lt;/h2&gt;';
+
+content.innerHTML += '&lt;h2&gt;this is an h2 added to the content&lt;/h2&gt;';
+
+const people = ['john', 'fred', 'mike'];
+
+people.forEach(person => {
+content.innerHTML += `&lt;p&gt;${person}&lt;/p&gt;`;
+});</code></pre>
+
+<div class="contenta"></div>
+
+
+<pre class="lang-js"><code>const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+link.setAttribute('href', 'https://phone1st.org');
+link.textContent = 'The Phone1st website';
+
+const mssg = document.querySelector('h3');
+
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class', 'success');
+mssg.setAttribute('style', 'color: green');</code></pre>
+
+<div class="contentb">
+  <a href="#">A Link</a>
+  <h3>This is h3 with class 'success'</h3>
+</div>
+
+<pre class="lang-js"><code>const title = document.querySelector('h4');
+
+title.setAttribute('style', 'margin: 150px;');//not shown
+
+title.style.margin = '50px';
+title.style.color = 'crimson';
+title.style.fontSize = '60px';
+title.style.margin = '';//no margin</code></pre>
+
+<div class="contentc">
+  <h4>This is h4</h4>
+</div>
+
+<pre class="lang-js"><code>const content = document.querySelector('p');
+
+// console.log(content.classList);
+// content.classList.add('error');
+// content.classList.remove('success');
+
+const story = document.querySelectorAll('p');
+
+story.forEach(p => {
+  if(p.textContent.includes('error')){
+    p.classList.add('error');
+  } else if(p.textContent.includes('success')) {
+    p.classList.add('success');
+  }
+  //success and error css set on main stylesheet
+});</code></pre>
+
+<div class="contentd">
+  <p>This is success</p>
+  <p>This is error</p>
+</div>
+
+<pre class="lang-js"><code>const button = document.querySelector('button');
+
+ button.addEventListener('click', () => {
+   document.getElementById("demo").innerHTML = 'you clicked me';
+ });</code></pre>
+
+ <div class="contente">
+   <button>Click Me</button>
+   <div id="contente"></div>
+ </div>
+
+ <pre class="lang-js"><code>const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+  item.addEventListener('click', e => {
+    console.log('item clicked');
+    console.log(e);
+    console.log(e.target);
+    console.log(item);
+    e.target.style.textDecoration = 'line-through';
+  });
+});</code></pre>
+
+<ul class="items">
+  <li>This is a list item</li>
+</ul>
+
+<pre class="lang-js"><code>const ul = document.querySelector('.list');
+// ul.remove();
+
+const button = document.querySelector('.button');
+
+button.addEventListener('click', () => {
+  const li = document.createElement('li');
+  li.textContent = 'something new to do';
+  //ul.appendChild(li);
+  ul.prepend(li);
+});
+
+const list = document.querySelectorAll('.list', 'li');
+
+list.forEach(li => {
+  li.addEventListener('click', e => {
+     //e.target.style.textDecoration = 'line-through';
+    e.target.remove();
+  });
+});</code></pre>
+
+<ul class="list"></ul>
+
+<button class="button">Press</button>
+
+<pre class="lang-js"><code>const box = document.querySelector('.boxed');
+
+boxed.addEventListener('mousemove', e => {
+  //console.log(e.offsetX, e.offsetY);
+  box.textContent = `x pos - ${e.offsetX}  y pos - ${e.offsetY}`;
+});</code></pre>
+
+<div class="boxed">Whats the position</div>
+
+<pre class="lang-js"><code>const submit = document.querySelector('.popup-button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+
+submit.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+popup.addEventListener('click', (e) => {
+  if(e.target.className === 'popup-wrapper'){
+    popup.style.display = 'none';
+  }
+//css styles set on main stylesheet
+});</code></pre>
+
+<div class="popup-content-area">
+<button class="popup-button">Click for Offers!</button>
+
+<div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close">x</div>
+      <div class="popup-content">
+        <h2>MASSIVE SALE!!</h2>
+        <p>50% off all latest clothing. don't miss out!</p>
+        <a href="#">View Clothing</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<hr>
+<!-- @import ../includes/_subscribe -->
+
+<!-- @import ../includes/_social-share -->
+
+</div>
+</article>
+
+<!-- @import ../includes/_related -->
+
+<script>
+let people = ['peter', 'fred', 'john'];
+
+const ul = document.querySelector('.people');
+
+let html = ``;
+
+people.forEach(person => {
+  html += `<li style="color: purple">${person}</li>`;
+});
+
+ul.innerHTML = html;
+
+////////////////////
+
+let user = {
+  name: 'michael',
+  age: 30,
+  email: 'michael@michaelcain.co.uk',
+  location: 'london',
+  blogs: [{title: 'the only way is my way', likes: 30}, {title: 'tomorrow never comes', likes:50}],
+
+  login: function(){
+   document.getElementById("demo7").innerHTML = 'the user logged in';
+  },
+  
+  logout: function(){
+   document.getElementById("demo8").innerHTML = 'the user logged out';
+  },
+  
+  logBlogs(){
+// access the blogs here
+   console.log(this);
+   console.log('this user has written these blogs:');
+
+const ul = document.querySelector('.blogs');
+
+let html = ``;
+
+document.getElementById("demo9").innerHTML = 'this user has written these blogs:';
+
+this.blogs.forEach(blog => {
+html += `<li style="color: red">${blog.title} has ${blog.likes} likes</li>`; 
+})
+ul.innerHTML = html;
+}
+};
+
+user.logBlogs();
+
+/////////////////////////
+
+const content = document.querySelector('.contenta');
+content.innerHTML = '<h2>this is a new h2</h2>';
+
+content.innerHTML += '<h2>this is an h2 added to the content</h2>';
+
+const crowd = ['john', 'fred', 'mike'];
+
+crowd.forEach(person => {
+content.innerHTML += `<p>${person}</p>`;
+});
+const link = document.querySelector('.contentb a');
+
+link.setAttribute('href', 'https://phone1st.org');
+link.textContent = 'The Phone1st website';
+
+const mssg = document.querySelector('.contentb h3');
+
+mssg.setAttribute('class', 'success');
+mssg.setAttribute('style', 'color: green');
+
+const title = document.querySelector('.contentc h4');
+
+title.style.margin = '50px';
+title.style.color = 'crimson';
+title.style.fontSize = '60px';
+title.style.margin = '';
+
+const story = document.querySelectorAll('.contentd p');
+
+story.forEach(p => {
+  if(p.textContent.includes('error')){
+    p.classList.add('error');
+  } else if(p.textContent.includes('success')) {
+    p.classList.add('success');
+  }
+});
+
+const button = document.querySelector('.contente button');
+
+ button.addEventListener('click', () => {
+   document.getElementById("contente").innerHTML = 'you clicked me';
+ });
+
+ const items = document.querySelectorAll('.items li');
+
+items.forEach(item => {
+  item.addEventListener('click', e => {
+    console.log('item clicked');
+    console.log(e);
+    console.log(e.target);
+    console.log(item);
+    e.target.style.textDecoration = 'line-through';
+  });
+});
+
+const ul2 = document.querySelector('.list');
+
+const button2 = document.querySelector('.button');
+
+button2.addEventListener('click', () => {
+  const li = document.createElement('li');
+  li.textContent = 'something new to do';
+  ul2.prepend(li);
+});
+
+const list = document.querySelectorAll('.list', 'li');
+
+list.forEach(li => {
+  li.addEventListener('click', e => {
+    e.target.remove();
+  });
+});
+
+const box = document.querySelector('.boxed');
+
+box.addEventListener('mousemove', e => {
+  //console.log(e.offsetX, e.offsetY);
+  box.textContent = `x pos - ${e.offsetX}  y pos - ${e.offsetY}`;
+});
+
+const submit = document.querySelector('.popup-button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+
+submit.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+popup.addEventListener('click', (e) => {
+  if(e.target.className === 'popup-wrapper'){
+    popup.style.display = 'none';
+  }
+});
+
+</script>
+
+<!-- @include ../includes/_footer -->

@@ -38,10 +38,16 @@ text-align: center;
 }
 
 //body $class
-.home a[href*="index.html"],
-.about a[href*="about.html"],
-.basics a[href*="basics.html"],
-.all-articles a[href*="docs.html"] {
+.home #home,
+.about #about,
+.basics #basics,
+.all-articles #all-articles,
+.reference #reference {
+	color: red;
+	cursor: default;
+}
+
+.post-basics #basics {
 	color: red;
 }
 
