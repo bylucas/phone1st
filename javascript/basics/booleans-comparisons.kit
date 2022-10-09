@@ -1,0 +1,100 @@
+<!-- $title Booleans and Comparisons -->
+<!-- $SEO-title Booleans and Comparisons in Modern Javascript -->
+<!-- $description How booleans and comparisons work - true or false. -->
+
+<!-- $keyword booleans, comparisons -->
+<!-- $url booleans-comparisons.html -->
+
+<!-- $class booleans-comparisons -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">How <em>booleans</em> and <em>comparisons</em> work - true or false.</p>
+
+    <pre><code class="lang-js">//methods can return booleans
+let email = 'michael@michaelcain.co.uk';
+let names = ['michael', 'fred', 'john'];
+
+let result = email.includes('@');
+console.log(result);
+//answer: true
+
+let result2 = names.includes('fred');
+console.log(result2);
+//answer: true
+
+
+//comparison operators
+let age = 25;
+
+console.log('1', age == 25);
+//answer: true
+
+console.log('2', age == 30);
+//answer: false
+
+console.log('3', age != 30);
+//answer: true
+
+console.log('4', age &gt; 20);
+//answer: true
+
+console.log('5', age &lt; 20);
+//answer: false
+
+console.log('6', age &lt;= 25);
+//answer: true
+
+console.log('7', age &gt;= 25);
+//answer: true
+
+
+let name = 'peter';
+
+console.log('8', name == 'peter');
+//answer: true
+
+console.log('9', name == 'Peter');
+//answer: false
+
+//p comes after c
+console.log('10', name &gt; 'claire');
+//answer: true
+
+//lowercase is greater than uppercase
+console.log('11', name &gt; 'Peter');
+//answer: true
+
+console.log('12', name &gt; 'Claire');
+//answer: true</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!-- $title Null and Undefined -->
+<!-- $SEO-title Null and Undefined in Modern Javascript -->
+<!-- $description A variable is named storage for data. We use variables to store data that can be recalled when needed. -->
+<!-- $keyword null, undefined -->
+<!-- $url null-undefined.html -->
+
+<!-- $class null-undefined -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Setting a value of <em>null</em> is intentionally leaving the value <em>undefined</em> whereas a variable that has no value is set to <em>undefined</em> by the browser.</p>
+
+    <pre><code class="lang-js">//null and undefined are primitive values in JavaScript
+//a null or undefined value evaluates to false in conditional expression
+
+//a null value means absence
+
+let count = null;
+//intentionally setting no value
+
+console.log(count, count + 3, `the sum is ${count}`);
+//result: null 3 "the sum is null"
+//count is null
+//no value + 3 = 3
+//${count} is null
+
+
+//an undefined value means lack of value
+
+let counter
+//awaiting a value
+//browser sets counter to undefined
+
+console.log(counter, counter + 3, `the sum is ${counter}`);
+//result: undefined NaN "the sum is undefined"</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

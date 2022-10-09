@@ -1,0 +1,71 @@
+<!-- $title Primitive and Reference Values -->
+<!-- $SEO-title Primitive and Reference Values in Modern Javascript -->
+<!-- $description Primitive and Reference values are stored in memory. Primitive values are stored on the Stack and Reference values are stored on the Heap. -->
+<!-- $keyword primitive-reference-values -->
+<!-- $url primitive-reference-values.html -->
+
+<!-- $class primitive-reference-values -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="objects.html">Objects</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+  <p class="post-intro">Primitive and Reference values are stored in memory. Primitive values are stored on the <em>Stack</em> and Reference values are stored on the <em>Heap</em>.</p>
+  
+  <p class="post-intro"><strong>Primitive</strong> types include <em>numbers, strings, Booleans, null, undefined</em> and <em>symbols</em>.
+  </p>
+
+  <p class="post-intro">Most of the time, a <em>primitive value</em> is represented directly at the lowest level of the language implementation.</p>
+  
+  <p class="post-intro"><strong>Reference</strong> types include <em>all types of objects, object literals, arrays, functions, dates</em> and <em>all other objects</em>.</p>
+
+    <pre><code class="lang-js">//primitive values
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+//answer: scoreOne: 50 scoreTwo: 50
+
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+//answer: scoreOne: 100 scoreTwo: 50
+
+
+//reference values
+userOne = { name: 'mike', age: 30 };
+userTwo = userOne;
+console.log(userOne, userTwo);
+//answer: {name: "mike", age: 30} {name: "mike", age: 30}
+
+userOne.name = 'peter';
+console.log(userOne, userTwo);
+//answer: {name: "peter", age: 30} {name: "peter", age: 30}</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-objects -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!-- $title If Statements -->
+<!-- $SEO-title If Statements in Modern Javascript -->
+
+<!-- $description If statements are Conditional statements, if a condition is true then do something. Unlike the loops we don't check a condition over and over. -->
+
+<!-- $keyword if-statements -->
+<!-- $url if-statements.html -->
+
+<!-- $class if-statements -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="control-flow.html">Control Flow</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>If statements</em> are Conditional statements, if a condition is true then do something. Unlike the loops we don't check a condition over and over, the conditon is checked once and acted upon if the conditon is true.</p>
+
+    <pre><code class="lang-js">const age = 25;
+
+//if the condition is true then
+if(age &gt; 20){
+//do something
+console.log('you are over 20 years old');
+}
+//answer: you are over 20 years old 
+
+const people = ['michael', 'fred', 'john', 'walter'];
+
+if(people.length &gt; 3){
+console.log("that's a lot of people!");
+//use double quotes if apostrophe in the text
+}
+//answer: that's a lot of people!
+
+const password = 'p@ssword';
+
+//if less than or equal to 8
+if(password.length &gt;= 8){
+console.log('that password is long enough');
+}
+//answer: that password is long enough</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-control-flow -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

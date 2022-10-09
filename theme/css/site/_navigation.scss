@@ -1,0 +1,68 @@
+// =======================
+// Breadcrumbs
+// =======================
+
+.breadcrumb-box {
+  margin-bottom: $spacer;
+
+  p {
+    font-family: $alt-font;
+    font-size: $third;
+  }
+}
+
+// =======================
+// Page Naviagtion
+// =======================
+
+.pagination {
+  margin: math.div($spacer, 2) auto $spacer auto;
+  width: 95%;
+  text-align: center;
+
+  ul {
+    li {
+      display: inline;
+      font-family: $alt-font;
+      font-size: $third;
+      font-weight: bold;
+
+      &:first-child a,
+      &:first-child span,
+      &:last-child a,
+      &:last-child span {
+        @include background();
+        border-radius: $radius;
+      }
+
+      a,
+      span {
+        padding: 0.4rem 0.6rem;
+        @include background();
+        border-radius: $radius;
+      }
+    }
+  }
+}
+
+// ==================================
+// Next/Previous Navigation
+// ==================================
+
+.prev-next {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.prev-link,
+.next-link {
+  font-family: $alt-font;
+  font-size: $third;
+  @include background();
+  border-radius: $radius;
+  padding: 0.3rem 0.5rem;
+}

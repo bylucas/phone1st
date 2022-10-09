@@ -1,0 +1,114 @@
+<!-- $title Arrow Functions -->
+<!-- $SEO-title Arrow Functions in Modern Javascript -->
+<!-- $description Arrow functions are in most cases a shorter, neater version of the regular function. It's not always better using arrow functions in place of regular functions. -->
+<!-- $keyword arrow-functions -->
+<!-- $url arrow-functions.html -->
+
+<!-- $class arrow-functions -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="functions-cat.html">Functions</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>Arrow functions</em> are in most cases a shorter, neater version of the regular function. It's not always better using arrow functions in place of regular functions.</p>
+
+    <pre><code class="lang-js">//regular function
+const calcArea = function(radius){
+ return 3.14 * radius**2;
+};
+
+//arrow function
+//if only one parameter take away parenthasis
+const calcArea = radius =&gt; {
+ return 3.14 * radius**2;
+};
+
+//if no parameters we need parenthasis
+const calcArea = () =&gt; {
+ code block
+};
+
+//if more than one parameter we need parenthasis
+const calcArea = (one, two) =&gt; {
+ code block
+};
+
+
+//if there is only one return
+//put on one line remove keyword 'return' and code block curly braces
+const calcArea = radius =&gt; 3.14 * radius**2;
+
+const area = calcArea(5);
+ console.log('area is:', area);
+//answer: 78.5
+
+
+//regular function
+const greet = function(){
+ return 'hello, world';
+}
+
+//arrow function
+const greet = () =&gt; 'hello, world';
+ console.log(greet());
+//answer: hello, world
+
+//regular function
+const bill = function(products, tax){
+ let total = 0;
+  for(let i = 0; i &lt; products.length; i++){
+   total += products[i] + products[i] * tax;
+ }
+ return total;
+}
+
+//arrow function not much shorter
+const bill = (products, tax) =&gt; {
+ let total = 0;
+  for(let i = 0; i &lt; products.length; i++){
+   total += products[i]  + products[i] * tax;
+ }
+ return total;
+}
+console.log(bill([10,15,30], 0.2));
+//answer: 66
+//products 10 + 15 + 30 = 55 x tax 0.2 = 11 products 55 + tax 11 = 66
+
+//multi parameters
+//one return
+const sum = (a,b,c) =&gt; a + b * c;
+
+const sums = sum(2,3,4);
+
+console.log(sums);
+//answer: 14
+//3 x 4 + 2 - B I D M A S - see numbers</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-functions -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

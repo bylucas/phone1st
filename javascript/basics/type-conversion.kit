@@ -1,0 +1,97 @@
+<!-- $title Type Conversion -->
+<!-- $SEO-title Type Conversion in Modern Javascript -->
+
+<!-- $description Most of the time, operators and functions automatically convert the values given to them to the right type. In some cases we need to explicitly convert a value to the expected type -->
+
+<!-- $keyword type-conversion -->
+<!-- $url type-conversion.html -->
+
+<!-- $class type-conversion -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Most of the time, operators and functions automatically convert the values given to them to the right type. <em>Alert</em> automatically converts any value to a string to show it. <em>Mathematical operations</em> convert values to numbers.</p>
+
+    <p class="post-intro">There are also cases when we need to explicitly convert a value to the expected type.</p>
+
+    <pre><code class="lang-js">let score = '100';
+
+console.log(score + 1);
+//result: 1001
+//This is not what we want
+
+console.log(typeof score);
+//result: string
+
+//convert to a number
+score = Number(score);
+
+console.log(score + 1);
+//result: 101
+//Thats better
+
+console.log(typeof score);
+//result: number
+
+let result = Number('hello');
+
+console.log(result, typeof result);
+//result: NaN "number"
+
+let result2 = String(50);
+
+console.log(result2, typeof result2);
+//result: 50 string
+
+let result3 = Boolean(100);
+
+console.log(result3, typeof result3);
+//result: true "boolean"
+
+let result4 = Boolean(0);
+
+console.log(result4, typeof result4);
+//result: false "boolean"
+//A boolean set to 0 is false
+
+let result5 = Boolean('0');
+
+console.log(result5, typeof result5);
+//result: true "boolean"
+//boolean set to a string is true
+
+let result6 = Boolean('');
+console.log(result6, typeof result6);
+//result: false "boolean"
+//boolean set to a string with no value is false</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!-- $title Logical Operators -->
+<!-- $SEO-title Logical Operators in Modern Javascript -->
+<!-- $description If we want to check for two or more conditions we can use the logical operators AND && and OR ||. The Logical NOT(!) switches the boolean value. -->
+
+<!-- $keyword logical-operators -->
+<!-- $url logical-operators.html -->
+
+<!-- $class logical-operators -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="control-flow.html">Control Flow</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">If we want to check for two or more conditions we can use the <em>logical operators</em> AND && and OR ||. The Logical NOT(!) switches the boolean value.</p>
+
+    <pre><code class="lang-js">//checking two or more conditions
+
+//using logical operator OR || and AND &&
+const password = 'p@ss12';
+
+//AND && both conditions must be true
+if(password.length &gt;= 12 && password.includes('@')){
+
+console.log('that password is mighty strong');
+
+//OR || one set of conditions must be true
+//password must be 8 or more characters OR contain character @ AND contain 5 or more characters
+
+} else if(password.length &gt;= 8 || password.includes('@') && password.length &gt; 5){
+
+//password satisfies the two conditions on the right side of the || it contains @ and contains more than 5 characters
+console.log('that password is strong enough');
+
+} else {
+
+console.log('that password is not strong enough');
+}
+//answer: that password is strong enough
+
+
+//The Logical NOT(!) switches the boolean value
+
+const user = false;
+
+if(!user){
+ //do something
+ console.log('you must be logged in to continue');
+}
+//answer: you must be logged in to continue
+
+console.log(!true);
+//answer: false
+
+console.log(!false);
+//answer: true</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-control-flow -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

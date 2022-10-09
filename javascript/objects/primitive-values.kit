@@ -1,0 +1,67 @@
+<!-- $title Primitive Values -->
+<!-- $SEO-title Primitive Values in Modern Javascript -->
+<!-- $description Primitive (primitive value, primitive data type) is data that is not an object and has no methods. There are 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null. -->
+<!-- $keyword primitive-values -->
+<!-- $url primitive-values.html -->
+
+<!-- $class primitive-values -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">In JavaScript, a <strong>primitive</strong> (<em>primitive value</em>, <em>primitive data type</em>) is data that is not an object and has no methods. There are 7 <em>primitive data types</em>: string, number, bigint, boolean, undefined, symbol, and null.</p>
+
+    <p class="post-intro">Most of the time, a <em>primitive value</em> is represented directly at the lowest level of the language implementation.</p>
+
+    <p class="post-intro">All <em>primitives</em> are <em>immutable</em>, i.e. they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a <em>primitive value</em>. The variable may be reassigned a new value, but the existing value can <strong>not</strong> be changed in the ways that objects, arrays, and functions can be altered.</p>
+
+    <pre><code class="lang-js">//This example helps to explain that primitive values are immutable
+
+// Using a string method doesn't mutate the string
+let bar = "baz";
+console.log(bar); //baz
+bar.toUpperCase();
+console.log(bar); //baz
+
+// Using an array method mutates the array
+let foo = [];
+console.log(foo); //[]
+foo.push("plugh");
+console.log(foo); //["plugh"]
+
+// Assignment gives the primitive a new (not a mutated) value
+bar = bar.toUpperCase();
+console.log(bar); //BAZ
+
+
+//A primitive can be replaced, but it can't be directly altered.</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-objects -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

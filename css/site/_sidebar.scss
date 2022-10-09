@@ -1,0 +1,20 @@
+aside {
+  margin: $spacer 0;
+
+  h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  }
+
+  li {
+    font-size: $third;
+  }
+}
+
+@include media(900) {
+
+  aside {
+    margin-top: $spacer*4.8;
+  }
+}

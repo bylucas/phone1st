@@ -1,0 +1,161 @@
+<!-- $title Callback Functions and ForEach -->
+<!-- $SEO-title Callback Functions and ForEach in Modern Javascript -->
+<!-- $description Functions taking functions as arguments are called callback functions. ForEach is a method that expects a callback function. -->
+<!-- $keyword callback-functions -->
+<!-- $url callback-functions.html -->
+
+<!-- $class callback-functions -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="functions-cat.html">Functions</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Functions taking functions as arguments are called <em>callback functions</em>. <em>ForEach</em> is a method that expects a callback function.</p>
+
+    <pre><code class="lang-js">//callback functions
+//long example of callback function
+const myFunc = (callbackFunc) =&gt; {
+ //do something
+ let value = 100;//simple example
+ callbackFunc(value);
+}
+
+//pass callback function into another function
+myFunc(function(value) {
+ //do something
+ console.log(value);
+})
+//answer: 100
+
+//shorten to arrow function
+myFunc(value =&gt; {
+ //do something
+ console.log(value);
+});
+//answer: 100
+
+
+//another example
+//regular function
+function greeting(name) {
+ console.log('Hello ' + `${name}`)
+}
+
+//arrow function
+greeting = (name =&gt; {
+ console.log('Hello ' + `${name}`)
+})
+
+//regular callback function
+function user(callback) {
+ let name = 'John';
+ callback(name);
+}
+
+//arrow callback function
+user = (callback =&gt; {
+ let name = 'John';
+ callback(name);
+})
+
+//evoke the two functions
+user(greeting);
+//answer: Hello John
+
+
+//forEach
+
+let people = ['peter', 'fred', 'john', 'mel', 'george'];
+
+//built-in array method forEach
+people.forEach(function() {
+ //do something
+});
+
+//add parameters
+//in this example person is a singular value of people. The 'person' value can be given any name eg. 'x'. The forEach iterates through the array values
+people.forEach(function(person) {
+ //do something
+});
+
+//convert to arrow function
+people.forEach(person =&gt; {
+ //do something
+});
+
+//make callback function
+//console.log the value of each person and the index property
+const logPerson = (person, index) =&gt; {
+ console.log(`${index} - hello ${person}`);
+};
+
+//evoke logPerson
+people.forEach(logPerson);
+//answer:
+//0 - hello peter
+//1 - hello fred
+//2 - hello john
+//3 - hello mel
+//4 - hello george
+
+
+//outputting to the dom
+//select an element from the dom
+const ul = document.querySelector('ul');
+
+//prepare an empty template
+let html = ``;
+
+//make the callback
+people.forEach(person =&gt; {
+ //create html template for each person
+ html += `&lt;li style="color: purple"&gt;${person}&lt;/li&gt;`; 
+});
+
+console.log(html);
+//answer:
+//&lt;li style="color: purple"&gt;peter&lt;/li&gt;
+//&lt;li style="color: purple"&gt;fred&lt;/li&gt;
+//&lt;li style="color: purple"&gt;john&lt;/li&gt;
+//&lt;li style="color: purple"&gt;mel&lt;/li&gt;
+//&lt;li style="color: purple"&gt;george&lt;/li&gt;
+
+//display the html template
+ul.innerHTML = html; 
+//inspect elements
+//&lt;ul&gt;
+//&lt;li style="color: purple"&gt;peter&lt;/li&gt;
+//&lt;li style="color: purple"&gt;fred&lt;/li&gt;
+//&lt;li style="color: purple"&gt;john&lt;/li&gt;
+//&lt;li style="color: purple"&gt;mel&lt;/li&gt;
+//&lt;li style="color: purple"&gt;george&lt;/li&gt;
+//&lt;/ul&gt;</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-functions -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

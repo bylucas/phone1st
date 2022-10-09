@@ -1,0 +1,107 @@
+<!-- $title Numbers -->
+<!-- $SEO-title Numbers in Modern Javascript -->
+<!-- $description JavaScript has only one type of number. Numbers can be written with or without decimals -->
+<!-- $keyword numbers -->
+<!-- $url numbers.html -->
+
+<!-- $class numbers -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">JavaScript has only one type of <em>number</em>. <em>Numbers</em> can be written with or without decimals.</p>
+
+    <pre><code class="lang-js">//math operators: +, -, *, /, **, %
+
+// + : Addition
+// - : Subtraction
+// * : Multiplication
+// / : Division
+// ** : Exponentiation (power)
+// % : Modulus (remainder)
+// ++ : Increment
+// -- : Decrement
+
+let radius = 10;
+let pi = 3.14;
+
+let result = radius % 3;
+console.log(result);
+//result: 1
+//10 / 3 = 3 remainder 1
+  
+let result2 = pi * radius**2;
+console.log(result2);
+//result: 314
+//3.14 x 10 x 10
+
+// order of operation - B I D M A S
+
+// Brackets
+// Indices
+// Divide
+// Multiply
+// Addition
+// Subtraction
+
+let result3 = 5 * (10 - 3)**2;
+console.log(result3);
+//answer: 245
+
+// How its worked out:
+// Brackets : 10 - 3 = 7
+// Indices : 7 x 7 = 49
+// Multiply : 5 x 49 = 245
+
+//shorthands
+let count = 10;
+
+count = count + 1; //answer 11
+//shorter
+count++; //answer 11
+
+count = count + 10; //answer 20
+//shorter
+count += 10; //answer 20
+count *= 2; //answer 20
+count /= 2; //answer 5
+
+//NaN - not a number
+console.log(5 / 'hello');
+//answer: NaN
+
+
+let result4 = 'the total count is ' + count;
+console.log(result4);
+//answer:the total count is 32
+//sum of all the above count: 10 + 1 + 1 + 10 + 10 x 2 / 2</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

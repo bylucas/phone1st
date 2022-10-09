@@ -1,0 +1,91 @@
+.main-navigation {
+  display: block;
+
+ .menu-wrap {
+display: none;
+@include position(fixed, 0 null null -250px);
+z-index: 100;
+  background: #303030;
+  padding: 40px 25px;
+  width: 70%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+  transition: all 1s ease;
+
+  p {
+    font-family: $heading-font;
+      font-weight: 200;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+
+      a {
+        color: $white;
+        opacity: .7;
+      }
+  }
+ }
+
+
+ ul {
+  list-style: none;
+  //padding-bottom: 10px;
+
+   li {
+      font-family: $heading-font;
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      border-bottom: 1px dashed #C8C8C8;
+      letter-spacing: 2px;
+      
+       a {
+      color: $white;
+      text-decoration: none;
+      opacity: .7;
+}
+ ul {
+//list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+
+
+  li {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    border-bottom: none;
+    margin-left: 6px;
+    letter-spacing: 2px;
+
+ ul {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  li {
+    font-size: .9rem;
+  margin-left: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+  }
+}
+
+}
+}
+
+}
+}
+}
+
+.main-navigation.toggled .menu-wrap {
+  transform: translateX(250px);
+}
+
+@include media(900) {
+  .menu-wrap p a:hover,
+  .nav-menu li a:hover {
+    opacity: 1;
+  }
+}

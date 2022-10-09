@@ -1,0 +1,92 @@
+<!-- $title Variables and Block Scope -->
+<!-- $SEO-title Variables and Block Scope in Modern Javascript -->
+<!-- $description When a variable is defined in the script root it has a global scope. When a variable is defined in a code block it has a block scope. var ignores block scope -->
+
+<!-- $keyword variables-block-scope -->
+<!-- $url variables-block-scope.html -->
+
+<!-- $class variables-block-scope -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="control-flow.html">Control Flow</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">When a variable is defined in the script root it has a <em>global scope</em>. When a variable is defined in a code block it has a <em>block scope</em>. '<em>var</em>' ignores block scope</p>
+
+    <pre><code class="lang-js">//Variables 'let' and 'const' declared inside a { } block cannot be accessed from outside the block
+
+{
+  let i = 1;
+}
+//i Can NOT be used here
+
+//variables declared with 'var' don't have block scope
+{
+  var i = 1;
+}
+//i CAN be used here
+
+
+//root value
+ let age = 30;
+ var number = 20;
+
+//create new code block
+ if(true){
+ //re-define age
+ let age = 40;
+ 
+ //add a new local variable
+ let name = 'peter';
+ 
+ //re-define number
+ var number = 10;
+ 
+ console.log('inside 1st code block: ', age, name, number);
+ //answer: inside 1st code block: 40 peter 10
+
+ //create a nested code block
+ if(true){
+ 
+ //re-define age again
+ let age = 50;
+ 
+ console.log('inside 2nd code block: ', age, name, number);
+ //answer: inside 2nd code block: 50 peter 10
+ //takes 'name' value from parent code block, age still a local value
+ }
+}
+
+ console.log('outside code block: ', age, name, number);
+//answer: outside code block: 30 10
+//no name value in the root script
+//var was changed in the code block</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-control-flow -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

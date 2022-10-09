@@ -1,0 +1,83 @@
+<!-- $title Math Object -->
+<!-- $SEO-title Math Object in Modern Javascript -->
+<!-- $description Unlike other objects, the Math object has no constructor. The Math object is static. -->
+<!-- $keyword math-object -->
+<!-- $url math-object.html -->
+
+<!-- $class math-object -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="objects.html">Objects</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Unlike other objects, the <em>Math object</em> has no constructor. The <em>Math object</em> is static. All methods and properties can be used without creating a <em>Math object</em> first.</p>
+
+    <pre><code class="lang-js">console.log(Math.PI);
+//answer: 3.141592653589793
+
+console.log(Math.E);
+//answer: 2.718281828459045
+//The E property returns the Euler's number and the base of natural logarithms.
+
+const area = 7.7;
+
+console.log(Math.round(area));
+//answer: 8
+//nearest whole number
+//if const area is 7.3 anwser: 7
+
+console.log(Math.floor(area));
+//answer: 7
+//bottom whole number
+
+console.log(Math.ceil(area));
+//answer: 8
+//top whole number
+
+console.log(Math.trunc(area));
+//answer: 7
+//remove decimal place
+
+
+//random numbers
+
+const random = Math.random();
+
+console.log(random);
+//this answer: 0.5640304369763256
+//different random answer with each refresh
+//random between 0 and 1
+
+console.log(Math.round(random * 100));
+//this answer: 56
+//different random answer with each refresh
+//random between 1 and 100</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-objects -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

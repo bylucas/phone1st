@@ -1,0 +1,23 @@
+//Examples
+
+//switch statements in control flow
+.box-container {
+  max-width: 400px;
+  height: 40px;
+  margin: 0 auto $spacer auto;
+  position: relative;
+  border: 1px solid gray;
+}
+.inner-box {
+  width: 20px;
+  height: 39px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 190px;
+}
+
+.example-text {
+  text-align: center;
+  margin: $spacer 0;
+}

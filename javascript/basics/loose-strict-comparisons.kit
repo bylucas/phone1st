@@ -1,0 +1,76 @@
+<!-- $title Loose and Strict Comparisons -->
+<!-- $SEO-title Loose and Strict Comparisons in Modern Javascript -->
+<!-- $description loose comparison - different types can still be equal. strict comparison - different types cannot be equal. -->
+
+<!-- $keyword loose-strict-comparisons -->
+<!-- $url loose-strict-comparisons.html -->
+
+<!-- $class loose-strict-comparisons -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>Loose Comparison</em> '==' allows us to compare two or more operands by converting their value to a common type first and then checking for the equality between them.</p>
+
+    <p class="post-intro"><em>Strict Comparison</em> '===' allows us to compare two or more operands by checking the equality between the values as well as their types . It returns true only if the values and the type both match with the other operand.</p>
+
+    <pre><code class="lang-js">let age = 25;
+
+//loose comparison (different types can still be equal)
+
+console.log(age == 25);
+//result: true
+
+console.log(age == '25');
+//result: true
+
+console.log(age != 25);
+//result: false
+
+console.log(age != '25');
+//result: false
+
+
+//strict comparison (different types cannot be equal)
+
+console.log(age === 25);
+//result: true
+
+console.log(age === '25');
+//result: false
+
+console.log(age !== 25);
+//result: false
+
+console.log(age !== '25');
+//result: true</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!-- $title Template Strings -->
+<!-- $SEO-title Template Strings in Modern Javascript -->
+<!-- $description A variable is named storage for data. We use variables to store data that can be recalled when needed. -->
+<!-- $keyword template-strings -->
+<!-- $url template-strings.html -->
+
+<!-- $class template-strings -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="basics.html">Basics</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Concatenation (<em>join together</em>) or <em>Template string</em>? Below shows examples of both. Both are correct it's your choice which you prefer.</p>
+
+    <pre><code class="lang-js">const title = 'Practical Fly Fishing';
+const author = 'J R Harpur';
+const likes = 30;
+
+//concatenation way
+
+let result = 'The blog called ' + title + ' by ' + author + ' has ' + likes + ' likes';
+
+console.log(result);
+//result: The blog called Practical Fly Fishing by J R Harpur has 30 likes
+
+
+//template string way(``)
+
+let result2 = `The blog called ${title} by ${author} has ${likes} likes`;
+console.log(result2);
+//result: The blog called Practical Fly Fishing by J R Harpur has 30 likes
+
+//creating html templates
+let html = `
+  &lt;h2&gt;${title}&lt;/h2&gt;
+  &lt;h3&gt;By ${author}&lt;/h3&gt;
+  &lt;p&gt;This blog has ${likes} likes&lt;/p&gt;
+`;
+
+console.log(html);
+//result:
+//&lt;h2&gt;Practical Fly Fishing&lt;/h2&gt;
+//&lt;h3&gt;By J R Harpur&lt;/h3&gt;
+//&lt;p&gt;This blog has 30 likes&lt;/p&gt;</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-basics -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

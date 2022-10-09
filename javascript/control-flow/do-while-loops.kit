@@ -1,0 +1,64 @@
+<!-- $title Do While Loops -->
+<!-- $SEO-title Do While Loops in Modern Javascript -->
+<!-- $description Do while loops run the code once even if the condition is false. Then if true will carry on with the loop. -->
+
+<!-- $keyword do-while-loops -->
+<!-- $url do-while-loops.html -->
+
+<!-- $class do-while-loops -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="control-flow.html">Control Flow</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>Do While loops</em> run the code once even if the condition is false. Then if true will carry on with the loop.</p>
+
+    <pre><code class="lang-js">//a semi-colon is needed at the end because the while is out of the "do" code block
+
+let i = 5;
+
+do{
+console.log('val of i is: ', i);
+  i++;
+} while(i &lt; 5);//note semi-colon
+//result: val of i is: 5
+//the code runs at least once even if the condition is false - in this example i = 5 is not less than 5 so is false
+
+let x = 5;
+do{
+console.log('val of x is: ', x);
+  x++;
+} while(x &lt; 8);
+//result:
+//val of x is: 5
+//val of x is: 6
+//val of x is: 7</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-control-flow -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

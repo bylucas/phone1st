@@ -1,0 +1,89 @@
+<!-- $title While Loops -->
+<!-- $SEO-title While Loops in Modern Javascript -->
+<!-- $description While loops as the name implies loop while the condition is true. -->
+
+<!-- $keyword while-loops -->
+<!-- $url while-loops.html -->
+
+<!-- $class while-loops -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="control-flow.html">Control Flow</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>While loops</em> as the name implies loop while the condition is true.</p>
+
+    <pre><code class="lang-js">//like the for loop, no semi-colon to end the code block
+
+let i = 0;
+//set the value outside the while loop code block
+
+while(i &lt; 5){//set the condition
+ //do something
+ console.log('loop: ', i);
+  i++;//final expression - without this the loop would be infinite
+}
+//result:
+//loop: 0
+//loop: 1
+//loop: 2
+//loop: 3
+//loop: 4
+
+//most of the time you won't know the number of items in your source, ie. when accessing a database, so we find the total with .length
+
+const names = ['peter', 'fred', 'john', 'mel', 'frank', 'martin'];
+
+//it dosen't have to be i
+let a = 0;
+while(a &lt; names.length){
+console.log(names[a]);
+  a++;
+}
+//result:
+//peter
+//fred
+//john
+//mel
+//frank
+//martin
+
+//in this example i-- is i - 1
+i = 8;
+while(i &gt; 5){
+console.log('loop: ', i);
+  i--;
+}
+//answer:
+//loop: 8
+//loop: 7
+//loop: 6</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-control-flow -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>

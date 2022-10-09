@@ -1,0 +1,222 @@
+<!-- $title Object Literals -->
+<!-- $SEO-title Object Literals in Modern Javascript -->
+<!-- $description Objects are variables, that can contain many values. The values are written as name:value pairs (name and value separated by a colon). -->
+<!-- $keyword object-literals -->
+<!-- $url object-literals.html -->
+
+<!-- $class object-literals -->
+
+<!-- @import ../includes/_header -->
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1><!-- $title --></h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links"><a href="objects.html">Objects</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro"><em>Objects</em> are variables, that can contain many values. The values are written as name:value pairs (<em>name and value separated by a colon</em>).</p>
+    <p class="post-intro">You define (<em>and create</em>) a JavaScript object with an object literal.</p>
+
+    <p class="post-intro">The name:value pairs in JavaScript objects are called <em>properties</em>.</p>
+  <p class="post-intro"><em>Objects</em> can also have methods. Methods are actions that can be performed on objects. Methods are stored in properties as function definitions.</p>
+<p class="post-intro">In a function definition, <strong>this</strong> refers to the "owner" of the function.</p>
+
+    <pre><code class="lang-js">//surround objects with curly braces
+//objects contain key value pairs
+//key = name: value = 'fred'
+//place each property on a new line for better reading
+let user = {
+ name: 'fred',//key value pair
+ age: 30,
+ email: 'fred@me.com',
+ location: 'london',
+ blogs: ['all the worlds a stage', 'tomorrow never comes']
+};
+
+console.log(user);
+//answer: name: "fred", age: 30, email: "fred@me.com", location: "london", blogs: Array(2) ['all the worlds a stage', 'tomorrow never comes']
+
+//access properties with dot notation
+console.log(user.name);
+//answer: fred
+
+//change the properties
+user.name = 'john';
+console.log(user.name);
+//answer: john
+
+//access using brackets
+user['name'] = 'eric';
+console.log(user['name']);
+//answer: eric
+
+//brackets advantage is you can use variables which isn't possible with dot notation:
+const key = 'location';
+
+console.log(user[key]);
+//answer: london
+
+console.log(user.key);
+//answer: undefined
+//will not work with dot notation
+
+
+//adding methods
+let user2 = {
+ name: 'fred',//key value pair
+ age: 30,
+ email: 'fred@me.com',
+ location: 'london',
+ blogs: ['all the worlds a stage', 'tomorrow never comes'],
+//Methods
+ login: function() {
+  console.log('user 2 logged in')
+ },
+
+ logout: function() {
+  console.log('user 2 logged out')  
+ }
+};//user
+
+//methods are functions on objects
+user2.login();//answer: the user logged in
+user2.logout();//answer: the user logged out
+
+//[this] key word
+//in order to access the blogs array we need to use the [this] key word
+let user3 = {
+ name: 'fred',
+ age: 30,
+ email: 'fred@me.com',
+ location: 'london',
+ blogs: ['all the worlds a stage', 'tomorrow never comes'],
+//Methods
+ login: function() {
+  console.log('user 3 logged in')
+ },
+
+ logout: function() {
+  console.log('user 3 logged out')  
+ },
+
+//access the blogs using the [this] keyword
+//arrow function will not work here with [this] keyword use normal function
+ logBlogs: function() {
+ console.log(this.blogs);
+ //answer: ["all the worlds a stage", "tomorrow never comes"]
+ 
+ //we can list the blogs using an arrow function and the forEach method
+ this.blogs.forEach(blog => {
+  console.log(blog);
+ });
+ }
+};//user3
+
+user3.logBlogs();
+//answer:
+//all the worlds a stage
+//tomorrow never comes
+
+//the [this] keyword is local to the user object
+//logBlogs must be a normal function for the [this] keyword to work
+
+
+//the functions can still be shortened and still allow us to use the [this] keyword inside the functions when using objects
+let user4 = {
+ name: 'fred',
+ age: 30,
+ email: 'fred@me.com',
+ location: 'london',
+ blogs: ['all the worlds a stage', 'tomorrow never comes'],
+ //shorthand
+ login() {
+  console.log('user 4 logged in')
+ },
+
+ logout() {
+  console.log('user 4 logged out')  
+ },
+
+ logBlogs() {
+  this.blogs.forEach(blog => {
+   console.log(blog);
+  });
+ }
+};//user4
+
+user4.logBlogs();
+//answer:
+//all the worlds a stage
+//tomorrow never comes
+
+
+//storing objects in arrays
+
+//quick example
+const blogs = [
+{title: 'all the worlds a stage', likes: 30},
+{title: 'tomorrow never comes', likes: 10}
+]
+
+console.log(blogs);
+//answer:
+//0: {title: "all the worlds a stage", likes: 30}
+//1: {title: "tomorrow never comes", likes: 10}
+
+
+//Put the blogs into our user example
+let user5 = {
+ name: 'fred',
+ age: 30,
+ email: 'fred@me.com',
+ location: 'london',
+ //objects in arrays
+ blogs: [
+  {title: 'all the worlds a stage', likes: 30},
+  {title: 'tomorrow never comes', likes: 10}
+ ],
+    
+ login() {
+  console.log('user 5 logged in')
+ },
+
+ logout() {
+  console.log('user 5 logged out')  
+ },
+
+ logBlogs() {
+  this.blogs.forEach(blog => {
+   console.log(blog.title, blog.likes);
+  });
+ }
+};//user5
+
+user5.logBlogs();
+//answer:
+//all the worlds a stage 30
+//tomorrow never comes 10</code></pre>
+    
+  </div>
+  
+</article>
+
+<!-- @import ../includes/_related-objects -->
+ 
+</section>
+<!-- @import ../includes/_footer -->
+</div>
+<!-- @import ../includes/_scripts2 -->
+</body>
+
+</html>
