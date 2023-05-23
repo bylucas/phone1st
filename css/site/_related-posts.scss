@@ -2,7 +2,7 @@
 
 
 .related-post-wrap {
-  margin-bottom: $spacer*2;
+  //margin-bottom: $spacer*2;
 
   h2 {
   font-size: 1.6rem;
@@ -63,7 +63,7 @@
 @include media(600) {
   .related-post-wrap {
   border-bottom: 0;
-  margin-bottom: $spacer;
+  //margin-bottom: $spacer;
   //padding-bottom: 0;
 
   //h2 {
@@ -92,7 +92,7 @@ column: 20px;
 @include media(900) {
 
   .related-post-wrap {
-    margin-bottom: $spacer*2.5;
+    //margin-bottom: $spacer*2.5;
   }
   .related-post {
     //flex: 1 250px;

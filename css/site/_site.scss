@@ -25,9 +25,9 @@ border-bottom: 6px solid $light-gray;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: $spacer;
+  margin-top: $spacer*2;
   border-top: 1px dashed $light-gray;
-  padding-top: $spacer;
+  @include padding($spacer null);
 }
 
 .footer-links {
