@@ -1,14 +1,14 @@
 //front index page
 
 .home {
-  padding-top: $spacer/4;
+  padding-top: math.div($spacer, 4);
 }
 
 .home-box {
   text-align: center;
-  margin: $spacer/2 $spacer/2 0 $spacer/2 ;
+  margin: math.div($spacer, 2) math.div($spacer, 2) 0 math.div($spacer, 2) ;
   border-bottom: 1px solid $light-gray;
-  padding: 0 0 $spacer/3 0;
+  padding: 0 0 math.div($spacer, 3) 0;
 
   h1, h2, h3 {
     font-size: 1.3rem;
@@ -28,12 +28,12 @@ text-align: center;
 padding-top: 20px;
 div {
   border-bottom: 1px solid $light-gray;
-margin: $spacer/2 $spacer/2 0 $spacer/2 ;
+margin: math.div($spacer, 2) math.div($spacer, 2) 0 math.div($spacer, 2) ;
 }
 
   img {
     width: 20%;
-    margin-bottom: $spacer/3;
+    margin-bottom: math.div($spacer, 3);
   }
   p {
   font-size: $font-size*1.1;
@@ -51,8 +51,8 @@ text-align: left;
 border-top: 1px solid $light-gray;
 border-left: 1px solid $light-gray;
 border-right: 1px solid $light-gray;
-padding: $spacer $spacer/2;
-margin: $spacer*1.5 $spacer/2;
+padding: $spacer math.div($spacer, 2);
+margin: $spacer*1.5 math.div($spacer, 2);
 
 h1, h2, h3 {
     font-size: 1.2rem;
@@ -61,7 +61,7 @@ h1, h2, h3 {
 
 
 img {
-  margin: 0 $spacer/1.5 0 0;
+  margin: 0 math.div($spacer, 1.5) 0 0;
   width: 17%;
   }
 }
@@ -76,7 +76,7 @@ border-top: 1px solid $light-gray;
 border-bottom: 1px solid $light-gray;
 margin-top: $spacer*1.5;
 margin-bottom: $spacer*1.5;
-padding: $spacer/3 0 $spacer/1.5 0;
+padding: math.div($spacer, 3) 0 math.div($spacer, 1.5) 0;
 
 div {
   border-bottom: 0;
@@ -84,7 +84,7 @@ div {
 
 img {
     width: 25%;
-    margin: 0 0 $spacer/4 0;
+    margin: 0 0 math.div($spacer, 4) 0;
   }
 
   p {

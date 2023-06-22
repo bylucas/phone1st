@@ -54,7 +54,8 @@
 .object-literals #object-literals,
 .math-object #math-object,
 .primitive-values #primitive-values,
-.primitive-reference-values #primitive-reference-values {
+.primitive-reference-values #primitive-reference-values,
+.blog #blog {
  color: $hover-color;
  opacity: 1;
  cursor: not-allowed;
