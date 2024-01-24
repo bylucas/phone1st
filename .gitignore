@@ -2,3 +2,5 @@
 .DS_Store
 .DS_Store?
 *.codekit3
+js/firebase-config.js
+node_modules

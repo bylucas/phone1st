@@ -30,3 +30,24 @@ class Backtotop {
 
 const backtotop = new Backtotop();
 backtotop.init();
+
+//Modal
+const submit = document.querySelector(".modal-button")
+const popup = document.querySelector(".popup-wrapper")
+const effect = document.querySelector(".popup")
+const close = document.querySelector(".popup-close")
+
+submit.addEventListener("click", () => {
+  popup.style.display = "block"
+  effect.classList.add('enter')
+})
+
+close.addEventListener("click", () => {
+  popup.style.display = "none"
+})
+
+popup.addEventListener("click", (e) => {
+  if (e.target.className === "popup-wrapper") {
+    popup.style.display = "none"
+  }
+})

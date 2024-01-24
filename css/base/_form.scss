@@ -10,24 +10,24 @@ textarea {
   font-size: $secondary;
   color: $medium-gray;
   padding: 15px;
+  background: transparent;
   //margin-bottom: math.div($spacer, 2);
 }
 // Add your type inputs - Bourbon Mixin
 #{$all-text-inputs},
 select {
-  background-color: $input-background;
   width: 100%;//set for phone first
-  border: $border;
-  border-radius: $radius;
-  box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-  transition: background-color 0.8s ease-in 0.1s;
+  //border: $border;
+  //border-radius: $radius;
+  //box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+  //transition: background-color 0.8s ease-in 0.1s;
 
   &:hover {
-    border-color: darken($input-background, 20%);
+    //border-color: darken($input-background, 20%);
   }
   &:focus {
     border-color: $link-color;
-    box-shadow: inset 0 1px 2px rgba(#000, 0.1);
+    //box-shadow: inset 0 1px 2px rgba(#000, 0.1);
     outline: none;
   }
   &:disabled {
@@ -35,11 +35,11 @@ select {
     opacity: 0.5;
 
     &:hover {
-      border-color: $error-color;
+      //border-color: $error-color;
     }
   }
   @include placeholder {
-    color: $medium-gray;
+    color: #51B924;
   }
 }
 

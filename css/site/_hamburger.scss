@@ -34,7 +34,7 @@
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: math.div(4px, -2);
+  margin-top: 4px;
 
   &,
   &::before,
@@ -56,11 +56,11 @@
   }
 
   &::before {
-    top: (6px + 4px) * -1;
+    top: -10px;
   }
 
   &::after {
-    bottom: (6px + 4px) * -1;
+    bottom: -10px;
   }
 }
 
