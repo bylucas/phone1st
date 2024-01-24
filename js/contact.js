@@ -31,9 +31,9 @@ form.addEventListener("submit", (e) => {
     feedback.style.display = 'block'
     setTimeout(() => {
   feedback.style.display = 'none',
-  name.value = '',
-  email.value = '',
-  message.value = ''
+  form.name.value = '',
+  form.email.value = '',
+  form.message.value = ''
   }, 3000 )
 
 
