@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KTBJ75M7YH');
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Math Object in Modern Javascript | howardl</title>
+<meta name="HandheldFriendly" content="True" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Unlike other objects, the Math object has no constructor. The Math object is static.">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta name="keywords" content="math-object">
+<link rel="canonical" href="https://howardl.org/javascript/math-object.html" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="../../css/style.css" />
+
+</head>
+
+<body class="math-object" onload="spinner()">
+
+<div class="wrapper">
+  <div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+<button id="topBtn" title="Back to top">Top</button>
+<header class="header">
+  <div class="inner">
+   <h1><a href="../index.html">howardl</a> - <a href="javascript.html">Javascript</a></h1>
+    <nav id="site-navigation" class="main-navigation">
+    
+       <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    
+    <section class="menu-wrap">
+      <p><a href="https://howardl.org/">howardl</a></p>
+      <p><a href="https://howardl.org/blog.html">Blog</a></p>
+      <p>--------------</p>
+    
+         <ul>
+           <li><a id="javascript" href="javascript.html">Modern Javascript</a>
+            
+            <ul>
+            <li><a id="basics" href="basics.html">- Basics -</a>
+              
+              <ul>
+              <li><a id="variables" href="variables.html">Variables</a></li>
+              <li><a id="strings" href="strings.html">Strings</a></li>
+              <li><a id="string-methods" href="string-methods.html">String Methods</a></li>
+              <li><a id="numbers" href="numbers.html">Numbers</a></li>
+              <li><a id="template-strings" href="template-strings.html">Template Strings</a></li>
+              <li><a id="arrays" href="arrays.html">Arrays</a></li>
+              <li><a id="null-undefined" href="null-undefined.html">Null and Undefined</a></li>
+              <li><a id="booleans-comparisons" href="booleans-comparisons.html">Booleans and Comparisons</a></li>
+              <li><a id="loose-strict-comparisons" href="loose-strict-comparisons.html">Loose and Strict Comparisons</a></li>
+              <li><a id="type-conversion" href="type-conversion.html">Type Conversion</a></li>
+              </ul>
+            </li>
+            </ul>
+    
+            
+            <ul>
+              <li><a id="control-flow" href="control-flow.html">- Control Flow -</a>
+                <ul>
+                  <li><a id="for-loops" href="for-loops.html">For Loops</a></li>
+                  <li><a id="while-loops" href="while-loops.html">While Loops</a></li>
+                  <li><a id="do-while-loops" href="do-while-loops.html">Do While Loops</a></li>
+              <li><a id="if-statements" href="if-statements.html">If Statements</a></li>
+              
+              <li><a id="else-if-statements" href="else-if-statements.html">Else If Statements</a></li>
+              
+              <li><a id="logical-operators" href="logical-operators.html">Logical Operators</a></li>
+              
+              <li><a id="ternary-operator" href="ternary-operator.html">Ternary Operator</a></li>
+              
+              <li><a id="break-continue" href="break-continue.html">Break and Continue</a></li>
+              
+              <li><a id="switch-statements" href="switch-statements.html">Switch Statements</a></li>
+              
+              <li><a id="variables-block-scope" href="variables-block-scope.html">Variables and Block Scope</a></li>
+            
+            </ul>
+          </li>
+        </ul>
+    
+         <ul>
+              <li><a id="functions-cat" href="functions-cat.html">- Functions -</a>
+                <ul>
+                  <li><a id="functions" href="functions.html">Functions</a></li>
+                  <li><a id="arrow-functions" href="arrow-functions.html">Arrow Functions</a></li>
+                  <li><a id="callback-functions" href="callback-functions.html">Callback Functions and ForEach</a></li>
+            
+            </ul>
+          </li>
+        </ul>
+    
+        <ul>
+              <li><a id="objects" href="objects.html">- Objects -</a>
+                <ul>
+                  <li><a id="object-literals" href="object-literals.html">Object Literals</a></li>
+                  <li><a id="math-object" href="math-object.html">Maths Object</a></li>
+                  <!-- <li><a id="primitive-values" href="primitive-values.html">Primitive Values</a></li> -->
+                  <li><a id="primitive-reference-values" href="primitive-reference-values.html">Primitive and Reference Values</a></li>
+            
+            </ul>
+          </li>
+        </ul>
+           
+           </li>
+           </ul>
+          
+          </section>
+        </nav>
+  </div>
+
+</header>
+
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1>Math Object</h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links">#<a href="objects.html">Objects</a></span>
+      </div>
+   
+  </header>
+
+  <div class="post-content">
+
+    <p class="post-intro">Unlike other objects, the <em>Math object</em> has no constructor. The <em>Math object</em> is static. All methods and properties can be used without creating a <em>Math object</em> first.</p>
+
+    <pre><code class="lang-js">console.log(Math.PI);
+//answer: 3.141592653589793
+
+console.log(Math.E);
+//answer: 2.718281828459045
+//The E property returns the Euler's number and the base of natural logarithms.
+
+const area = 7.7;
+
+console.log(Math.round(area));
+//answer: 8
+//nearest whole number
+//if const area is 7.3 anwser: 7
+
+console.log(Math.floor(area));
+//answer: 7
+//bottom whole number
+
+console.log(Math.ceil(area));
+//answer: 8
+//top whole number
+
+console.log(Math.trunc(area));
+//answer: 7
+//remove decimal place
+
+
+//random numbers
+
+const random = Math.random();
+
+console.log(random);
+//this answer: 0.5640304369763256
+//different random answer with each refresh
+//random between 0 and 1
+
+console.log(Math.round(random * 100));
+//this answer: 56
+//different random answer with each refresh
+//random between 1 and 100</code></pre>
+    
+  </div>
+  
+</article>
+
+
+
+<div class="related-post-wrap">
+  <h2>Similar in Objects</h2>
+  <div class="related-wrap">
+
+    <div class="related-post">
+        <h3><a id="object-literals" href="object-literals.html">Object Literals</a></h3>
+    </div>
+    
+    <div class="related-post">
+        <h3><a id="math-object" href="math-object.html">Maths Object</a></h3>
+    </div>
+
+    <!-- <div class="related-post">
+        <h3><a id="primitive-values" href="primitive-values.html">Primitive Values</a></h3>
+    </div> -->
+
+     <div class="related-post">
+        <h3><a id="primitive-reference-values" href="primitive-reference-values.html">Primitive and Reference Values</a></h3>
+    </div>
+
+  
+  </div>
+</div>
+ 
+</section>
+ <footer class="footer">
+  <nav class="footer-links"><a id="javascript" href="javascript.html">Home .</a><a id="basics" href="basics.html">Basics .</a><a id="control-flow" href="control-flow.html">Control Flow .</a><a id="functions-cat" href="functions-cat.html">Functions .</a><a id="objects" href="objects.html">Objects</a></nav>
+   
+   <p class="third">&copy;2024 <a href="https://howardl.org/" title="howardl">howardl . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="../privacy.html">Privacy</a></p>
+ </footer>
+
+ <div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close">X</div>
+    <h2>Contact Form</h2>
+      <div class="popup-content">
+
+         <form class="contact-form">
+     <input class="subscribe" type="text" id="name" placeholder="your name" required/>
+
+     <input class="subscribe" type="email" id="email" placeholder="youremail@example.com" required/>
+    
+    <textarea class="subscribe" id="message" placeholder="How can we help?" required></textarea>
+    
+    <div class="feedback">You Did It!....</div>
+  
+    <button type="submit" class="contact-submit">Send</button>
+  
+        </form>
+    </div>
+  </div>
+</div>
+
+</div>
+<script src="../../js/prism.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/javascript.js"></script>
+<script src="../../js/contact.js"></script>
+</body>
+
+</html>
