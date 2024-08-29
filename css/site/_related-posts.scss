@@ -1,13 +1,12 @@
 //Related Posts
 
-
 .related-post-wrap {
   //margin-bottom: $spacer*2;
 
   h2 {
-  font-size: 1.6rem;
-  margin-bottom: $spacer;
-  text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: $spacer;
+    text-align: center;
   }
 }
 
@@ -27,7 +26,6 @@
 .control-flow #control-flow,
 .functions-cat #functions-cat,
 .objects #objects,
-
 .variables #variables,
 .strings #strings,
 .string-methods #string-methods,
@@ -55,31 +53,33 @@
 .math-object #math-object,
 .primitive-values #primitive-values,
 .primitive-reference-values #primitive-reference-values,
-.blog #blog {
- color: $hover-color;
- opacity: 1;
- cursor: not-allowed;
+.blog #blog,
+.cheat-sheets #cheat-sheets,
+.markdown #markdown {
+  color: $hover-color;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 @include media(600) {
   .related-post-wrap {
-  border-bottom: 0;
-  //margin-bottom: $spacer;
-  //padding-bottom: 0;
+    border-bottom: 0;
+    //margin-bottom: $spacer;
+    //padding-bottom: 0;
 
-  //h2 {
-  //margin-bottom: 20px;
-  //}
-}
+    //h2 {
+    //margin-bottom: 20px;
+    //}
+  }
 
   .related-wrap {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-//align-items: center;
-gap: 20px;
-column: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //align-items: center;
+    gap: 20px;
+    column: 20px;
   }
 
   .related-post {
@@ -91,7 +91,6 @@ column: 20px;
 }
 
 @include media(900) {
-
   .related-post-wrap {
     //margin-bottom: $spacer*2.5;
   }

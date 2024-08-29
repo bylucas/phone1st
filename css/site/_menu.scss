@@ -20,6 +20,7 @@ z-index: 100;
       font-weight: 200;
       font-size: 1.2rem;
       letter-spacing: 3px;
+      margin-bottom: 0.4rem;
 
       a {
         color: $white;
@@ -38,6 +39,7 @@ z-index: 100;
       font-weight: 300;
       font-size: 1.1rem;
       margin-bottom: 15px;
+      padding-bottom: 0.2rem;
       border-bottom: 1px dashed #C8C8C8;
       letter-spacing: 2px;
       
@@ -50,7 +52,7 @@ z-index: 100;
 //list-style: none;
   padding-left: 0;
   margin-bottom: 0;
-  margin-top: 15px;
+  //margin-top: 15px;
 
   li {
     font-size: 1rem;
