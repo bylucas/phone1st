@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <!-- @import ../../includes/_meta -->
+<link rel="stylesheet" href="../css/style.css" />
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script>
 <script>
@@ -11,16 +14,16 @@
 
   gtag('config', 'G-KTBJ75M7YH');
 </script>
-
-<!-- @import ../../includes/_meta -->
-<link rel="stylesheet" href="../css/style.css" />
-
 </head>
-
-<body class="<!-- $class? -->">
+  <body class="<!-- $class? -->" onload="spinner()">
 
 <div class="wrapper">
 <button id="topBtn" title="Back to top">Top</button>
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
 <header class="header">
   <div class="inner">
    <h1><a href="../index.html">howardl</a> - <a href="blog.html">Blog</a></h1>

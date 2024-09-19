@@ -18,8 +18,8 @@ z-index: 100;
   p {
     font-family: $heading-font;
       font-weight: 200;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
+      font-size: 1.1rem;
+      letter-spacing: 5px;
       margin-bottom: 0.4rem;
 
       a {
@@ -27,20 +27,20 @@ z-index: 100;
         opacity: .7;
       }
   }
+  .line {
+    color: $menu-line;
+  }
  }
 
 
  ul {
   list-style: none;
-  //padding-bottom: 10px;
 
    li {
       font-family: $heading-font;
       font-weight: 300;
       font-size: 1.1rem;
-      margin-bottom: 15px;
       padding-bottom: 0.2rem;
-      border-bottom: 1px dashed #C8C8C8;
       letter-spacing: 2px;
       
        a {
@@ -49,16 +49,13 @@ z-index: 100;
       opacity: .7;
 }
  ul {
-//list-style: none;
   padding-left: 0;
   margin-bottom: 0;
-  //margin-top: 15px;
 
   li {
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 0;
-    border-bottom: none;
     margin-left: 6px;
     letter-spacing: 3px;
 
@@ -66,6 +63,7 @@ z-index: 100;
   margin-bottom: 0;
   margin-top: 8px;
   padding-bottom: 0;
+  border-bottom: 1px dashed $menu-line;
   li {
     font-size: .9rem;
   margin-left: 18px;

@@ -1,9 +1,5 @@
 //front index page
 
-.home {
-  padding-top: math.div($spacer, 4);
-}
-
 .home-box {
   text-align: center;
   margin: math.div($spacer, 2) math.div($spacer, 2) 0 math.div($spacer, 2) ;
@@ -12,84 +8,111 @@
 
   h1, h2, h3 {
     font-size: 1.3rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 15px;
   }
 
   img {
-    width: 20%;
+    width: 140px;
     margin-bottom: 10px;
     margin-top: 10px;
   }
 }
 
-.home-options {
-text-align: center;
-padding-top: 20px;
-div {
-  border-bottom: 1px solid $light-gray;
-margin: math.div($spacer, 2) math.div($spacer, 2) 0 math.div($spacer, 2) ;
+.bottom-box {
+ border-bottom: 1px solid $light-gray;
 }
 
+.home-phone {
+text-align: center;
+padding-top: 20px;
+
   img {
-    width: 20%;
+    width: 90px;
     margin-bottom: math.div($spacer, 3);
   }
   p {
-  font-size: $font-size*1.1;
+  font-size: 1.1rem;
+  }
+}
+
+.blog-links {
+  margin: $spacer 0;
+}
+
+.blog-links-heading {
+text-align: center;
+letter-spacing: 3px;
+margin-top: $spacer;
+.line {
+    color: $menu-line;
+  }
+}
+
+.home-notes {
+  margin-top: $spacer;
+  text-align: center;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  p {
+    color: $white;
+    @include padding(20px 20px null 20px);
+    font-size: $secondary;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: $white;
+    font-size: $lead;
+  }
+
+  .invert {
+    color: $black;
   }
 }
 
 @include media(600) {
   .home-box {
-    display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-//justify-content: center;
-align-items: center;
-text-align: left;
 border-top: 1px solid $light-gray;
 border-left: 1px solid $light-gray;
 border-right: 1px solid $light-gray;
 padding: $spacer math.div($spacer, 2);
-margin: $spacer*1.5 math.div($spacer, 2);
+margin: $spacer*1.5 0;
 
 h1, h2, h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
   }
 
 
 img {
   margin: 0 math.div($spacer, 1.5) 0 0;
-  width: 17%;
+  width: 110px;
+  margin-bottom: 15px;
   }
 }
 
-.home-options {
-  display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: center;
-align-items: center;
-border-top: 1px solid $light-gray;
-border-bottom: 1px solid $light-gray;
-margin-top: $spacer*1.5;
-margin-bottom: $spacer*1.5;
-padding: math.div($spacer, 3) 0 math.div($spacer, 1.5) 0;
-
-div {
-  border-bottom: 0;
+.bottom-box {
+ border-top: 1px solid $light-gray;
 }
 
+.home-phone {
+padding-top: $spacer*1.3;
+
 img {
-    width: 25%;
-    margin: 0 0 math.div($spacer, 4) 0;
+    width: 80px;
   }
 
   p {
-    margin: 0;
     font-size: 1.1rem;
+  }
+  }
+  .home-notes {
+    p {
+    @include padding(20px 30px null 30px);
   }
   }
 }
@@ -97,81 +120,39 @@ img {
 @include media(700) {
   .home-box {
     h1, h2, h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
 
 img {
-  width: 15%;
+  width: 120px;
   }
   }
-}
-
-@include media(900) {
-  .home-options img {
-    width: 20%;
+  .blog-links {
+  margin: 0;
   }
-  .home-box {
-    img {
-    width: 12%;
-  }
- h1, h2, h3 {
-    font-size: 1.4rem;
-  }
-  }
-
-//   .lead {
-//   font-size: $font-size*1.4;
-// }
-}
-/////////////////////////////////////////////
-
-.card-wrap {
-  margin-top: $spacer*1.5 0;
-}
-
-.index-content {
-  margin-bottom: $spacer;
-  border: 1px dashed $light-gray;
-  border-radius:$radius;
-  padding: 15px;
-
-  h2 {
-    font-size: 1.5rem;
-     margin-bottom: 10px;
-  }
-  margin-bottom: 1rem;
-}
-
-.meta {
-font-size: $third;
-border-top: 1px dashed $light-gray;
-padding-top: 10px;
-}
-
-@include media(900) {
-  .card-wrap {
-  display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    column: 30px;
-}
-
-.index-content {
-  flex: 1 400px;
-    display: flex;
-    flex-direction: column;
+  .home-notes p {
     margin-bottom: 0;
+  }
+}
+@include media(900) {
+  .home-notes {
     border: 1px solid $light-gray;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 8px 10px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
-
-  &:hover {
-    text-decoration: none;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .home-notes {
+    &:hover {
     box-shadow: rgba(39, 44, 49, 0.07) 8px 14px 18px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
     transition: all 0.7s ease;
     transform: translate3D(0, -1px, 0) scale(1.02);
   }
+  
+  a:hover {
+    color: $link-color;
+  }
 }
-
 }

@@ -44,7 +44,7 @@ a {
 
 @include media(900) {
   a {
-    transition: color 0.3s ease-in 0.1s;
+    transition: color 0.2s ease-in 0.1s;
   }
 
   body {
@@ -74,6 +74,7 @@ a {
 @import "site/menu";
 @import "site/hamburger";
 @import "site/index";
+@import "site/categories";
 @import "site/post";
 @import "site/pages";
 @import "site/blog";

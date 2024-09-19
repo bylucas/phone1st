@@ -8,6 +8,10 @@
     margin-bottom: $spacer;
     text-align: center;
   }
+
+  .line {
+    color: $menu-line;
+  }
 }
 
 .related-post {
@@ -55,7 +59,8 @@
 .primitive-reference-values #primitive-reference-values,
 .blog #blog,
 .cheat-sheets #cheat-sheets,
-.markdown #markdown {
+.markdown #markdown,
+.git #git {
   color: $hover-color;
   opacity: 1;
   cursor: not-allowed;

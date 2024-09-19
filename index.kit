@@ -8,6 +8,9 @@
 <html lang="en">
 
 <head>
+  <!-- @import includes/_meta -->
+<link rel="stylesheet" href="css/style.css" />
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script>
 <script>
@@ -17,9 +20,6 @@
 
   gtag('config', 'G-KTBJ75M7YH');
 </script>
-<!-- @import includes/_meta -->
-<link rel="stylesheet" href="css/style.css" />
-
 </head>
 
 <body onload="spinner()">
@@ -31,9 +31,10 @@
   <div class="loader-section section-right"></div>
 </div>
 
-<section class="main">
+<header>
    <img src="images/phone1st-home.webp" alt="phone1st home page image">
-   <div class="home">
+   </header>
+   <section class="top-box">
      <div class="home-box">
     <img src="images/feather.png" alt="feather image">
     <h1>A <em>light</em> and <em>basic</em> html starter theme to get you off to a <em>quick</em> start with your web developments.</h1>
@@ -48,24 +49,39 @@
     <img src="images/smarter.png" alt="smarter image">
     <h3>Using <em>Phone1st</em> will save you time, building <em>quicker</em>, <em>smarter</em> projects.</h3>
   </div>
-
-  <div class="home-options">
-    <div class="home-left">
+</section>
+  
+  <section class="bottom-box">
+    <div class="home-phone">
       <img src="images/view.png" alt="view image">
       <p><a href="https://phone1st.org/">View Phone1st</a></p>
     </div>
 
-    <div class="home-right">
+    <div class="home-phone">
       <img src="images/download.png" alt="download image">
       <p><a href="https://github.com/bylucas/phone1st-theme">Download Phone1st</a></p>
     </div>
+ </section>
+ <h3 class="blog-links-heading"><span class="line">―</span> What's Going On <span class="line">―</span></h3>
+ 
+<section class="blog-links"> 
+  
+  <div class="home-notes" style="background-image: url(images/modern-javascript-background.webp);">
+    <p>A complete reference guide to Modern Javascript including projects</p>
+    <a href="javascript.html">Modern Javascript</a>
   </div>
-  <div class="home-notes">
-    <a href="javascript.html"><img src="images/js-notes.webp" alt="Go to javascript notes"></a>
-  </div>
+
+  <div class="home-notes" style="background-image: url(images/markdown-background.webp);">
+    <p>Learn the basics of Markdown and MultiMarkdown for writing quicker html</p>
+    <a href="markdown.html">Markdown Guide</a>
   </div>
  
-</section><!-- .main -->
+  <div class="home-notes" style="background-image: url(images/git-background.webp);">
+    <p class="invert">A Git and Github cheat-sheet for quick reference to some basic commands</p>
+    <a class="invert" href="git.html">Git and Github Basics</a>
+  </div>
+ 
+ </section> 
 <!-- @import includes/_footer -->
 </div>
 <!-- @import includes/_scripts -->
