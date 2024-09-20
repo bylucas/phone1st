@@ -75,7 +75,7 @@
             <li><a id="cheat-sheets" href="cheat-sheets.html"><span class="line">―</span> Cheat-Sheets <span class="line">―</span></a>
               
               <ul>
-              <li><a id="markdown" href="markdown.html">A Guide to Multi-Markdown</a></li>
+              <li><a id="markdown" href="markdown.html">A Guide to Markdown</a></li>
                <li><a id="git" href="git.html">Git and Github Basics</a></li>
               </ul>
             </li>
@@ -133,6 +133,12 @@ highlights the git code for easier reading</em></p>
 <p><code>git config --list</code><br>
 <em>Lists your git config settings</em><br>
 <em>global - default settings used in all git repros</em></p>
+
+<h4>.DS_Store files</h4>
+<p><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code><br>  
+<em>Finds and removes .DS_Store files from your project and Git</em><br>
+<em>Do this from the root of your project</em><br>  
+<em>Add **/.DS_Store to the .gitignore file</em></p>
 
 <h3>Starting a Repository</h3>
 
@@ -238,7 +244,7 @@ Download a on-line project to a folder on your computer</em></p>
   <div class="related-wrap">
     
     <div class="related-post">
-        <h3><a id="markdown" href="markdown.html">A Guide to Multi-Markdown</a></h3>
+        <h3><a id="markdown" href="markdown.html">A Guide to Markdown</a></h3>
     </div>
     <div class="related-post">
         <h3><a id="git" href="git.html">Git and Github Basics</a></h3>

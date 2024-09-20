@@ -54,6 +54,12 @@ highlights the git code for easier reading</em></p>
 <em>Lists your git config settings</em><br>
 <em>global - default settings used in all git repros</em></p>
 
+<h4>.DS_Store files</h4>
+<p><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code><br>  
+<em>Finds and removes .DS_Store files from your project and Git</em><br>
+<em>Do this from the root of your project</em><br>  
+<em>Add **/.DS_Store to the .gitignore file</em></p>
+
 <h3>Starting a Repository</h3>
 
 <p>A Git repository is a folder that holds your project. It can be empty or already contain project files and folders. Git places a hidden folder at the root of the project folder/repository where it tracks the projects files and watches for changes.</p>
