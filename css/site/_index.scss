@@ -7,7 +7,7 @@
   padding: 0 0 math.div($spacer, 3) 0;
 
   h1, h2, h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 15px;
   }
@@ -43,6 +43,7 @@ padding-top: 20px;
 .blog-links-heading {
 text-align: center;
 letter-spacing: 3px;
+font-size: 1.3rem;
 margin-top: $spacer;
 .line {
     color: $menu-line;
@@ -71,6 +72,12 @@ margin-top: $spacer;
 
   .invert {
     color: $black;
+  }
+}
+
+@include media(350) {
+ .blog-links-heading {
+    font-size: 1.5rem;
   }
 }
 
@@ -105,7 +112,6 @@ padding-top: $spacer*1.3;
 img {
     width: 80px;
   }
-
   p {
     font-size: 1.1rem;
   }
@@ -114,6 +120,9 @@ img {
     p {
     @include padding(20px 30px null 30px);
   }
+  }
+  .blog-links-heading {
+    font-size: 1.6rem;
   }
 }
 
@@ -133,6 +142,9 @@ img {
   }
   .home-notes p {
     margin-bottom: 0;
+  }
+  .blog-links-heading {
+    font-size: 1.7rem;
   }
 }
 @include media(900) {
@@ -155,4 +167,7 @@ img {
     color: $link-color;
   }
 }
+.blog-links-heading {
+    font-size: 1.8rem;
+  }
 }

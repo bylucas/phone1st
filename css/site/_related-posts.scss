@@ -60,7 +60,8 @@
 .blog #blog,
 .cheat-sheets #cheat-sheets,
 .markdown #markdown,
-.git #git {
+.git #git,
+.terminal #terminal {
   color: $hover-color;
   opacity: 1;
   cursor: not-allowed;
@@ -69,12 +70,16 @@
 @include media(600) {
   .related-post-wrap {
     border-bottom: 0;
-    //margin-bottom: $spacer;
-    //padding-bottom: 0;
 
-    //h2 {
-    //margin-bottom: 20px;
-    //}
+    h2 {
+
+    &:before,
+    &:after {
+      content: '―';
+      color: $menu-line;
+      @include margin(null 5px);
+    }
+  }
   }
 
   .related-wrap {

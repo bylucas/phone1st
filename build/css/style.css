@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,7 +17,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -187,7 +187,7 @@ body {
   height: 100%;
   color: #464747;
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: 1.2rem;
   line-height: 1.5;
@@ -205,9 +205,6 @@ a:active, a:focus {
 @media only screen and (min-width: 900px) {
   a {
     transition: color 0.2s ease-in 0.1s;
-  }
-  body {
-    font-weight: 300;
   }
 }
 @media (hover: hover) {
@@ -871,19 +868,27 @@ table caption {
   overflow-y: scroll;
   transition: all 1s ease;
 }
+.main-navigation .menu-wrap .top-links {
+  border-bottom: 1px dashed #1B81F5;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
 .main-navigation .menu-wrap p {
   font-family: "Work Sans", sans-serif;
   font-weight: 200;
   font-size: 1.1rem;
   letter-spacing: 5px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 .main-navigation .menu-wrap p a {
   color: #fff;
   opacity: 0.7;
 }
-.main-navigation .menu-wrap .line {
+.main-navigation .menu-wrap .line:before, .main-navigation .menu-wrap .line:after {
+  content: "―";
   color: #1B81F5;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 .main-navigation ul {
   list-style: none;
@@ -891,9 +896,14 @@ table caption {
 .main-navigation ul li {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-bottom: 0.2rem;
   letter-spacing: 2px;
+}
+@media only screen and (min-width: 600px) {
+  .main-navigation ul li {
+    font-size: 1.2rem;
+  }
 }
 .main-navigation ul li a {
   color: #fff;
@@ -905,23 +915,33 @@ table caption {
   margin-bottom: 0;
 }
 .main-navigation ul li ul li {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 0;
   margin-left: 6px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 600px) {
+  .main-navigation ul li ul li {
+    font-size: 1.1rem;
+  }
 }
 .main-navigation ul li ul li ul {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   margin-top: 8px;
-  padding-bottom: 0;
+  padding-bottom: 7px;
   border-bottom: 1px dashed #1B81F5;
 }
 .main-navigation ul li ul li ul li {
   font-size: 0.9rem;
   margin-left: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   letter-spacing: 0;
+}
+@media only screen and (min-width: 600px) {
+  .main-navigation ul li ul li ul li {
+    font-size: 1rem;
+  }
 }
 
 .main-navigation.toggled .menu-wrap {
@@ -1018,7 +1038,7 @@ table caption {
   padding: 0 0 0.6666666667rem 0;
 }
 .home-box h1, .home-box h2, .home-box h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 15px;
 }
@@ -1051,6 +1071,7 @@ table caption {
 .blog-links-heading {
   text-align: center;
   letter-spacing: 3px;
+  font-size: 1.3rem;
   margin-top: 2rem;
 }
 .blog-links-heading .line {
@@ -1081,6 +1102,11 @@ table caption {
   color: #1c0301;
 }
 
+@media only screen and (min-width: 350px) {
+  .blog-links-heading {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (min-width: 600px) {
   .home-box {
     border-top: 1px solid #ddd;
@@ -1115,6 +1141,9 @@ table caption {
     padding-right: 30px;
     padding-left: 30px;
   }
+  .blog-links-heading {
+    font-size: 1.6rem;
+  }
 }
 @media only screen and (min-width: 700px) {
   .home-box h1, .home-box h2, .home-box h3 {
@@ -1128,6 +1157,9 @@ table caption {
   }
   .home-notes p {
     margin-bottom: 0;
+  }
+  .blog-links-heading {
+    font-size: 1.7rem;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -1146,6 +1178,9 @@ table caption {
   }
   .home-notes a:hover {
     color: #376CC6;
+  }
+  .blog-links-heading {
+    font-size: 1.8rem;
   }
 }
 .card-wrap {
@@ -1378,6 +1413,7 @@ table caption {
 .blog-content img {
   margin-bottom: 2rem;
   margin-top: 1rem;
+  box-shadow: 0px 4px 8px #979797;
 }
 .blog-content figure {
   margin-bottom: 2rem;
@@ -1796,7 +1832,8 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
 .blog #blog,
 .cheat-sheets #cheat-sheets,
 .markdown #markdown,
-.git #git {
+.git #git,
+.terminal #terminal {
   color: #B05C4A;
   opacity: 1;
   cursor: not-allowed;
@@ -1805,6 +1842,12 @@ div.code-toolbar > .toolbar > .toolbar-item > span:focus {
 @media only screen and (min-width: 600px) {
   .related-post-wrap {
     border-bottom: 0;
+  }
+  .related-post-wrap h2:before, .related-post-wrap h2:after {
+    content: "―";
+    color: #1B81F5;
+    margin-right: 5px;
+    margin-left: 5px;
   }
   .related-wrap {
     display: flex;

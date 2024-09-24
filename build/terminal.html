@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line Cheat-Sheet</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="description" content="Discover the power of the command line with this cheat-sheet which introduces some of the basic commands to get you started with the command line .">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="keywords" content="command-line, terminal">
+  <link rel="canonical" href="https://howardl.org/terminal.html" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <meta property="og:site_name" content="howardl">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Command Line Cheat-Sheet">
+  <meta property="og:description" content="Discover the power of the command line with this cheat-sheet which introduces some of the basic commands to get you started with the command line .">
+  <meta property="og:url" content="https://howardl.org/terminal.html">
+  <meta property="og:image" content="https://howardl.org/images/phone1st-home.jpg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Command Line Cheat-Sheet">
+  <meta name="twitter:description" content="Discover the power of the command line with this cheat-sheet which introduces some of the basic commands to get you started with the command line .">
+  <meta name="twitter:url" content="https://howardl.org/terminal.html">
+  <meta name="twitter:image" content="https://howardl.org/images/phone1st-home.jpg">
+  <meta property="og:image:width" content="1020">
+  <meta property="og:image:height" content="457">
+<link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KTBJ75M7YH');
+</script>
+</head>
+  <body class="terminal" onload="spinner()">
+
+<div class="wrapper">
+<button id="topBtn" title="Back to top">Top</button>
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+<header class="header">
+  <div class="inner">
+   <h1><a href="../index.html">howardl</a> - <a href="blog.html">Blog</a></h1>
+    <nav id="site-navigation" class="main-navigation">
+    
+       <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    
+    <section class="menu-wrap">
+      <div class="top-links">
+      <p><a href="https://howardl.org/">howardl</a></p>
+      <p><a href="https://howardl.org/javascript.html">Javascript</a></p>
+    </div>
+         <ul>
+           <li><a id="blog" href="blog.html">Blog</a>
+            
+            <ul>
+            <li><a id="cheat-sheets" class="line" href="cheat-sheets.html">Cheat-Sheets</a>
+              
+              <ul>
+              <li><a id="markdown" href="markdown.html">A Guide to Markdown</a></li>
+               <li><a id="git" href="git.html">Git and Github Basics</a></li>
+               <li><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></li>
+              </ul>
+            </li>
+            </ul>
+          
+          </section>
+        </nav>
+  </div>
+
+</header>
+
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1>Command Line Cheat-Sheet</h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links">#<a href="cheat-sheets.html">cheat-sheets</a></span>
+      </div>
+   
+  </header>
+
+  <div class="blog-content">
+
+  <img src="images/command-line-header-image.webp" alt="command line header image">
+
+<p class="post-intro">The Command Line is a text based interface that exists on every operating system in some form, <em>eg. Terminal on the Mac</em>. By typing commands in the Terminal you can access files, install and manipulate programs and communicate with the computers internal workings. <em>Pretty much everything is available via Terminal</em></p>
+
+<p>Programmers use the <em>Command Line</em> to install packages, <em>eg through NPM</em>, to aid coding and developing their projects. It&#8217;s also used to upload and download projects to platforms like <em>Github</em>. The <em>Command Line</em> can seem a little daunting, but with a few basic commands, <em>like below</em>, will give you a basic understanding of how the <em>Command Line</em> works.</p>
+
+<h3 id="shortcuts">SHORTCUTS</h3>
+
+<p><code>Tab</code> - <em>Auto-complete files and folder names</em></p>
+
+<p><code>Ctrl + A</code> - <em>Go to the beginning of the line you are currently typing on</em></p>
+
+<p><code>Ctrl + E</code> - <em>Go to the end of the line you are currently typing on</em></p>
+
+<p><code>Ctrl + U</code> - <em>Clear the line before the cursor</em></p>
+
+<p><code>Ctrl + K</code> - <em>Clear the line after the cursor</em></p>
+
+<p><code>Ctrl + W</code> - <em>Delete the word before the cursor</em></p>
+
+<p><code>Ctrl + T</code> - <em>Swap the last two characters before the cursor</em></p>
+
+<p><code>Esc + T</code> - <em>Swap the last two words before the cursor</em></p>
+
+<p><code>Ctrl + R</code> - <em>Lets you search through previously used commands</em></p>
+
+<p><code>Ctrl + L</code> or <code>Command + K</code> - <em>Clears the Screen</em></p>
+
+<p><code>Ctrl + C</code> - <em>Kill whatever you are running</em></p>
+
+<p><code>Ctrl + D</code> - <em>Exit the current shell</em></p>
+
+<h3 id="corecommands">CORE COMMANDS</h3>
+
+<p><code>pwd</code> - <em>Print working directory - displays the file path from the root directory to the current directory</em></p>
+
+<p><code>cd</code> - <em>Home directory</em></p>
+
+<p><code>cd [folder name]</code> - <em>Change to named directory</em></p>
+
+<p><code>cd ~</code> - <em>Home directory, e.g. cd ~/folder/</em></p>
+
+<p><code>cd /</code> - <em>Root of drive</em></p>
+
+<p><code>ls</code> - <em>Short listing</em></p>
+
+<p><code>ls -l</code> - <em>Long listing</em></p>
+
+<p><code>ls -a</code> - <em>Listing incl. hidden files</em></p>
+
+<p><code>ls -t</code> - <em>Lists all content by time they were last modified</em></p>
+
+<p><code>ls -lh</code> - <em>Long listing with Human readable file sizes</em></p>
+
+<p><code>ls -R</code> - <em>Entire content of folder recursively</em></p>
+
+<p><code>sudo [command]</code> - <em>Run command with the security privileges of the superuser (requires password)</em></p>
+
+<p><code>open [file]</code> - <em>Opens a file</em></p>
+
+<p><code>open .</code> - <em>Opens the directory</em></p>
+
+<p><code>top</code> - <em>Displays active processes. Press q to quit</em></p>
+
+<p><code>nano [file]</code> - <em>Opens the Terminal editor</em></p>
+
+<p><code>pico [file]</code> - <em>Opens the Terminal editor</em></p>
+
+<p><code>q</code> - <em>Exit</em></p>
+
+<p><code>clear</code> - <em>Clear screen</em></p>
+
+<h3 id="commandhistory">COMMAND HISTORY</h3>
+
+<p><code>history n</code> - <em>Shows the stuff typed - add a number to limit the last n items</em></p>
+
+<p><code>ctrl-r</code> - <em>Interactively search through previously typed commands</em></p>
+
+<p><code>![value]</code> - <em>Execute the last command typed that starts with value</em></p>
+
+<p><code>!!</code> - <em>Execute the last command typed</em></p>
+
+<h3 id="filemanagement">FILE MANAGEMENT</h3>
+
+<p><code>touch [file]</code> - <em>Create new file in the current working directory</em></p>
+
+<p><code>pwd</code> - <em>Full path to working directory</em></p>
+
+<p><code>..</code> - <em>Parent/enclosing directory</em></p>
+
+<p><code>ls ..</code> - <em>Long listing of parent directory</em></p>
+
+<p><code>cd ../../</code>- <em>Move 2 levels up</em></p>
+
+<p><code>.</code> - <em>Current folder</em></p>
+
+<p><code>cat</code> - <em>Concatenate to screen</em></p>
+
+<p><code>rm [file]</code> - <em>Remove a file</em></p>
+
+<p><code>rm -i [file]</code> - <em>Remove with confirmation</em></p>
+
+<p><code>rm -r [dir]</code> - <em>Remove a directory and contents</em></p>
+
+<p><code>rm -f [file]</code> - <em>Force removal without confirmation</em></p>
+
+<p><code>rm -i [file]</code> - <em>Will display prompt before</em></p>
+
+<p><code>cp [file] [newfile]</code> - <em>Copy file</em></p>
+
+<p><code>cp [file] [dir]</code> - <em>Copy file to directory</em></p>
+
+<p><code>mv [file] [new filename]</code> - <em>Move/Rename, e.g. mv -v [file][dir]</em></p>
+
+<h3 id="directorymanagement">DIRECTORY MANAGEMENT</h3>
+
+<p><code>mkdir [dir]</code> - <em>Create new directory</em></p>
+
+<p><code>mkdir -p [dir]/[dir]</code> - <em>Create nested directories</em></p>
+
+<p><code>rmdir [dir]</code> - <em>Remove directory ( only works with empty directories )</em></p>
+
+<p><code>rm -R [dir]</code> - <em>Remove directory and contents</em></p>
+
+<h3 id="pipes">PIPES</h3>
+
+<p><em>Allows to combine multiple commands that generate output</em></p>
+
+<p><code>more</code> - <em>Output content delivered in screensize chunks</em></p>
+
+<p><code>&gt; [file]</code> - <em>Push output to file, keep in mind it will get overwritten</em></p>
+
+<p><code>&gt;&gt; [file]</code> - <em>Append output to existing file</em></p>
+
+<p><code>&lt;</code> - <em>Tell command to read content from a file</em></p>
+
+<h3 id="help">HELP</h3>
+
+<p><code>[command] -h</code> - <em>Offers help</em></p>
+
+<p><code>[command] --help</code> - <em>Offers help</em></p>
+
+<p><code>[command] help</code> - <em>Offers help</em></p>
+
+<p><code>reset</code> - <em>Resets the terminal display</em></p>
+
+<p><code>man [command]</code> - <em>Show the help for command</em></p>
+
+<p><code>whatis [command]</code> - <em>Gives a one-line description of command</em></p>
+
+</div>
+</article>
+
+<div class="related-post-wrap">
+  <h2>Similar in Cheat-Sheets</h2>
+  <div class="related-wrap">
+    
+    <div class="related-post">
+        <h3><a id="markdown" href="markdown.html">A Guide to Markdown</a></h3>
+    </div>
+    <div class="related-post">
+        <h3><a id="git" href="git.html">Git and Github Basics</a></h3>
+    </div>
+    <div class="related-post">
+        <h3><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></h3>
+    </div>
+</div>
+</div>
+ 
+</section>
+<footer class="footer">
+ <nav class="footer-links"><a id="blog" href="blog.html">Home</a> . <a id="cheat-sheets" href="cheat-sheets.html">Cheat-Sheets</a></nav>
+   
+   <p class="third">&copy;2024 <a href="https://howardl.org/" title="howardl">howardl . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="../privacy.html">Privacy</a></p>
+ </footer>
+
+ <div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close">X</div>
+    <h2>Contact Form</h2>
+      <div class="popup-content">
+
+         <form class="contact-form">
+     <input class="subscribe" type="text" id="name" placeholder="your name" required/>
+
+     <input class="subscribe" type="email" id="email" placeholder="youremail@example.com" required/>
+    
+    <textarea class="subscribe" id="message" placeholder="How can we help?" required></textarea>
+    
+    <div class="feedback">You Did It!....</div>
+  
+    <button type="submit" class="contact-submit">Send</button>
+  
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+<script src="../js/prism.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/javascript.js"></script>
+<script src="../js/contact.js"></script>
+</body>
+
+</html>

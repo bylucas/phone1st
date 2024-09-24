@@ -25,7 +25,7 @@ body {
   height: 100%;
   color: $font-color;
   font-family: $font;
-  font-weight: 400;
+  font-weight: 300;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: $font-size;
   line-height: 1.5;
@@ -46,10 +46,6 @@ a {
   a {
     transition: color 0.2s ease-in 0.1s;
   }
-
-  body {
-  font-weight: 300;
-}
 }
 
 //Link hovers
