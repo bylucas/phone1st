@@ -27,153 +27,152 @@
 
   <img src="images/command-line-header-image.webp" alt="command line header image">
 
-<p class="post-intro">The Command Line is a text based interface that exists on every operating system in some form, <em>eg. Terminal on the Mac</em>. By typing commands in the Terminal you can access files, install and manipulate programs and communicate with the computers internal workings. <em>Pretty much everything is available via Terminal</em></p>
+<p class="post-intro">The Command Line is a text based interface that exists on every operating system in some form, eg. Terminal on the Mac. By typing commands in the Terminal you can access files, install and manipulate programs and communicate with the computers internal workings. Pretty much everything is available via Terminal</p>
 
-<p>Programmers use the <em>Command Line</em> to install packages, <em>eg through NPM</em>, to aid coding and developing their projects. It&#8217;s also used to upload and download projects to platforms like <em>Github</em>. The <em>Command Line</em> can seem a little daunting, but with a few basic commands, <em>like below</em>, will give you a basic understanding of how the <em>Command Line</em> works.</p>
+<p>Programmers use the <em>Command Line</em> to install packages, <em>eg through <a href="https://www.npmjs.com/">npm</a></em>, to aid coding and developing their projects. It&#8217;s also used to upload and download projects to platforms like <a href="https://docs.github.com/en">Github</a>. The <em>Command Line</em> can seem a little daunting, but with a few basic commands, <em>like below</em>, will give you a basic understanding of how the <em>Command Line</em> works.</p>
 
-<h3 id="shortcuts">SHORTCUTS</h3>
+<pre><code class="lang-clike">//SHORTCUTS
 
-<p><code>Tab</code> - <em>Auto-complete files and folder names</em></p>
+Tab //Auto-complete files and folder names
 
-<p><code>Ctrl + A</code> - <em>Go to the beginning of the line you are currently typing on</em></p>
+Ctrl + A //Go to the beginning of the line you are currently typing on
 
-<p><code>Ctrl + E</code> - <em>Go to the end of the line you are currently typing on</em></p>
+Ctrl + E //Go to the end of the line you are currently typing on
 
-<p><code>Ctrl + U</code> - <em>Clear the line before the cursor</em></p>
+Ctrl + U //Clear the line before the cursor
 
-<p><code>Ctrl + K</code> - <em>Clear the line after the cursor</em></p>
+Ctrl + K //Clear the line after the cursor
 
-<p><code>Ctrl + W</code> - <em>Delete the word before the cursor</em></p>
+Ctrl + W //Delete the word before the cursor
 
-<p><code>Ctrl + T</code> - <em>Swap the last two characters before the cursor</em></p>
+Ctrl + T //Swap the last two characters before the cursor
 
-<p><code>Esc + T</code> - <em>Swap the last two words before the cursor</em></p>
+Esc + T //Swap the last two words before the cursor
 
-<p><code>Ctrl + R</code> - <em>Lets you search through previously used commands</em></p>
+Ctrl + R //Lets you search through previously used commands
 
-<p><code>Ctrl + L</code> or <code>Command + K</code> - <em>Clears the Screen</em></p>
+Ctrl + L or Command + K //Clears the Screen
 
-<p><code>Ctrl + C</code> - <em>Kill whatever you are running</em></p>
+Ctrl + C //Kill whatever you are running
 
-<p><code>Ctrl + D</code> - <em>Exit the current shell</em></p>
+Ctrl + D //Exit the current shell</code></pre>
 
-<h3 id="corecommands">CORE COMMANDS</h3>
+<pre><code class="lang-clike">//CORE COMMANDS
 
-<p><code>pwd</code> - <em>Print working directory - displays the file path from the root directory to the current directory</em></p>
+pwd //Print working directory - displays the file path from the root directory to the current directory
 
-<p><code>cd</code> - <em>Home directory</em></p>
+cd //Home directory
 
-<p><code>cd [folder name]</code> - <em>Change to named directory</em></p>
+cd [folder name] //Change to named directory
 
-<p><code>cd ~</code> - <em>Home directory, e.g. cd ~/folder/</em></p>
+cd ~ //Home directory, e.g. cd ~/folder/
 
-<p><code>cd /</code> - <em>Root of drive</em></p>
+cd / //Root of drive
 
-<p><code>ls</code> - <em>Short listing</em></p>
+ls //Short listing
 
-<p><code>ls -l</code> - <em>Long listing</em></p>
+ls -l //Long listing
 
-<p><code>ls -a</code> - <em>Listing incl. hidden files</em></p>
+ls -a //Listing incl. hidden files
 
-<p><code>ls -t</code> - <em>Lists all content by time they were last modified</em></p>
+ls -t //Lists all content by time they were last modified
 
-<p><code>ls -lh</code> - <em>Long listing with Human readable file sizes</em></p>
+ls -lh //Long listing with Human readable file sizes
 
-<p><code>ls -R</code> - <em>Entire content of folder recursively</em></p>
+ls -R //Entire content of folder recursively
 
-<p><code>sudo [command]</code> - <em>Run command with the security privileges of the superuser (requires password)</em></p>
+sudo [command] //Run command with the security privileges of the superuser (requires password)
 
-<p><code>open [file]</code> - <em>Opens a file</em></p>
+open [file] //Opens a file
 
-<p><code>open .</code> - <em>Opens the directory</em></p>
+open . //Opens the directory
 
-<p><code>top</code> - <em>Displays active processes. Press q to quit</em></p>
+top //Displays active processes. Press q to quit
 
-<p><code>nano [file]</code> - <em>Opens the Terminal editor</em></p>
+nano [file] //Opens the Terminal editor
 
-<p><code>pico [file]</code> - <em>Opens the Terminal editor</em></p>
+pico [file] //Opens the Terminal editor
 
-<p><code>q</code> - <em>Exit</em></p>
+q //Exit
 
-<p><code>clear</code> - <em>Clear screen</em></p>
+clear //Clear screen</code></pre>
 
-<h3 id="commandhistory">COMMAND HISTORY</h3>
+<pre><code class="lang-clike">//COMMAND HISTORY
 
-<p><code>history n</code> - <em>Shows the stuff typed - add a number to limit the last n items</em></p>
+history n //Shows the stuff typed - add a number to limit the last n items
 
-<p><code>ctrl-r</code> - <em>Interactively search through previously typed commands</em></p>
+ctrl-r //Interactively search through previously typed commands
 
-<p><code>![value]</code> - <em>Execute the last command typed that starts with value</em></p>
+![value] //Execute the last command typed that starts with value
 
-<p><code>!!</code> - <em>Execute the last command typed</em></p>
+!! //Execute the last command typed</code></pre>
 
-<h3 id="filemanagement">FILE MANAGEMENT</h3>
+<pre><code class="lang-clike">//FILE MANAGEMENT
 
-<p><code>touch [file]</code> - <em>Create new file in the current working directory</em></p>
+touch [file] //Create new file in the current working directory
 
-<p><code>pwd</code> - <em>Full path to working directory</em></p>
+pwd //Full path to working directory
 
-<p><code>..</code> - <em>Parent/enclosing directory</em></p>
+.. //Parent/enclosing directory
 
-<p><code>ls ..</code> - <em>Long listing of parent directory</em></p>
+ls .. //Long listing of parent directory
 
-<p><code>cd ../../</code>- <em>Move 2 levels up</em></p>
+cd ../../ //Move 2 levels up
 
-<p><code>.</code> - <em>Current folder</em></p>
+. //Current folder
 
-<p><code>cat</code> - <em>Concatenate to screen</em></p>
+cat //Concatenate to screen
 
-<p><code>rm [file]</code> - <em>Remove a file</em></p>
+rm [file] //Remove a file
 
-<p><code>rm -i [file]</code> - <em>Remove with confirmation</em></p>
+rm -i [file] //Remove with confirmation
 
-<p><code>rm -r [dir]</code> - <em>Remove a directory and contents</em></p>
+rm -r [dir] //Remove a directory and contents
 
-<p><code>rm -f [file]</code> - <em>Force removal without confirmation</em></p>
+rm -f [file] //Force removal without confirmation
 
-<p><code>rm -i [file]</code> - <em>Will display prompt before</em></p>
+rm -i [file] //Will display prompt before
 
-<p><code>cp [file] [newfile]</code> - <em>Copy file</em></p>
+cp [file] [newfile] //Copy file
 
-<p><code>cp [file] [dir]</code> - <em>Copy file to directory</em></p>
+cp [file] [dir] //Copy file to directory
 
-<p><code>mv [file] [new filename]</code> - <em>Move/Rename, e.g. mv -v [file][dir]</em></p>
+mv [file] [new filename] //Move/Rename, e.g. mv -v [file][dir]</code></pre>
 
-<h3 id="directorymanagement">DIRECTORY MANAGEMENT</h3>
+<pre><code class="lang-clike">//DIRECTORY MANAGEMENT
 
-<p><code>mkdir [dir]</code> - <em>Create new directory</em></p>
+mkdir [dir] //Create new directory
 
-<p><code>mkdir -p [dir]/[dir]</code> - <em>Create nested directories</em></p>
+mkdir -p [dir]/[dir] //Create nested directories
 
-<p><code>rmdir [dir]</code> - <em>Remove directory ( only works with empty directories )</em></p>
+rmdir [dir] //Remove directory (only works with empty directories)
 
-<p><code>rm -R [dir]</code> - <em>Remove directory and contents</em></p>
+rm -R [dir] //Remove directory and contents</code></pre>
 
-<h3 id="pipes">PIPES</h3>
+<pre><code class="lang-clike">//PIPES
+//Allows to combine multiple commands that generate output
 
-<p><em>Allows to combine multiple commands that generate output</em></p>
+more //Output content delivered in screensize chunks
 
-<p><code>more</code> - <em>Output content delivered in screensize chunks</em></p>
+&gt; [file] //Push output to file, keep in mind it will get overwritten
 
-<p><code>&gt; [file]</code> - <em>Push output to file, keep in mind it will get overwritten</em></p>
+&gt;&gt; [file] //Append output to existing file
 
-<p><code>&gt;&gt; [file]</code> - <em>Append output to existing file</em></p>
+&lt; //Tell command to read content from a file</code></pre>
 
-<p><code>&lt;</code> - <em>Tell command to read content from a file</em></p>
+<pre><code class="lang-clike">//HELP
 
-<h3 id="help">HELP</h3>
+[command] -h //Offers help
 
-<p><code>[command] -h</code> - <em>Offers help</em></p>
+[command] --help //Offers help
 
-<p><code>[command] --help</code> - <em>Offers help</em></p>
+[command] help //Offers help
 
-<p><code>[command] help</code> - <em>Offers help</em></p>
+reset //Resets the terminal display
 
-<p><code>reset</code> - <em>Resets the terminal display</em></p>
+man [command] //Show the help for command
 
-<p><code>man [command]</code> - <em>Show the help for command</em></p>
-
-<p><code>whatis [command]</code> - <em>Gives a one-line description of command</em></p>
+whatis [command] //Gives a one-line description of command</code></pre>
 
 </div>
 </article>

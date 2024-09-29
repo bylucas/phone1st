@@ -27,7 +27,7 @@
 
   <img src="images/git-header-image.webp" alt="git and github header image">
 
-<p class="post-intro">A <em>Git and Github cheat-sheet</em> for quick reference to some basic commands. Includes a basic introduction to Git and Github with more information found <a href="https://docs.github.com/en">here</a>. <em>Git and Github</em> have a bit of a learning curve, but once your files are in GitHub, it's easy to share the repository with others.</p>
+<p class="post-intro">A Git and Github cheat-sheet for quick reference to some basic commands. Includes a basic introduction to Git and Github with more information found <a href="https://docs.github.com/en">here</a>. Git and Github have a bit of a learning curve, but once your files are in GitHub, it's easy to share the repository with others.</p>
 
 <h3>What is Git</h3>
 
@@ -37,125 +37,124 @@
 
 <p>GitHub is a cloud-based platform that allows developers to store, share, and collaborate on code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project. It is commonly used to host open source software development projects.</p>
 
-<h3>Configurations</h3>
+<pre><code class="lang-clike">//CONFIGURATIONS
+//First set some configuration settings to work with Git.
+//If you&#8217;ve signed up to Github use those settings so that they can interact with each other.
 
-<p>First set some configuration settings to work with Git. If you&#8217;ve signed up to Github use those settings so that they can interact with each other.</p>
+git config --global user.name &quot;Your Username&quot;
+//The username you use on Github
 
-<p><code>git config --global user.name &quot;Your Username&quot;</code><br>
-<em>The username you use on Github</em></p>
+git config --global user.email &quot;Your email&quot;
+//The email you use on Github
 
-<p><code>git config --global user.email &quot;Your email&quot;</code><br>
-<em>The email you use on Github</em></p>
+git config --global color.ui true
+//highlights the git code for easier reading
 
-<p><code>git config --global color.ui true</code><br>
-highlights the git code for easier reading</em></p>
+git config --list
+//Lists your git config settings
+//global - default settings used in all git repros</code></pre>
 
-<p><code>git config --list</code><br>
-<em>Lists your git config settings</em><br>
-<em>global - default settings used in all git repros</em></p>
+<pre><code class="lang-clike">//.DS_STORE FILES
+//Finds and removes .DS_Store files from your project and Git
+//Do this from the root of your project
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch  
 
-<h4>.DS_Store files</h4>
-<p><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code><br>  
-<em>Finds and removes .DS_Store files from your project and Git</em><br>
-<em>Do this from the root of your project</em><br>  
-<em>Add **/.DS_Store to the .gitignore file</em></p>
+**/.DS_Store //Add to the .gitignore file</code></pre>
 
-<h3>Starting a Repository</h3>
+<pre><code class="lang-clike">//STARTING A REPOSITORY
+//A Git repository is a folder that holds your project. It can be empty or already contain project files and folders. Git places a hidden folder at the root of the project folder/repository where it tracks the projects files and watches for changes.
 
-<p>A Git repository is a folder that holds your project. It can be empty or already contain project files and folders. Git places a hidden folder at the root of the project folder/repository where it tracks the projects files and watches for changes.</p>
+git init
+//initialize a repository
 
-<p><code>git init</code><br>
-<em>initialize a repository</em></p>
+git status
+//Shows the status of the repository</code></pre>
 
-<p><code>git status</code><br>
-<em>Shows the status of the repository</em></p>
+<pre><code class="lang-clike">//STAGING FILES
+//The command git status shows any changes to the projects files.
+//Before Git commits the files it needs to add them to the staging area.
+//Git manipulates the staging area with the following commands.
 
-<h3>Staging Files</h3>
+git add &lt;file-name&gt;
+//Add changed or new file to commit stage
 
-<p>The command <code>git status</code> shows any changes to the projects files. Before Git commits the files it needs to add them to the staging area. Git manipulates the staging area with the following commands.</p>
+git add &lt;file-name&gt; &lt;another-file-name&gt; &lt;and-another-file-name&gt;
+//Add multiple changed or new files to commit stage
 
-<p><code>git add &lt;file-name&gt;</code><br>
-<em>Add changed or new file to commit stage</em></p>
+git add .
+//Add all changed or new files in the root directory - note the period
 
-<p><code>git add &lt;file-name&gt; &lt;another-file-name&gt; &lt;and-another-file-name&gt;</code><br>
-<em>Add multiple changed or new files to commit stage</em></p>
+git add --all
+//Add all changed or new files in the project
 
-<p><code>git add .</code><br>
-<em>Add all changed or new files in the root directory - note the period</em></p>
+git add -A
+//Add all changed or new files in the project
 
-<p><code>git add --all</code><br>
-<em>Add all changed or new files in the project</em></p>
+git rm --cached &lt;file-name&gt;
+//Remove file from commit list
 
-<p><code>git add -A</code><br>
-<em>Add all changed or new files in the project</em></p>
+git reset &lt;file-name&gt;
+//Remove file from commit list</code></pre>
 
-<p><code>git rm --cached &lt;file-name&gt;</code><br>
-<em>Remove file from commit list</em></p>
+<pre><code class="lang-clike">git commit -m &quot;your message&quot;
+//Commit with message
 
-<p><code>git reset &lt;file-name&gt;</code><br>
-<em>Remove file from commit list</em></p>
+git reset --soft HEAD^
+//Undo the last commit
 
-<h3>Committing to a Repository</h3>
+git commit --amend -m &quot;enter your message&quot;
+//Use instead of git reset to amend the last commit and rewriting the message
 
-<p>After adding files to the staging area Git will commit the changes or new files to the current branch.</p>
+//example:
+git add I-forgot-this-file
+git commit --amend -m &quot;added I-forgot-this-file&quot;</code></pre>
 
-<p><code>git commit -m &quot;your message&quot;</code><br>
-<em>Commit with message</em></p>
+<pre><code class="lang-clike">//PULLING AND PUSHING FROM AND TO REPOSITORIES
+//Working between the local and remote repositories(Local to Github)
 
-<p><code>git reset --soft HEAD^</code><br>
-<em>Undo the last commit</em></p>
+git remote add origin &lt;repo link&gt;
+//Set up the origin path to your on-line repository
 
-<p><code>git commit --amend -m &quot;enter your message&quot;</code><br>
-<em>Use instead of git reset to amend the last commit and rewriting the message</em><br>
-<em><small>example:</small></em><br>
-<code>git add I-forgot-this-file</code><br>
-<code>git commit --amend -m &quot;added I-forgot-this-file&quot;</code></p>
+git push -u origin master
+//upload to the on-line repository master branch
 
-<h3>Pulling and Pushing From and To Repositories</h3>
+git push
+//because we ran git push -u origin master we can now just use git push
 
-<p>Working between the local and remote repositories(Local to Github)</p>
+git clone &lt;clone link&gt;
+//Download a on-line project to a folder on your computer
 
-<p><code>git remote add origin &lt;repo link&gt;</code><br>
-<em>Set up the origin path to your on-line repository</em></p>
+git clone &lt;clone link&gt; new-name
+//Download and change the name if you wish
 
-<p><code>git push -u origin master</code><br>
-<em>upload to the on-line repository master branch</em></p>
+git pull
+//Update the local repository with any changes made in the remote repository</code></pre>
 
-<p><code>git push</code><br>
-<em>because we ran git push -u origin master we can now just use git push</em></p>
+<pre><code class="lang-clike">//BRANCHING
+//The main branch in a repository is the master branch.
+//If we need to add new features to the project we can make them on separate branches so as not to upset the master branch.
+//This allows multi developers to work on different features at the same time.
+//When the features are finished and passed the branches can be merged with the master branch.
 
-<p><code>git clone &lt;clone link&gt;</code><br>
-Download a on-line project to a folder on your computer</em></p>
+git branch
+//Lists all the repository branches
 
-<p><code>git clone &lt;clone link&gt; new-name</code><br>
-<em>Download and change the name if you wish</em></p>
+git branch &lt;branch-name&gt;
+//Create a new branch
 
-<p><code>git pull</code><br>
-<em>Update the local repository with any changes made in the remote repository</em></p>
+git checkout &lt;branch-name&gt;
+//Switch to branch
 
-<h3>Branching</h3>
+git merge &lt;branch-name&gt;
+//Merge the branch into master branch
+//Switch to the master branch before merging
 
-<p>The main branch in a repository is the <code>master branch</code>. If we need to add new features to the project we can make them on separate branches so as not to upset the <code>master branch</code>. This allows multi developers to work on different features at the same time. When the features are finished and passed the branches can be merged with the <code>master branch</code>.</p>
+git branch -d &lt;branch-name&gt;
+//delete branch
+//Switch to the master branch before deleting
 
-<p><code>git branch</code><br/>
-<em>Lists all the repository branches</em></p>
-
-<p><code>git branch &lt;branch-name&gt;</code><br/>
-<em>Create a new branch</em></p>
-
-<p><code>git checkout &lt;branch-name&gt;</code><br/>
-<em>Switch to branch</em> </p>
-
-<p><code>git merge &lt;branch-name&gt;</code><br/>
-<em>Merge the branch into master branch</em><br/>
-<em>Switch to the master branch before merging</em></p>
-
-<p><code>git branch -d &lt;branch-name&gt;</code><br/>
-<em>delete branch</em><br>
-<em>Switch to the master branch before deleting</em></p>
-
-<p><code>git checkout -b &lt;branch-name&gt;</code><br/>
-<em>Create and switch to new branch</em></p>
+git checkout -b &lt;branch-name&gt;
+//Create and switch to new branch</code></pre>
 </div>
 </article>
 
