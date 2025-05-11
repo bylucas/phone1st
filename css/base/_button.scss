@@ -50,5 +50,4 @@ button,
 .submit {
   @extend %btn;
   @include button-bg($button-background);
-  margin-bottom: 0; //to line-up button and input class="but" on the test page
 }

@@ -7,28 +7,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loose and Strict Comparisons in Modern Javascript</title>
+  <title>Null and Undefined in Modern Javascript</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <meta name="description" content="loose comparison - different types can still be equal. strict comparison - different types cannot be equal.">
+  <meta name="description" content="A variable is named storage for data. We use variables to store data that can be recalled when needed.">
   <meta name="robots" content="INDEX,FOLLOW">
-  <meta name="keywords" content="loose-strict-comparisons">
-  <link rel="canonical" href="https://howardl.org/loose-strict-comparisons.html" />
+  <meta name="keywords" content="null, undefined">
+  <link rel="canonical" href="https://bylucas.org/null-undefined.html" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   
-  <meta property="og:site_name" content="howardl">
+  <meta property="og:site_name" content="bylucas">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Loose and Strict Comparisons in Modern Javascript">
-  <meta property="og:description" content="loose comparison - different types can still be equal. strict comparison - different types cannot be equal.">
-  <meta property="og:url" content="https://howardl.org/loose-strict-comparisons.html">
-  <meta property="og:image" content="https://howardl.org/images/phone1st-home.jpg">
+  <meta property="og:title" content="Null and Undefined in Modern Javascript">
+  <meta property="og:description" content="A variable is named storage for data. We use variables to store data that can be recalled when needed.">
+  <meta property="og:url" content="https://bylucas.org/null-undefined.html">
+  <meta property="og:image" content="https://bylucas.org/images/phone1st-home.jpg">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Loose and Strict Comparisons in Modern Javascript">
-  <meta name="twitter:description" content="loose comparison - different types can still be equal. strict comparison - different types cannot be equal.">
-  <meta name="twitter:url" content="https://howardl.org/loose-strict-comparisons.html">
-  <meta name="twitter:image" content="https://howardl.org/images/phone1st-home.jpg">
+  <meta name="twitter:title" content="Null and Undefined in Modern Javascript">
+  <meta name="twitter:description" content="A variable is named storage for data. We use variables to store data that can be recalled when needed.">
+  <meta name="twitter:url" content="https://bylucas.org/null-undefined.html">
+  <meta name="twitter:image" content="https://bylucas.org/images/phone1st-home.jpg">
   <meta property="og:image:width" content="1020">
   <meta property="og:image:height" content="457">
 <link rel="stylesheet" href="../../css/style.css" />
@@ -44,7 +44,7 @@
 </script>
 </head>
 
-<body class="loose-strict-comparisons" onload="spinner()">
+<body class="null-undefined" onload="spinner()">
 
 <div class="wrapper">
   <div id="loader-wrapper">
@@ -55,7 +55,7 @@
 <button id="topBtn" title="Back to top">Top</button>
 <header class="header">
   <div class="inner">
-   <h1><a href="../index.html">howardl</a> - <a href="javascript.html">Javascript</a></h1>
+   <h1><a href="/">bylucas</a> - <a href="/javascript.html">Javascript</a></h1>
     <nav id="site-navigation" class="main-navigation">
     
        <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false">
@@ -66,25 +66,25 @@
     
     <section class="menu-wrap">
       <div class="top-links">
-      <p><a href="https://howardl.org/">howardl</a></p>
-      <p><a href="https://howardl.org/blog.html">Blog</a></p>
+      <p><a href="/">bylucas</a></p>
+      <p><a href="/blog.html">Blog</a></p>
     </div>
          <ul>
-           <li><a id="javascript" href="javascript.html">Modern Javascript</a>
+           <li><a id="javascript" href="/javascript.html">Modern Javascript</a>
             
             <ul>
             <li><a id="basics" class="line" href="basics.html">Basics</a>
               
-              <ul>
-              <li><a id="variables" href="variables.html">Variables</a></li>
+              <ul class="side-basics">
+             <li><a id="variables" href="variables.html">Variables</a></li>
               <li><a id="strings" href="strings.html">Strings</a></li>
-              <li><a id="string-methods" href="string-methods.html">String Methods</a></li>
+              <li><a id="string-methods" href="common-string-methods.html">Common String Methods</a></li>
               <li><a id="numbers" href="numbers.html">Numbers</a></li>
               <li><a id="template-strings" href="template-strings.html">Template Strings</a></li>
               <li><a id="arrays" href="arrays.html">Arrays</a></li>
-              <li><a id="null-undefined" href="null-undefined.html">Null and Undefined</a></li>
-              <li><a id="booleans-comparisons" href="booleans-comparisons.html">Booleans and Comparisons</a></li>
-              <li><a id="loose-strict-comparisons" href="loose-strict-comparisons.html">Loose and Strict Comparisons</a></li>
+              <li><a id="null-undefined" href="null-and-undefined.html">Null and Undefined</a></li>
+              <li><a id="booleans-comparisons" href="booleans-and-comparisons.html">Booleans and Comparisons</a></li>
+              <li><a id="loose-strict-comparisons" href="loose-and-strict-comparisons.html">Loose and Strict Comparisons</a></li>
               <li><a id="type-conversion" href="type-conversion.html">Type Conversion</a></li>
               </ul>
             </li>
@@ -154,7 +154,7 @@
 
   <header class="post-header">
    
-    <h1>Loose and Strict Comparisons</h1>
+    <h1>Null and Undefined</h1>
 
      <div class="post-meta">
          
@@ -165,94 +165,46 @@
 
   <div class="post-content">
 
-    <p class="post-intro"><em>Loose Comparison</em> '==' allows us to compare two or more operands by converting their value to a common type first and then checking for the equality between them.</p>
+    <p class="post-intro">Setting a value of <em>null</em> is intentionally leaving the value <em>undefined</em> whereas a variable that has no value is set to <em>undefined</em> by the browser.</p>
 
-    <p class="post-intro"><em>Strict Comparison</em> '===' allows us to compare two or more operands by checking the equality between the values as well as their types . It returns true only if the values and the type both match with the other operand.</p>
+    <pre><code class="lang-js">//null and undefined are primitive values in JavaScript
+//a null or undefined value evaluates to false in conditional expression
 
-    <pre><code class="lang-js">let age = 25;
+//a null value means absence
 
-//loose comparison (different types can still be equal)
+let count = null;
+//intentionally setting no value
 
-console.log(age == 25);
-//result: true
-
-console.log(age == '25');
-//result: true
-
-console.log(age != 25);
-//result: false
-
-console.log(age != '25');
-//result: false
+console.log(count, count + 3, `the sum is ${count}`);
+//result: null 3 "the sum is null"
+//count is null
+//no value + 3 = 3
+//${count} is null
 
 
-//strict comparison (different types cannot be equal)
+//an undefined value means lack of value
 
-console.log(age === 25);
-//result: true
+let counter
+//awaiting a value
+//browser sets counter to undefined
 
-console.log(age === '25');
-//result: false
-
-console.log(age !== 25);
-//result: false
-
-console.log(age !== '25');
-//result: true</code></pre>
+console.log(counter, counter + 3, `the sum is ${counter}`);
+//result: undefined NaN "the sum is undefined"</code></pre>
     
   </div>
   
 </article>
 
-
-
 <div class="related-post-wrap">
   <h2>Similar in Basics</h2>
-  <div class="related-wrap">
-    
-    <div class="related-post">
-        <h3><a id="variables" href="variables.html">Variables</a></h3>
-    </div>
-
-     <div class="related-post">
-        <h3><a id="strings" href="strings.html">Strings</a></h3>
-    </div>
-
-     <div class="related-post">
-        <h3><a id="string-methods" href="string-methods.html">String Methods</a></h3>
-    </div>
-
-    <div class="related-post">
-        <h3><a id="numbers" href="numbers.html">Numbers</a></h3>
-    </div>
-
-    <div class="related-post">
-        <h3><a id="template-strings" href="template-strings.html">Template Strings</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="arrays" href="arrays.html">Arrays</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="null-undefined" href="null-undefined.html">Null and Undefined</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="booleans-comparisons" href="booleans-comparisons.html">Booleans and Comparisons</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="loose-strict-comparisons" href="loose-strict-comparisons.html">Loose and Strict Comparisons</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="type-conversion" href="type-conversion.html">Type Conversion</a></h3>
-    </div>
-  
-  </div>
+  <div class="related-wrap"></div>
 </div>
  
 </section>
  <footer class="footer">
-  <nav class="footer-links"><a id="javascript" href="javascript.html">Home .</a><a id="basics" href="basics.html">Basics .</a><a id="control-flow" href="control-flow.html">Control Flow .</a><a id="functions-cat" href="functions-cat.html">Functions .</a><a id="objects" href="objects.html">Objects</a></nav>
-   
-   <p class="third">&copy;2024 <a href="https://howardl.org/" title="howardl">howardl . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="../privacy.html">Privacy</a></p>
+  <!-- <nav class="footer-links"><a id="javascript" href="javascript.html">Home .</a><a id="basics" href="basics.html">Basics .</a><a id="control-flow" href="control-flow.html">Control Flow .</a><a id="functions-cat" href="functions-cat.html">Functions .</a><a id="objects" href="objects.html">Objects</a></nav> -->
+   <nav class="footer-links"></nav>
+   <p class="third">&copy;2025 <a href="/" title="bylucas">bylucas . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="/privacy.html">Privacy</a></p>
  </footer>
 
  <div class="popup-wrapper">
@@ -278,10 +230,16 @@ console.log(age !== '25');
 </div>
 
 </div>
+<script>
+  const linkTitle = 'Null and Undefined'
+</script>
+<script src="../js/basics.js"></script>
+
 <script src="../../js/prism.js"></script>
 <script src="../../js/app.js"></script>
 <script src="../../js/javascript.js"></script>
 <script src="../../js/contact.js"></script>
+
 </body>
 
 </html>

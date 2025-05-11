@@ -1,43 +1,334 @@
- <!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>A Guide to Markdown and Multi-Markdown</title> <meta name="HandheldFriendly" content="True"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="referrer" content="no-referrer-when-downgrade"> <meta name="description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started."> <meta name="robots" content="INDEX,FOLLOW"> <meta name="keywords" content="markdown, Multi-Markdown"> <link rel="canonical" href="https://howardl.org/markdown.html"> <link rel="apple-touch-icon" href="apple-touch-icon.png"> <meta property="og:site_name" content="howardl"> <meta property="og:type" content="article"> <meta property="og:title" content="A Guide to Markdown and Multi-Markdown"> <meta property="og:description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started."> <meta property="og:url" content="https://howardl.org/markdown.html"> <meta property="og:image" content="https://howardl.org/images/phone1st-home.jpg"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="A Guide to Markdown and Multi-Markdown"> <meta name="twitter:description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started."> <meta name="twitter:url" content="https://howardl.org/markdown.html"> <meta name="twitter:image" content="https://howardl.org/images/phone1st-home.jpg"> <meta property="og:image:width" content="1020"> <meta property="og:image:height" content="457"> <link rel="stylesheet" href="../css/style.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script> <script> window.dataLayer = window.dataLayer || [];
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Guide to Markdown and Multi-Markdown</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta name="description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started.">
+  <meta name="robots" content="INDEX,FOLLOW">
+  <meta name="keywords" content="markdown, Multi-Markdown">
+  <link rel="canonical" href="https://bylucas.org/markdown.html" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <meta property="og:site_name" content="bylucas">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="A Guide to Markdown and Multi-Markdown">
+  <meta property="og:description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started.">
+  <meta property="og:url" content="https://bylucas.org/markdown.html">
+  <meta property="og:image" content="https://bylucas.org/images/phone1st-home.jpg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A Guide to Markdown and Multi-Markdown">
+  <meta name="twitter:description" content="Markdown and Multi-Markdown for writing quicker html. Easy to pick up as you will see from this article which explains how easy it is to get started.">
+  <meta name="twitter:url" content="https://bylucas.org/markdown.html">
+  <meta name="twitter:image" content="https://bylucas.org/images/phone1st-home.jpg">
+  <meta property="og:image:width" content="1020">
+  <meta property="og:image:height" content="457">
+<link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KTBJ75M7YH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-KTBJ75M7YH'); </script> </head> <body class="markdown" onload="spinner()"> <div class="wrapper"> <button id="topBtn" title="Back to top">Top</button> <div id="loader-wrapper"> <div id="loader"></div> <div class="loader-section section-left"></div> <div class="loader-section section-right"></div> </div> <header class="header"> <div class="inner"> <h1><a href="../index.html">howardl</a> - <a href="blog.html">Blog</a></h1> <nav id="site-navigation" class="main-navigation"> <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false"> <div class="hamburger-box"> <div class="hamburger-inner"></div> </div> </div> <section class="menu-wrap"> <div class="top-links"> <p><a href="https://howardl.org/">howardl</a></p> <p><a href="https://howardl.org/javascript.html">Javascript</a></p> </div> <ul> <li><a id="blog" href="blog.html">Blog</a> <ul> <li><a id="cheat-sheets" class="line" href="cheat-sheets.html">Cheat-Sheets</a> <ul> <li><a id="markdown" href="markdown.html">A Guide to Markdown</a></li> <li><a id="git" href="git.html">Git and Github Basics</a></li> <li><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></li> </ul> </li> </ul> </li></ul></section> </nav> </div> </header> <section class="main"> <article class="post"> <header class="post-header"> <h1>A Guide to Markdown and Multi-Markdown</h1> <div class="post-meta"> <span class="cat-links">#<a href="cheat-sheets.html">cheat-sheets</a></span> </div> </header> <div class="blog-content"> <img src="images/markdown.webp" alt="Markdown and Multi-Markdown header image"> <p class="post-intro">Markdown and Multi-Markdown for writing quicker html articles and posts. Easy to pick up as you will see from this article which explains all you need to know to get you started. Give it a try, forget about the html tags and write quicker and cleaner posts/articles.</p> <blockquote><p>Much of the following article is taken from <a href="https://daringfireball.net/projects/markdown/syntax#backslash">daringfireball.net</a> and <a href="http://fletcherpenney.net/multimarkdown/">fletcherpenny.net</a>.</p></blockquote> <hr> <h2>How to use Markdown and Multi-Markdown with your theme</h2> <p>Although Markdown and Multi-Markdown can be used to create web pages, it’s probably better to stick with a good code editor to layout the structure of your page and website. Markdown and Multi-Markdown is ideal for writing sections of a web page <em>ie. a post or article</em>.</p> <p>Markdown and Multi-Markdown is cleaner and quicker and highly portable. As well as Markdown and Multi-Markdown syntax you can use html tags which allows the insertion of your theme <em>classes</em>, <em>id&#8217;s</em> etc.</p> <hr> <h2 id="summary">Summary</h2> <p><a href="#whatis">What is Markdown and Multi-Markdown?</a><br> <a href="#metadata">Metadata</a><br> <a href="#references">Cross-references</a><br> <a href="#syntax">Markdown Syntax</a><br> <a href="#images">Images</a><br> <a href="#tables">Tables</a><br> <a href="#footnotes">Footnotes</a><br> <a href="#citations">Citations</a><br> <a href="#definition">Definition List</a> </p> <hr> <h2 id="whatis">What is Markdown and Multi-Markdown?</h2> <p>To understand what Multi-Markdown is, you first should be familiar with Markdown. The best description of what Markdown is comes from John Gruber’s Markdown website:</p> <blockquote> <p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p> <p>Thus, <em>Markdown</em> is two things: (1) a plain text formatting syntax; and (2) a software tool, written in Perl, that converts the plain text formatting to HTML.</p> <p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email. — <a href="http://daringfireball.net/projects/markdown/">John Gruber</a></p></blockquote> <p>Markdown is great, but it lacked a few features that would allow it to work with documents, rather than just pieces of a web page. Multi-Markdown extends Markdown’s syntax to work with complete documents that could ultimately be converted from text into other formats, including complete <em>HTML</em> documents, <em>LaTeX, PDF, ODF,</em> or even <em>Microsoft Word</em> documents.</p> <p>In addition to the ability to work with complete documents and conversion to other formats, the Markdown syntax was lacking a few other things. <a href="http://www.michelf.com/projects/php-markdown/extra/">Michel Fortin</a> added a few additional syntax features when writing PHP Markdown Extra. Some of his ideas were implemented and expanded on in Multi-Markdown, in addition to including features not available in other Markdown implementations. These features include tables, footnotes, citation support, image and link attributes, cross-references, math support, and more.</p> <p>You can think of Multi-Markdown as:</p> <ol> <li>A program to convert plain text to a fully formatted document.</li> <li>The syntax used in the plain text to describe how to convert it to a complete document.</li> </ol> <p><a href="http://fletcherpenney.net/mmd/">Fletcher T. Penney</a></p> <hr> <h2 id="metadata">Metadata</h2> <p>Multi-Markdown has support for metadata, meaning that you can include information about a document that is not necessarily part of the document contents. To use metadata, simply add information to the top of a Markdown file:</p> <pre><code class="lang-markdown">Title:  A New Markdown Document  
+  gtag('config', 'G-KTBJ75M7YH');
+</script>
+</head>
+  <body class="markdown" onload="spinner()">
+
+<div class="wrapper">
+<button id="topBtn" title="Back to top">Top</button>
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+<header class="header">
+  <div class="inner">
+   <h1><a href="/">bylucas</a> - <a href="/blog.html">Blog</a></h1>
+    <nav id="site-navigation" class="main-navigation">
+    
+       <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    
+    <section class="menu-wrap">
+      <div class="top-links">
+      <p><a href="/">bylucas</a></p>
+      <p><a href="/javascript.html">Javascript</a></p>
+    </div>
+         <ul>
+           <li><a id="blog" href="/blog.html">Blog</a>
+            
+            <ul>
+            <li><a id="cheat-sheets" class="line" href="cheat-sheets.html">Cheat-Sheets</a>
+              
+              <ul>
+              <li><a id="markdown" href="markdown.html">A Guide to Markdown</a></li>
+               <li><a id="git" href="git.html">Git and Github Basics</a></li>
+               <li><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></li>
+              </ul>
+            </li>
+            </ul>
+          
+          </section>
+        </nav>
+  </div>
+
+</header>
+
+
+<section class="main">
+
+  <article class="post">
+
+  <header class="post-header">
+   
+    <h1>A Guide to Markdown and Multi-Markdown</h1>
+
+     <div class="post-meta">
+         
+        <span class="cat-links">#<a href="cheat-sheets.html">cheat-sheets</a></span>
+      </div>
+   
+  </header>
+
+  <div class="blog-content">
+
+  <img src="images/markdown.webp" alt="Markdown and Multi-Markdown header image">
+
+<p class="post-intro">Markdown and Multi-Markdown for writing quicker html articles and posts. Easy to pick up as you will see from this article which explains all you need to know to get you started. Give it a try, forget about the html tags and write quicker and cleaner posts/articles.</p>
+
+<blockquote><p>Much of the following article is taken from <a href="https://daringfireball.net/projects/markdown/syntax#backslash">daringfireball.net</a> and <a href="http://fletcherpenney.net/multimarkdown/">fletcherpenny.net</a>.</p></blockquote>
+
+<hr />
+
+<h2>How to use Markdown and Multi-Markdown with your theme</h2>
+
+<p>Although Markdown and Multi-Markdown can be used to create web pages, it’s probably better to stick with a good code editor to layout the structure of your page and website. Markdown and Multi-Markdown is ideal for writing sections of a web page <em>ie. a post or article</em>.</p>
+
+<p>Markdown and Multi-Markdown is cleaner and quicker and highly portable. As well as Markdown and Multi-Markdown syntax you can use html tags which allows the insertion of your theme <em>classes</em>, <em>id&#8217;s</em> etc.</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p><a href="#whatis">What is Markdown and Multi-Markdown?</a><br/>
+<a href="#metadata">Metadata</a><br/>
+<a href="#references">Cross-references</a><br/>
+<a href="#syntax">Markdown Syntax</a><br/>
+<a href="#images">Images</a><br/>
+<a href="#tables">Tables</a><br/>
+<a href="#footnotes">Footnotes</a><br/>
+<a href="#citations">Citations</a><br/>
+<a href="#definition">Definition List</a> </p>
+
+<hr />
+
+<h2 id="whatis">What is Markdown and Multi-Markdown?</h2>
+
+<p>To understand what Multi-Markdown is, you first should be familiar with Markdown. The best description of what Markdown is comes from John Gruber’s Markdown website:</p>
+
+<blockquote>
+<p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
+
+<p>Thus, <em>Markdown</em> is two things: (1) a plain text formatting syntax; and (2) a software tool, written in Perl, that converts the plain text formatting to HTML.</p>
+
+<p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email. — <a href="http://daringfireball.net/projects/markdown/">John Gruber</a></p></blockquote>
+
+<p>Markdown is great, but it lacked a few features that would allow it to work with documents, rather than just pieces of a web page. Multi-Markdown extends Markdown’s syntax to work with complete documents that could ultimately be converted from text into other formats, including complete <em>HTML</em> documents, <em>LaTeX, PDF, ODF,</em> or even <em>Microsoft Word</em> documents.</p>
+
+<p>In addition to the ability to work with complete documents and conversion to other formats, the Markdown syntax was lacking a few other things. <a href="http://www.michelf.com/projects/php-markdown/extra/">Michel Fortin</a> added a few additional syntax features when writing PHP Markdown Extra. Some of his ideas were implemented and expanded on in Multi-Markdown, in addition to including features not available in other Markdown implementations. These features include tables, footnotes, citation support, image and link attributes, cross-references, math support, and more.</p>
+
+<p>You can think of Multi-Markdown as:</p>
+
+<ol>
+<li>A program to convert plain text to a fully formatted document.</li>
+<li>The syntax used in the plain text to describe how to convert it to a complete document.</li>
+</ol>
+
+<p><a href="http://fletcherpenney.net/mmd/">Fletcher T. Penney</a></p>
+
+<hr />
+
+<h2 id="metadata">Metadata</h2>
+
+<p>Multi-Markdown has support for metadata, meaning that you can include information about a document that is not necessarily part of the document contents.
+To use metadata, simply add information to the top of a Markdown file:</p>
+
+<pre><code class="lang-markdown">Title:  A New Markdown Document  
 Author: howardl
 Date:   July 25, 2005  
 Address: Some Road, Some Town, Some City L67 QPE  
 Copyright: howardl.org  
 Email: h@howardl.org
 Web: https://howardl.org    
-Keywords: one, two, three, four, five, six</code></pre> <p>The above metadata is the more common metadata information, for more metadata information see <a href="https://github.com/fletcher/Multi-Markdown/wiki/Multi-Markdown-Syntax-Guide">Multi-Markdown Syntax Guide</a></p> <blockquote> <p>You’d probably include Metadata when writing fresh html pages or Markdown documents. You probably wouldn’t use Metadata when writing posts or sections of a page as the Metadata needs to be in the header.</p></blockquote> <hr> <h2 id="references">Cross-references</h2> <p>Cross-references will become your new best friend when writing long documents. They will highly improve the navigability of the generated documents by giving the reader links to jump across sections with a single click. As seen in the Summary section of the document.</p> <pre><code class="lang-markdown">Clicking [here][summary] will lead you to the **Summary** section.
-</code></pre> <p class="nearer"><strong>Result</strong></p> <p>Clicking <a href="#summary">here</a> will lead you to the <strong>Summary</strong> section.</p> <hr> <h2 id="syntax">Markdown Syntax</h2> <h3>Emphasis</h3> <pre><code class="lang-markdown">This is *italic* and so is _this_  
+Keywords: one, two, three, four, five, six</code></pre>
+
+<p>The above metadata is the more common metadata information, for more metadata information see <a href="https://github.com/fletcher/Multi-Markdown/wiki/Multi-Markdown-Syntax-Guide">Multi-Markdown Syntax Guide</a></p>
+
+<blockquote>
+<p>You’d probably include Metadata when writing fresh html pages or Markdown documents. You probably wouldn’t use Metadata when writing posts or sections of a page as the Metadata needs to be in the header.</p></blockquote>
+
+<hr />
+
+<h2 id="references">Cross-references</h2>
+
+<p>Cross-references will become your new best friend when writing long documents. They will highly improve the navigability of the generated documents by giving the reader links to jump across sections with a single click. As seen in the Summary section of the document.</p>
+
+<pre><code class="lang-markdown">Clicking [here][summary] will lead you to the **Summary** section.
+</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>Clicking <a href="#summary">here</a> will lead you to the <strong>Summary</strong> section.</p>
+
+<hr />
+
+<h2 id="syntax">Markdown Syntax</h2>
+
+<h3>Emphasis</h3>
+
+<pre><code class="lang-markdown">This is *italic* and so is _this_  
 This is **bold** and so is __this__
-</code></pre> <p class="nearer"><strong>Result</strong></p> <p>This is <em>italic</em> and so is <em>this</em><br> This is <strong>bold</strong> and so is <strong>this</strong></p> <hr> <h3>Links</h3> <p><strong>Inline:</strong></p> <pre><code class="lang-markdown">See [howardl](https://howardl.org/ &quot;Title&quot;) for more information.
-</code></pre> <p class="nearer"><strong>Result</strong></p> <p>See <a href="https://howardl.org/" title="Visit howardl.org">howardl</a> for more information.</p> <p><strong>Reference-style links</strong> (titles are optional):</p> <pre><code class="lang-markdown">See [Link name][id]
+</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>This is <em>italic</em> and so is <em>this</em><br/>
+This is <strong>bold</strong> and so is <strong>this</strong></p>
+
+<hr />
+
+<h3>Links</h3>
+
+<p><strong>Inline:</strong></p>
+
+<pre><code class="lang-markdown">See [howardl](https://howardl.org/ &quot;Title&quot;) for more information.
+</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>See <a href="https://howardl.org/" title="Visit howardl.org">howardl</a> for more information.</p>
+
+<p><strong>Reference-style links</strong> (titles are optional):</p>
+
+<pre><code class="lang-markdown">See [Link name][id]
 Then, anywhere else in the doc, define the link:
 [id]: https://link/  &quot;Title&quot;
 
 eg. See [howardl][howardl-web] for more information.
 [howardl-web]: https://howardl.org/ “Visit howardl.org” - place anywhere in the document
-</code></pre> <p class="nearer"><strong>Result</strong></p> <p>See <a href="https://howardl.org/" title="Visit howardl.org">howardl</a> for more information.</p> <h3>Email:</h3> <pre><code class="lang-markdown">You should [email me](mailto:h@howardl.org)
+</code></pre>
 
-My email address is &lt;h@howardl.org&gt;</code></pre> <p class="nearer"><strong>Result</strong></p> <p>You should <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x68;&#x40;&#104;&#x6f;&#x77;&#x61;&#x72;&#100;&#108;&#46;&#111;&#114;&#103;">&#101;&#109;&#x61;&#105;&#108; &#x6d;&#x65;</a> </p> <p>My email address is <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#104;&#x40;&#104;&#x6f;&#x77;&#x61;&#114;&#x64;&#108;&#x2e;&#x6f;&#114;&#x67;">&#x68;&#x40;&#x68;&#x6f;&#x77;&#97;&#x72;&#x64;&#108;&#x2e;&#x6f;&#114;&#x67;</a></p> <hr> <h3>Headings:</h3> <pre><code class="lang-markdown"># This is a heading h1
+<p class="nearer"><strong>Result</strong></p>
+
+<p>See <a href="https://howardl.org/" title="Visit howardl.org">howardl</a> for more information.</p>
+
+<h3>Email:</h3>
+
+<pre><code class="lang-markdown">You should [email me](mailto:h@howardl.org)
+
+My email address is &lt;h@howardl.org&gt;</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>You should <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x68;&#x40;&#104;&#x6f;&#x77;&#x61;&#x72;&#100;&#108;&#46;&#111;&#114;&#103;">&#101;&#109;&#x61;&#105;&#108; &#x6d;&#x65;</a> </p>
+
+<p>My email address is <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#104;&#x40;&#104;&#x6f;&#x77;&#x61;&#114;&#x64;&#108;&#x2e;&#x6f;&#114;&#x67;">&#x68;&#x40;&#x68;&#x6f;&#x77;&#97;&#x72;&#x64;&#108;&#x2e;&#x6f;&#114;&#x67;</a></p>
+
+<hr />
+
+<h3>Headings:</h3>
+
+<pre><code class="lang-markdown"># This is a heading h1
 ## This is a heading h2
 ### This is a heading h3
 #### This is a heading h4
 ##### This is a heading h5
-###### This is a heading h6</code></pre> <p class="nearer"><strong>Result</strong></p> <h1>This is a heading h1</h1> <h2>This is a heading h2</h2> <h3>This is a heading h3</h3> <h4>This is a heading h4</h4> <h5>This is a heading h5</h5> <h6>This is a heading h6</h6> <hr> <h3>Lists:</h3> <p><strong>Unordered List</strong></p> <pre><code class="lang-markdown">* Milk
+###### This is a heading h6</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<h1>This is a heading h1</h1>
+
+<h2>This is a heading h2</h2>
+
+<h3>This is a heading h3</h3>
+
+<h4>This is a heading h4</h4>
+
+<h5>This is a heading h5</h5>
+
+<h6>This is a heading h6</h6>
+
+<hr />
+
+<h3>Lists:</h3>
+
+<p><strong>Unordered List</strong></p>
+
+<pre><code class="lang-markdown">* Milk
 * Bread
 * Cheese
     * Cheddar (4 spaces or tab)
     * Camembert
 * Rice
-(You can also use - or + instead of *)</code></pre> <p><strong>Result</strong></p> <ul> <li>Milk</li> <li>Bread</li> <li>Cheese <ul> <li>Cheddar</li> <li>Camembert</li> </ul></li> <li>Rice</li> </ul> <p><strong>Ordered List</strong></p> <pre><code class="lang-markdown">1. Milk
+(You can also use - or + instead of *)</code></pre>
+
+<p><strong>Result</strong></p>
+
+<ul>
+<li>Milk</li>
+<li>Bread</li>
+<li>Cheese
+
+<ul>
+<li>Cheddar</li>
+<li>Camembert</li>
+</ul></li>
+<li>Rice</li>
+</ul>
+
+<p><strong>Ordered List</strong></p>
+
+<pre><code class="lang-markdown">1. Milk
 2. Bread
 3. Cheese
     1. Cheddar (4 spaces or tab)
     2. Camembert
-4. Rice</code></pre> <p><strong>Result</strong></p> <ol> <li>Milk</li> <li>Bread</li> <li>Cheese <ol> <li>Cheddar</li> <li>Camembert</li> </ol></li> <li>Rice</li> </ol> <hr> <h3>Blockqoutes:</h3> <pre><code class="lang-markdown">&gt; Email-style angle brackets
+4. Rice</code></pre>
+
+<p><strong>Result</strong></p>
+
+<ol>
+<li>Milk</li>
+<li>Bread</li>
+<li>Cheese
+
+<ol>
+<li>Cheddar</li>
+<li>Camembert</li>
+</ol></li>
+<li>Rice</li>
+</ol>
+
+<hr />
+
+<h3>Blockqoutes:</h3>
+
+<pre><code class="lang-markdown">&gt; Email-style angle brackets
 &gt; are used for blockquotes.
 &gt;
 &gt; &gt; And, they can be nested.
@@ -45,14 +336,93 @@ My email address is &lt;h@howardl.org&gt;</code></pre> <p class="nearer"><strong
 &gt; #### Headers in blockquotes
 &gt; 
 &gt; * You can quote a list.
-&gt; * Etc.</code></pre> <p><strong>Result</strong></p> <blockquote> <p>Email-style angle brackets are used for blockquotes.</p> <blockquote> <p>And, they can be nested.</p> <h4>Headers in blockquotes</h4> </blockquote> <ul> <li>You can quote a list.</li> <li>Etc.</li> </ul> </blockquote> <hr> <h3>Code:</h3> <pre><code class="lang-markdown">`This is a code span`</code></pre> <p class="nearer"><strong>Result</strong></p> <p><code class="lang-markdown">This is a code span</code></p> <h3>Pre-formatted Code Blocks</h3> <p>Indent every line of a code block by at least 4 spaces or 1 tab.</p> <pre><code class="lang-markdown">This is a preformatted
-code block.</code></pre> <hr> <h3>Super and Subscript</h3> <pre><code class="lang-markdown">This is Super^super or the 1^st person wins.
+&gt; * Etc.</code></pre>
 
-This is Sub~sub or the 2~nd person loses.</code></pre> <p class="nearer"><strong>Result</strong></p> <p>This is Super<sup>super</sup> or the 1<sup>st</sup> person wins.</p> <p>This is Sub<sub>sub</sub> or the 2<sub>nd</sub> person loses.</p> <hr> <h3>Horizontal Rules</h3> <p>Three or more dashes, underscores or asterisks:</p> <pre><code class="lang-markdown">----
+<p><strong>Result</strong></p>
+
+<blockquote>
+<p>Email-style angle brackets
+are used for blockquotes.</p>
+
+<blockquote>
+<p>And, they can be nested.</p>
+
+<h4>Headers in blockquotes</h4>
+</blockquote>
+
+<ul>
+<li>You can quote a list.</li>
+<li>Etc.</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<h3>Code:</h3>
+
+<pre><code class="lang-markdown">`This is a code span`</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p><code class="lang-markdown">This is a code span</code></p>
+
+<h3>Pre-formatted Code Blocks</h3>
+
+<p>Indent every line of a code block by at least 4 spaces or 1 tab.</p>
+
+<pre><code class="lang-markdown">This is a preformatted
+code block.</code></pre>
+
+<hr />
+
+<h3>Super and Subscript</h3>
+
+<pre><code class="lang-markdown">This is Super^super or the 1^st person wins.
+
+This is Sub~sub or the 2~nd person loses.</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>This is Super<sup>super</sup> or the 1<sup>st</sup> person wins.</p>
+
+<p>This is Sub<sub>sub</sub> or the 2<sub>nd</sub> person loses.</p>
+
+<hr />
+
+<h3>Horizontal Rules</h3>
+
+<p>Three or more dashes, underscores or asterisks:</p>
+
+<pre><code class="lang-markdown">----
 
 * * *
 
-____</code></pre> <hr> <h3>Manual Line Breaks</h3> <p class="nearer">End a line with two or more spaces:</p> <p>Roses are red,<br> Violets are blue.</p> <hr> <h3>Backlash Escapes</h3> <p>Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax. For example, if you wanted to surround a word with literal asterisks (<em>instead of an HTML <code>&lt;em&gt;</code> tag</em>), you can use backslashes before the asterisks, like this:</p> <pre><code class="lang-markdown">\*literal asterisks - I'm not italic\*</code></pre> <p class="nearer"><strong>Result</strong></p> <p>*literal asterisks - I&#8217;m not italic*</p> <p>Markdown provides backslash escapes for the following characters:</p> <pre><code class="lang-markdown">\   backslash
+____</code></pre>
+
+<hr />
+
+<h3>Manual Line Breaks</h3>
+
+<p class="nearer">End a line with two or more spaces:</p>
+
+<p>Roses are red,<br/>
+Violets are blue.</p>
+
+<hr />
+
+<h3>Backlash Escapes</h3>
+
+<p>Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax. For example, if you wanted to surround a word with literal asterisks (<em>instead of an HTML <code>&lt;em&gt;</code> tag</em>), you can use backslashes before the asterisks, like this:</p>
+
+<pre><code class="lang-markdown">\*literal asterisks - I'm not italic\*</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>*literal asterisks - I&#8217;m not italic*</p>
+
+<p>Markdown provides backslash escapes for the following characters:</p>
+
+<pre><code class="lang-markdown">\   backslash
 `   backtick
 *   asterisk
 _   underscore
@@ -63,54 +433,320 @@ _   underscore
 +   plus sign
 -   minus sign (hyphen)
 .   dot
-!   exclamation mark</code></pre> <hr> <h2 id="images">Images</h2> <h3>Inline Images:</h3> <pre><code class="lang-markdown">![alt text](/path/img.jpg &quot;Title&quot;) - (titles are optional)
+!   exclamation mark</code></pre>
 
-![Guruvayur Elephant Sanctuary](https://howardl.org/uploads/test-images/guruvayur-small.jpg &quot;Guruvayur Elephant Santuary&quot;)</code></pre> <p><strong>Result</strong></p> <figure> <img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Guruvayur Elephant Sanctuary" title="Guruvayur Elephant Santuary"> <figcaption>Guruvayur Elephant Sanctuary</figcaption> </figure> <p><strong>Note</strong> If captions are not required leave the &#8216;alt text&#8217; blank</p> <pre><code class="lang-markdown">![](/path/img.jpg &quot;Title&quot;) - (_no 'alt text' = 'no caption'_)</code></pre> <h3>Reference-style Images:</h3> <pre><code class="lang-markdown">![alt text][id]
+<hr />
+
+<h2 id="images">Images</h2>
+
+<h3>Inline Images:</h3>
+
+<pre><code class="lang-markdown">![alt text](/path/img.jpg &quot;Title&quot;) - (titles are optional)
+
+![Guruvayur Elephant Sanctuary](https://howardl.org/uploads/test-images/guruvayur-small.jpg &quot;Guruvayur Elephant Santuary&quot;)</code></pre>
+
+<p><strong>Result</strong></p>
+
+<figure>
+<img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Guruvayur Elephant Sanctuary" title="Guruvayur Elephant Santuary" />
+<figcaption>Guruvayur Elephant Sanctuary</figcaption>
+</figure>
+
+<p><strong>Note</strong> If captions are not required leave the &#8216;alt text&#8217; blank</p>
+
+<pre><code class="lang-markdown">![](/path/img.jpg &quot;Title&quot;) - (_no 'alt text' = 'no caption'_)</code></pre>
+
+<h3>Reference-style Images:</h3>
+
+<pre><code class="lang-markdown">![alt text][id]
 
 [id]: /url/to/img.jpg &quot;Title&quot; (_placed elsewhere in the document_)
 
 Example:
 ![Guruvayur][elephant]
 elsewhere in the document:
-[elephant]: https://howardl.org/uploads/test/guruvayur-small.jpg &quot;Guruvayur Elephant Santuary in the Document Footnotes&quot;</code></pre> <p><strong>Result</strong></p> <figure> <img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Guruvayur" id="elephant" title="Guruvayur Elephant Santuary in the Document Footnotes"> <figcaption>Guruvayur</figcaption> </figure> <h3>Styled Images</h3> <p>The original image is 200px x 220px as seen in the Inline and Reference images above. We can change the size to 120px x 150px and display it with a image class <code>img-framed</code></p> <pre><code class="lang-markdown">![Image Framed][img-framed]
+[elephant]: https://howardl.org/uploads/test/guruvayur-small.jpg &quot;Guruvayur Elephant Santuary in the Document Footnotes&quot;</code></pre>
+
+<p><strong>Result</strong></p>
+
+<figure>
+<img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Guruvayur" id="elephant" title="Guruvayur Elephant Santuary in the Document Footnotes" />
+<figcaption>Guruvayur</figcaption>
+</figure>
+
+<h3>Styled Images</h3>
+
+<p>The original image is 200px x 220px as seen in the Inline and Reference images above. We can change the size to 120px x 150px and display it with a image class <code>img-framed</code></p>
+
+<pre><code class="lang-markdown">![Image Framed][img-framed]
 
 Below can appear anywhere in the document
 [img-framed]: https://howardl.org/uploads/test/guruvayur-small.jpg &quot;Image Framed&quot;
 width=&quot;120px&quot; height=&quot;150px&quot;
-class=&quot;img-framed&quot;</code></pre> <p>img-framed css class somewhere on the stylesheet</p> <pre><code class="lang-css">.img-framed {
+class=&quot;img-framed&quot;</code></pre>
+
+<p>img-framed css class somewhere on the stylesheet</p>
+
+<pre><code class="lang-css">.img-framed {
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid #000;
     box-shadow: 2px 2px 2px #848484; 
-}</code></pre> <p><strong>Result</strong></p> <figure> <img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Image Framed" id="img-framed" title="Image Framed" style="height:150px;width:120px;" class="img-framed"> <figcaption>Image Framed</figcaption> </figure> <p>Do the same with the class <code>img-circle</code></p> <pre><code class="lang-markdown">![circle image][image_circle]
+}</code></pre>
+
+<p><strong>Result</strong></p>
+
+<figure>
+<img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="Image Framed" id="img-framed" title="Image Framed" style="height:150px;width:120px;" class="img-framed" />
+<figcaption>Image Framed</figcaption>
+</figure>
+
+<p>Do the same with the class <code>img-circle</code></p>
+
+<pre><code class="lang-markdown">![circle image][image_circle]
 
 [image_circle]: https://howardl.org/uploads/test-images/guruvayur-small.jpg &quot;&quot;
 width=&quot;150px&quot; height=&quot;150px&quot;
-class=&quot;img-circle&quot;</code></pre> <p>img-circle class somewhere on the stylesheet</p> <pre><code class="lang-css">.img-circle {
+class=&quot;img-circle&quot;</code></pre>
+
+<p>img-circle class somewhere on the stylesheet</p>
+
+<pre><code class="lang-css">.img-circle {
 border-radius: 50rem !important;
 }
-</code></pre> <p><strong>Result</strong></p> <figure> <img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="circle image" id="image_circle" style="height:150px;width:150px;" class="img-circle"> <figcaption>circle image</figcaption> </figure> <hr> <h2 id="tables">Tables</h2> <p>Creating tables in html is quite a busy process. Markdown makes creating tables a synch with just a few rules to follow. </p> <p>Tables are perfect to display structured data in rows and columns. Multi-Markdown supports the generation of tables by using a couple of simple rules alongside the use of the pipe character &#8211; <code>|</code>.</p> <pre><code class="lang-markdown">| First Header  | Second Header | Third Header |
+</code></pre>
+
+<p><strong>Result</strong></p>
+
+<figure>
+<img src="https://howardl.org/uploads/test-images/guruvayur-small.jpg" alt="circle image" id="image_circle" style="height:150px;width:150px;" class="img-circle" />
+<figcaption>circle image</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="tables">Tables</h2>
+
+<p>Creating tables in html is quite a busy process. Markdown makes creating tables a synch with just a few rules to follow. </p>
+
+<p>Tables are perfect to display structured data in rows and columns. Multi-Markdown supports the generation of tables by using a couple of simple rules alongside the use of the pipe character &#8211; <code>|</code>.</p>
+
+<pre><code class="lang-markdown">| First Header  | Second Header | Third Header |
 |:------- | :-----------: | -----------: |
 | First row | Data | Very long data entry |
 | Second row | **Cell** | *Cell* |
-| Third row | Cell that spans across two columns ||</code></pre> <p class="nearer"><strong>Result</strong></p> <table> <colgroup> <col style="text-align:left;"> <col style="text-align:center;"> <col style="text-align:right;"> </colgroup> <thead> <tr> <th style="text-align:left;">First Header</th> <th style="text-align:center;">Second Header</th> <th style="text-align:right;">Third Header</th> </tr> </thead> <tbody> <tr> <td style="text-align:left;">First row</td> <td style="text-align:center;">Data</td> <td style="text-align:right;">Very long data entry</td> </tr> <tr> <td style="text-align:left;">Second row</td> <td style="text-align:center;"><strong>Cell</strong></td> <td style="text-align:right;"><em>Cell</em></td> </tr> <tr> <td style="text-align:left;">Third row</td> <td style="text-align:center;" colspan="2">Cell that spans across two columns</td> </tr> </tbody> </table> <h3>Structure</h3> <p>If you are familiar with HTML tables, you&#8217;ll instantly recognize the structure of the table syntax. All tables must begin with one or more <strong>rows</strong> of <strong>headers</strong>, and each <strong>row</strong> may have one or more <strong>columns</strong>.</p> <p>These are the most important rules you&#8217;ll be dealing with:</p> <ul> <li>There must be at least one <code>|</code> per line;</li> <li>After the header rows, there must be a line containing only <code>|</code>, <code>-</code>, <code>:</code>, <code>.</code>, or spaces;</li> <li>Cell content must be on one line only;</li> <li>Columns are separated by <code>|</code>.</li> </ul> <h3>Alignment</h3> <p>To align the data cells on the table, you need to introduce a special row right after the headers, that will determine how the following rows &#8211; the data rows &#8211; will be aligned.</p> <pre><code class="lang-markdown">| Header One | Header Two | Header Three | Header Four |
+| Third row | Cell that spans across two columns ||</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+  <th style="text-align:left;">First Header</th>
+  <th style="text-align:center;">Second Header</th>
+  <th style="text-align:right;">Third Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+  <td style="text-align:left;">First row</td>
+  <td style="text-align:center;">Data</td>
+  <td style="text-align:right;">Very long data entry</td>
+</tr>
+<tr>
+  <td style="text-align:left;">Second row</td>
+  <td style="text-align:center;"><strong>Cell</strong></td>
+  <td style="text-align:right;"><em>Cell</em></td>
+</tr>
+<tr>
+  <td style="text-align:left;">Third row</td>
+  <td style="text-align:center;" colspan="2">Cell that spans across two columns</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Structure</h3>
+
+<p>If you are familiar with HTML tables, you&#8217;ll instantly recognize the structure of the table syntax. All tables must begin with one or more <strong>rows</strong> of <strong>headers</strong>, and each <strong>row</strong> may have one or more <strong>columns</strong>.</p>
+
+<p>These are the most important rules you&#8217;ll be dealing with:</p>
+
+<ul>
+<li>There must be at least one <code>|</code> per line;</li>
+<li>After the header rows, there must be a line containing only <code>|</code>, <code>-</code>, <code>:</code>, <code>.</code>, or spaces;</li>
+<li>Cell content must be on one line only;</li>
+<li>Columns are separated by <code>|</code>.</li>
+</ul>
+
+<h3>Alignment</h3>
+
+<p>To align the data cells on the table, you need to introduce a special row right after the headers, that will determine how the following rows &#8211; the data rows &#8211; will be aligned.</p>
+
+<pre><code class="lang-markdown">| Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
 | Default | Left | Center | Right |
 | Data | Data | Data | Data |
-| 1 | 2 | 3 | 4 |</code></pre> <p class="nearer"><strong>Result</strong></p> <table> <colgroup> <col> <col style="text-align:left;"> <col style="text-align:center;"> <col style="text-align:right;"> </colgroup> <thead> <tr> <th>Header One</th> <th style="text-align:left;">Header Two</th> <th style="text-align:center;">Header Three</th> <th style="text-align:right;">Header Four</th> </tr> </thead> <tbody> <tr> <td>Default</td> <td style="text-align:left;">Left</td> <td style="text-align:center;">Center</td> <td style="text-align:right;">Right</td> </tr> <tr> <td>Data</td> <td style="text-align:left;">Data</td> <td style="text-align:center;">Data</td> <td style="text-align:right;">Data</td> </tr> <tr> <td>1</td> <td style="text-align:left;">2</td> <td style="text-align:center;">3</td> <td style="text-align:right;">4</td> </tr> </tbody> </table> <p>The placing of the colon (<code>:</code>) is optional and determines the alignment of columns in the data rows. The second line with the colon&#8217;s is mandatory and must be placed between the headers and the data rows.</p> <p>Also, the usage of the <code>|</code> at the beginning or end of the rows is optional &#8211; as long as at least one <code>|</code> is present in each row.</p> <h3>Column spanning</h3> <p>To make a cell span across multiple columns, instead of using a single pipe (<code>|</code>) character to delimit that cell, use the number of pipes corresponding to the columns you wish to span.</p> <pre><code class="lang-markdown">| Column 1 | Column 2 | Column 3 | Column 4 |
+| 1 | 2 | 3 | 4 |</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+  <th>Header One</th>
+  <th style="text-align:left;">Header Two</th>
+  <th style="text-align:center;">Header Three</th>
+  <th style="text-align:right;">Header Four</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+  <td>Default</td>
+  <td style="text-align:left;">Left</td>
+  <td style="text-align:center;">Center</td>
+  <td style="text-align:right;">Right</td>
+</tr>
+<tr>
+  <td>Data</td>
+  <td style="text-align:left;">Data</td>
+  <td style="text-align:center;">Data</td>
+  <td style="text-align:right;">Data</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td style="text-align:left;">2</td>
+  <td style="text-align:center;">3</td>
+  <td style="text-align:right;">4</td>
+</tr>
+</tbody>
+</table>
+
+<p>The placing of the colon (<code>:</code>) is optional and determines the alignment of columns in the data rows. The second line with the colon&#8217;s is mandatory and must be placed between the headers and the data rows.</p>
+
+<p>Also, the usage of the <code>|</code> at the beginning or end of the rows is optional &#8211; as long as at least one <code>|</code> is present in each row.</p>
+
+<h3>Column spanning</h3>
+
+<p>To make a cell span across multiple columns, instead of using a single pipe (<code>|</code>) character to delimit that cell, use the number of pipes corresponding to the columns you wish to span.</p>
+
+<pre><code class="lang-markdown">| Column 1 | Column 2 | Column 3 | Column 4 |
 | -------- | :------: | -------- | -------- |
 | No span  | Span across three columns |||
 | Data | Data |||
-| 1 | 2 |||</code></pre> <p class="nearer"><strong>Result</strong></p> <table> <colgroup> <col> <col style="text-align:center;"> <col> <col> </colgroup> <thead> <tr> <th>Column 1</th> <th style="text-align:center;">Column 2</th> <th>Column 3</th> <th>Column 4</th> </tr> </thead> <tbody> <tr> <td>No span</td> <td style="text-align:center;" colspan="3">Span across three columns</td> </tr> <tr> <td>Data</td> <td style="text-align:center;" colspan="3">Data</td> </tr> <tr> <td>1</td> <td style="text-align:center;" colspan="3">2</td> </tr> </tbody> </table> <hr> <h2 id="footnotes">Footnotes</h2> <p>Footnotes are a simple, yet effective way of conveying non-crucial information to the reader.</p> <p>Rather than parenthesizing a side note or place it between em-dashes &#8211; as unimportant as it is, the reader will go through it, just like you did now &#8211; you can defer its reading and expand on your thoughts there.</p> <p>Example</p> <pre><code class="lang-markdown">Clicking this number[^fn-sample_footnote] will lead you to a footnote.
+| 1 | 2 |||</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<table>
+<colgroup>
+<col/>
+<col style="text-align:center;"/>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+  <th>Column 1</th>
+  <th style="text-align:center;">Column 2</th>
+  <th>Column 3</th>
+  <th>Column 4</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+  <td>No span</td>
+  <td style="text-align:center;" colspan="3">Span across three columns</td>
+</tr>
+<tr>
+  <td>Data</td>
+  <td style="text-align:center;" colspan="3">Data</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td style="text-align:center;" colspan="3">2</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="footnotes">Footnotes</h2>
+
+<p>Footnotes are a simple, yet effective way of conveying non-crucial information to the reader.</p>
+
+<p>Rather than parenthesizing a side note or place it between em-dashes &#8211; as unimportant as it is, the reader will go through it, just like you did now &#8211; you can defer its reading and expand on your thoughts there.</p>
+
+<p>Example</p>
+
+<pre><code class="lang-markdown">Clicking this number[^fn-sample_footnote] will lead you to a footnote.
 
 Place this in the document footer:
-[^fn-sample_footnote]: Handy! Now click the return link to go back.</code></pre> <p class="nearer"><strong>Result</strong></p> <p>Clicking this number<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> will lead you to a footnote.</p> <hr> <h2 id="citations">Citations</h2> <pre><code class="lang-markdown">This is a statement that should be attributed to its source[p. 23][#Doe:2006].</code></pre> <p>This is a statement that should be attributed to its source<a class="citation" href="#fn:2" title="Jump to citation">[<span class="locator">p. 23</span>, 2]<span class="citekey" style="display:none">Doe:2006</span></a>.</p> <p>Then add the following description of the reference to be used in the bibliography. (<em>seen in the Article Footnotes</em>)</p> <pre><code class="lang-markdown">[#Doe:2006]: John Doe. *Some Big Fancy Book*.  Vanity Press, 2006.</code></pre> <p>Your markdown will look like this:</p> <pre><code class="lang-markdown">This is a statement that should be attributed to its source[p. 23][#Doe:2006].
-[#Doe:2006]: John Doe. *Some Big Fancy Book*.  Vanity Press, 2006.</code></pre> <hr> <h2 id="definition">Definition Lists</h2> <pre><code class="lang-markdown">Apple
+[^fn-sample_footnote]: Handy! Now click the return link to go back.</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<p>Clicking this number<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> will lead you to a footnote.</p>
+
+<hr />
+
+<h2 id="citations">Citations</h2>
+
+<pre><code class="lang-markdown">This is a statement that should be attributed to its source[p. 23][#Doe:2006].</code></pre>
+
+<p>This is a statement that should be attributed to its source<a class="citation" href="#fn:2" title="Jump to citation">[<span class="locator">p. 23</span>, 2]<span class="citekey" style="display:none">Doe:2006</span></a>.</p>
+
+<p>Then add the following description of the reference to be used in the bibliography. (<em>seen in the Article Footnotes</em>)</p>
+
+<pre><code class="lang-markdown">[#Doe:2006]: John Doe. *Some Big Fancy Book*.  Vanity Press, 2006.</code></pre>
+
+<p>Your markdown will look like this:</p>
+
+<pre><code class="lang-markdown">This is a statement that should be attributed to its source[p. 23][#Doe:2006].
+[#Doe:2006]: John Doe. *Some Big Fancy Book*.  Vanity Press, 2006.</code></pre>
+
+<hr />
+
+<h2 id="definition">Definition Lists</h2>
+
+<pre><code class="lang-markdown">Apple
 :   Pomaceous fruit of plants of the genus Malus in the family Rosaceae.
 :   An american computer company.
 
 Orange
-:   The fruit of an evergreen tree of the genus Citrus.</code></pre> <p class="nearer"><strong>Result</strong></p> <dl> <dt>Apple</dt> <dd>Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</dd> <dd>An american computer company.</dd> <dt>Orange</dt> <dd>The fruit of an evergreen tree of the genus Citrus.</dd> </dl> <hr> <pre><code class="lang-markdown">Code placed in the Footer
+:   The fruit of an evergreen tree of the genus Citrus.</code></pre>
+
+<p class="nearer"><strong>Result</strong></p>
+
+<dl>
+<dt>Apple</dt>
+<dd>Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</dd>
+
+<dd>An american computer company.</dd>
+
+<dt>Orange</dt>
+<dd>The fruit of an evergreen tree of the genus Citrus.</dd>
+</dl>
+
+<hr />
+
+<pre><code class="lang-markdown">Code placed in the Footer
 //Reference-style links
 [howardl-web]: https://howardl.org/  &quot;Visit howardl.org&quot;
 
@@ -118,4 +754,73 @@ Orange
 [elephant]: https://howardl.org/uploads/test-images/guruvayur-small.jpg &quot;Guruvayur Elephant Santuary in the Document Footnotes&quot;
 
 //footnote
-[^fn-sample_footnote]: Handy! Now click the return link to go back.</code></pre> <div class="footnotes"> <hr> <ol> <li id="fn:1"> <p>Handy! Now click the return link to go back. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p> </li> <li id="fn:2" class="citation"><span class="citekey" style="display:none">Doe:2006</span><p>John Doe. <em>Some Big Fancy Book</em>. Vanity Press, 2006.</p> </li> </ol> </div> </div> </article> <div class="related-post-wrap"> <h2>Similar in Cheat-Sheets</h2> <div class="related-wrap"> <div class="related-post"> <h3><a id="markdown" href="markdown.html">A Guide to Markdown</a></h3> </div> <div class="related-post"> <h3><a id="git" href="git.html">Git and Github Basics</a></h3> </div> <div class="related-post"> <h3><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></h3> </div> </div> </div> </section> <footer class="footer"> <nav class="footer-links"><a id="blog" href="blog.html">Home</a> . <a id="cheat-sheets" href="cheat-sheets.html">Cheat-Sheets</a></nav> <p class="third">&copy;2024 <a href="https://howardl.org/" title="howardl">howardl . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="../privacy.html">Privacy</a></p> </footer> <div class="popup-wrapper"> <div class="popup"> <div class="popup-close">X</div> <h2>Contact Form</h2> <div class="popup-content"> <form class="contact-form"> <input class="subscribe" id="name" placeholder="your name" required> <input class="subscribe" type="email" id="email" placeholder="youremail@example.com" required> <textarea class="subscribe" id="message" placeholder="How can we help?" required></textarea> <div class="feedback">You Did It!....</div> <button type="submit" class="contact-submit">Send</button> </form> </div> </div> </div> </div> <script src="../js/prism.js"></script> <script src="../js/app.js"></script> <script src="../js/javascript.js"></script> <script src="../js/contact.js"></script> </body> </html> 
+[^fn-sample_footnote]: Handy! Now click the return link to go back.</code></pre>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>Handy! Now click the return link to go back. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2" class="citation"><span class="citekey" style="display:none">Doe:2006</span><p>John Doe. <em>Some Big Fancy Book</em>. Vanity Press, 2006.</p>
+</li>
+
+</ol>
+</div>
+</div>
+</article>
+
+<div class="related-post-wrap">
+  <h2>Similar in Cheat-Sheets</h2>
+  <div class="related-wrap">
+    
+    <div class="related-post">
+        <h3><a id="markdown" href="markdown.html">A Guide to Markdown</a></h3>
+    </div>
+    <div class="related-post">
+        <h3><a id="git" href="git.html">Git and Github Basics</a></h3>
+    </div>
+    <div class="related-post">
+        <h3><a id="terminal" href="terminal.html">Command Line Cheat-Sheet</a></h3>
+    </div>
+</div>
+</div>
+ 
+</section>
+<footer class="footer">
+ <nav class="footer-links"><a id="blog" href="/blog.html">Home</a> . <a id="cheat-sheets" href="/cheat-sheets.html">Cheat-Sheets</a></nav>
+   
+   <p class="third">&copy;2025 <a href="/" title="bylucas">bylucas . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="/privacy.html">Privacy</a></p>
+ </footer>
+
+ <div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close">X</div>
+    <h2>Contact Form</h2>
+      <div class="popup-content">
+
+         <form class="contact-form">
+     <input class="subscribe" type="text" id="name" placeholder="your name" required/>
+
+     <input class="subscribe" type="email" id="email" placeholder="youremail@example.com" required/>
+    
+    <textarea class="subscribe" id="message" placeholder="How can we help?" required></textarea>
+    
+    <div class="feedback">You Did It!....</div>
+  
+    <button type="submit" class="contact-submit">Send</button>
+  
+        </form>
+    </div>
+  </div>
+</div>
+</div>
+<script src="../js/prism.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/javascript.js"></script>
+<script src="../js/contact.js"></script>
+</body>
+
+</html>

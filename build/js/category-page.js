@@ -1,0 +1,1 @@
+if("Basics"==categoryTitle){const e=document.querySelector(".card-wrap");basicLinks.forEach((i=>{let n=`<div class="index-content">\n    <h2><a href="${i.toLowerCase().split(" ").join("-")}.html">${i}</a></h2>\n    </div>`;e.innerHTML+=n}))}

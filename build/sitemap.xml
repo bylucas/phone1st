@@ -2,197 +2,197 @@
 		<!--	created with www.mysitemapgenerator.com	-->
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://howardl.org/</loc>
+	<loc>https://bylucas.org/</loc>
 	<lastmod>2024-08-29T22:38:45+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://howardl.org/javascript.html</loc>
+	<loc>https://bylucas.org/javascript.html</loc>
 	<lastmod>2024-08-29T22:38:45+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://howardl.org/blog.html</loc>
+	<loc>https://bylucas.org/blog.html</loc>
 	<lastmod>2024-08-29T22:38:45+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/privacy.html</loc>
+	<loc>https://bylucas.org/privacy.html</loc>
 	<lastmod>2024-08-29T22:38:45+01:00</lastmod>
 	<priority>0.2</priority>
 </url>
 <url>
-	<loc>https://howardl.org/index.html</loc>
+	<loc>https://bylucas.org/index.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/basics.html</loc>
+	<loc>https://bylucas.org/basics.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/variables.html</loc>
+	<loc>https://bylucas.org/variables.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/strings.html</loc>
+	<loc>https://bylucas.org/strings.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/string-methods.html</loc>
+	<loc>https://bylucas.org/string-methods.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/numbers.html</loc>
+	<loc>https://bylucas.org/numbers.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/template-strings.html</loc>
+	<loc>https://bylucas.org/template-strings.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/arrays.html</loc>
+	<loc>https://bylucas.org/arrays.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/null-undefined.html</loc>
+	<loc>https://bylucas.org/null-undefined.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/booleans-comparisons.html</loc>
+	<loc>https://bylucas.org/booleans-comparisons.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/loose-strict-comparisons.html</loc>
+	<loc>https://bylucas.org/loose-strict-comparisons.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/type-conversion.html</loc>
+	<loc>https://bylucas.org/type-conversion.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/control-flow.html</loc>
+	<loc>https://bylucas.org/control-flow.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/for-loops.html</loc>
+	<loc>https://bylucas.org/for-loops.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/while-loops.html</loc>
+	<loc>https://bylucas.org/while-loops.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/do-while-loops.html</loc>
+	<loc>https://bylucas.org/do-while-loops.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/if-statements.html</loc>
+	<loc>https://bylucas.org/if-statements.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/else-if-statements.html</loc>
+	<loc>https://bylucas.org/else-if-statements.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/logical-operators.html</loc>
+	<loc>https://bylucas.org/logical-operators.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/ternary-operator.html</loc>
+	<loc>https://bylucas.org/ternary-operator.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/break-continue.html</loc>
+	<loc>https://bylucas.org/break-continue.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/switch-statements.html</loc>
+	<loc>https://bylucas.org/switch-statements.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/variables-block-scope.html</loc>
+	<loc>https://bylucas.org/variables-block-scope.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/functions-cat.html</loc>
+	<loc>https://bylucas.org/functions-cat.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/functions.html</loc>
+	<loc>https://bylucas.org/functions.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/arrow-functions.html</loc>
+	<loc>https://bylucas.org/arrow-functions.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/callback-functions.html</loc>
+	<loc>https://bylucas.org/callback-functions.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/objects.html</loc>
+	<loc>https://bylucas.org/objects.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/object-literals.html</loc>
+	<loc>https://bylucas.org/object-literals.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/math-object.html</loc>
+	<loc>https://bylucas.org/math-object.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/primitive-reference-values.html</loc>
+	<loc>https://bylucas.org/primitive-reference-values.html</loc>
 	<lastmod>2024-08-29T22:38:47+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/cheat-sheets.html</loc>
+	<loc>https://bylucas.org/cheat-sheets.html</loc>
 	<lastmod>2024-08-29T22:38:49+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/markdown.html</loc>
+	<loc>https://bylucas.org/markdown.html</loc>
 	<lastmod>2024-08-29T22:38:49+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/git.html</loc>
+	<loc>https://bylucas.org/git.html</loc>
 	<lastmod>2024-08-29T22:38:49+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://howardl.org/terminal.html</loc>
+	<loc>https://bylucas.org/terminal.html</loc>
 	<lastmod>2024-08-29T22:38:49+01:00</lastmod>
 	<priority>1.0</priority>
 </url>

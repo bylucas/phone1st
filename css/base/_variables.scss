@@ -35,7 +35,7 @@ $hover-color: #B05C4A;
 $comment-color: $link-color;
 // Background Colors
 $background: $light-gray;
-$light-background: lighten($background, 11%);
+$light-background: tint($background, 11%);
 
 // Form Colors
 $input-background: #F9F9F9;

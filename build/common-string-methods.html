@@ -7,28 +7,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Booleans and Comparisons in Modern Javascript</title>
+  <title>Common String Methods in Modern Javascript</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <meta name="description" content="How booleans and comparisons work - true or false.">
+  <meta name="description" content="String methods are functions that belong to a specific object or objects type.">
   <meta name="robots" content="INDEX,FOLLOW">
-  <meta name="keywords" content="booleans, comparisons">
-  <link rel="canonical" href="https://howardl.org/booleans-comparisons.html" />
+  <meta name="keywords" content="variables">
+  <link rel="canonical" href="https://bylucas.org/string-methods.html" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   
-  <meta property="og:site_name" content="howardl">
+  <meta property="og:site_name" content="bylucas">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Booleans and Comparisons in Modern Javascript">
-  <meta property="og:description" content="How booleans and comparisons work - true or false.">
-  <meta property="og:url" content="https://howardl.org/booleans-comparisons.html">
-  <meta property="og:image" content="https://howardl.org/images/phone1st-home.jpg">
+  <meta property="og:title" content="Common String Methods in Modern Javascript">
+  <meta property="og:description" content="String methods are functions that belong to a specific object or objects type.">
+  <meta property="og:url" content="https://bylucas.org/string-methods.html">
+  <meta property="og:image" content="https://bylucas.org/images/phone1st-home.jpg">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Booleans and Comparisons in Modern Javascript">
-  <meta name="twitter:description" content="How booleans and comparisons work - true or false.">
-  <meta name="twitter:url" content="https://howardl.org/booleans-comparisons.html">
-  <meta name="twitter:image" content="https://howardl.org/images/phone1st-home.jpg">
+  <meta name="twitter:title" content="Common String Methods in Modern Javascript">
+  <meta name="twitter:description" content="String methods are functions that belong to a specific object or objects type.">
+  <meta name="twitter:url" content="https://bylucas.org/string-methods.html">
+  <meta name="twitter:image" content="https://bylucas.org/images/phone1st-home.jpg">
   <meta property="og:image:width" content="1020">
   <meta property="og:image:height" content="457">
 <link rel="stylesheet" href="../../css/style.css" />
@@ -44,7 +44,7 @@
 </script>
 </head>
 
-<body class="booleans-comparisons" onload="spinner()">
+<body class="string-methods" onload="spinner()">
 
 <div class="wrapper">
   <div id="loader-wrapper">
@@ -55,7 +55,7 @@
 <button id="topBtn" title="Back to top">Top</button>
 <header class="header">
   <div class="inner">
-   <h1><a href="../index.html">howardl</a> - <a href="javascript.html">Javascript</a></h1>
+   <h1><a href="/">bylucas</a> - <a href="/javascript.html">Javascript</a></h1>
     <nav id="site-navigation" class="main-navigation">
     
        <div class="hamburger menu-toggle hamburger--squeeze" aria-controls="primary-menu" aria-expanded="false">
@@ -66,25 +66,25 @@
     
     <section class="menu-wrap">
       <div class="top-links">
-      <p><a href="https://howardl.org/">howardl</a></p>
-      <p><a href="https://howardl.org/blog.html">Blog</a></p>
+      <p><a href="/">bylucas</a></p>
+      <p><a href="/blog.html">Blog</a></p>
     </div>
          <ul>
-           <li><a id="javascript" href="javascript.html">Modern Javascript</a>
+           <li><a id="javascript" href="/javascript.html">Modern Javascript</a>
             
             <ul>
             <li><a id="basics" class="line" href="basics.html">Basics</a>
               
-              <ul>
-              <li><a id="variables" href="variables.html">Variables</a></li>
+              <ul class="side-basics">
+             <li><a id="variables" href="variables.html">Variables</a></li>
               <li><a id="strings" href="strings.html">Strings</a></li>
-              <li><a id="string-methods" href="string-methods.html">String Methods</a></li>
+              <li><a id="string-methods" href="common-string-methods.html">Common String Methods</a></li>
               <li><a id="numbers" href="numbers.html">Numbers</a></li>
               <li><a id="template-strings" href="template-strings.html">Template Strings</a></li>
               <li><a id="arrays" href="arrays.html">Arrays</a></li>
-              <li><a id="null-undefined" href="null-undefined.html">Null and Undefined</a></li>
-              <li><a id="booleans-comparisons" href="booleans-comparisons.html">Booleans and Comparisons</a></li>
-              <li><a id="loose-strict-comparisons" href="loose-strict-comparisons.html">Loose and Strict Comparisons</a></li>
+              <li><a id="null-undefined" href="null-and-undefined.html">Null and Undefined</a></li>
+              <li><a id="booleans-comparisons" href="booleans-and-comparisons.html">Booleans and Comparisons</a></li>
+              <li><a id="loose-strict-comparisons" href="loose-and-strict-comparisons.html">Loose and Strict Comparisons</a></li>
               <li><a id="type-conversion" href="type-conversion.html">Type Conversion</a></li>
               </ul>
             </li>
@@ -154,7 +154,7 @@
 
   <header class="post-header">
    
-    <h1>Booleans and Comparisons</h1>
+    <h1>Common String Methods</h1>
 
      <div class="post-meta">
          
@@ -165,118 +165,103 @@
 
   <div class="post-content">
 
-    <p class="post-intro">How <em>booleans</em> and <em>comparisons</em> work - true or false.</p>
+    <p class="post-intro"><em>String methods</em> are functions that belong to a specific object or objects type.</p>
 
-    <pre><code class="lang-js">//methods can return booleans
-let email = 'michael@michaelcain.co.uk';
-let names = ['michael', 'fred', 'john'];
+    <pre><code class="lang-js">let fullName = 'Michael Cain';
 
-let result = email.includes('@');
+console.log(fullName.toUpperCase());
+//result: MICHAEL CAIN
+
+let result = fullName.toLocaleLowerCase();
 console.log(result);
-//answer: true
+//result: michael cain
 
-let result2 = names.includes('fred');
+
+let email = 'mike@home.co.uk';
+
+//indexOf() - starts count at 0
+let index = email.indexOf('@');
+console.log('index of the @ sign is', index);
+//result: index of the @ sign is 4
+
+//lastIndexOf()
+let result2 = email.lastIndexOf('m');
 console.log(result2);
-//answer: true
+//result: 7
+
+//slice()
+//count the first parameter from the beginning
+//count the second parameter from the beginning 
+let result3 = email.slice(0,5);
+console.log(result3);
+//result: mike@
+
+//slice includes 012/ 34567 /8
+let result4 = email.slice(3,8);
+console.log(result4);
+//result: e@hom
+
+//If you omit the second parameter, the method will slice out the rest of the string
+let result5 = email.slice(6);
+console.log(result5);
+//result: ome.co.uk
+
+//negative numbers count from the end
+let result6 = email.slice(-8);
+console.log(result6);
+//result: me.co.uk
+
+let result7 = email.slice(-9,-3);
+console.log(result7);
+//result: ome.co
 
 
-//comparison operators
-let age = 25;
-
-console.log('1', age == 25);
-//answer: true
-
-console.log('2', age == 30);
-//answer: false
-
-console.log('3', age != 30);
-//answer: true
-
-console.log('4', age &gt; 20);
-//answer: true
-
-console.log('5', age &lt; 20);
-//answer: false
-
-console.log('6', age &lt;= 25);
-//answer: true
-
-console.log('7', age &gt;= 25);
-//answer: true
+//substring() are similar to slice() but they cannot except negative indexes
+//slice includes 0123/ 45678 /9
+let result8 = email.substring(3,9);
+console.log(result8);
+//result: e@home
 
 
-let name = 'peter';
+//substr() - starts from 3 + 9
+//includes 012/ 312345678/ 9
+let result9 = email.substr(3,9);
+console.log(result9);
+//result: e@home.co
 
-console.log('8', name == 'peter');
-//answer: true
 
-console.log('9', name == 'Peter');
-//answer: false
+//replace()
+let result10 = email.replace('m', 'w');
+console.log(result10);
+//result: wike@home.co.uk
+//replaces the first instance
 
-//p comes after c
-console.log('10', name &gt; 'claire');
-//answer: true
+let result11 = email.replace('e', 'w');
+console.log(result11);
+//result: mikw@home.co.uk
+//only replaces first instance of multi instances
 
-//lowercase is greater than uppercase
-console.log('11', name &gt; 'Peter');
-//answer: true
 
-console.log('12', name &gt; 'Claire');
-//answer: true</code></pre>
+//the trim() method removes whitespace from both sides of a string
+let text = "  This is untidy    "
+let result12 = text.trim()
+console.log(result12)
+//result: This is untidy</code></pre>
     
   </div>
   
 </article>
 
-
-
 <div class="related-post-wrap">
   <h2>Similar in Basics</h2>
-  <div class="related-wrap">
-    
-    <div class="related-post">
-        <h3><a id="variables" href="variables.html">Variables</a></h3>
-    </div>
-
-     <div class="related-post">
-        <h3><a id="strings" href="strings.html">Strings</a></h3>
-    </div>
-
-     <div class="related-post">
-        <h3><a id="string-methods" href="string-methods.html">String Methods</a></h3>
-    </div>
-
-    <div class="related-post">
-        <h3><a id="numbers" href="numbers.html">Numbers</a></h3>
-    </div>
-
-    <div class="related-post">
-        <h3><a id="template-strings" href="template-strings.html">Template Strings</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="arrays" href="arrays.html">Arrays</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="null-undefined" href="null-undefined.html">Null and Undefined</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="booleans-comparisons" href="booleans-comparisons.html">Booleans and Comparisons</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="loose-strict-comparisons" href="loose-strict-comparisons.html">Loose and Strict Comparisons</a></h3>
-    </div>
-    <div class="related-post">
-        <h3><a id="type-conversion" href="type-conversion.html">Type Conversion</a></h3>
-    </div>
-  
-  </div>
+  <div class="related-wrap"></div>
 </div>
  
 </section>
  <footer class="footer">
-  <nav class="footer-links"><a id="javascript" href="javascript.html">Home .</a><a id="basics" href="basics.html">Basics .</a><a id="control-flow" href="control-flow.html">Control Flow .</a><a id="functions-cat" href="functions-cat.html">Functions .</a><a id="objects" href="objects.html">Objects</a></nav>
-   
-   <p class="third">&copy;2024 <a href="https://howardl.org/" title="howardl">howardl . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="../privacy.html">Privacy</a></p>
+  <!-- <nav class="footer-links"><a id="javascript" href="javascript.html">Home .</a><a id="basics" href="basics.html">Basics .</a><a id="control-flow" href="control-flow.html">Control Flow .</a><a id="functions-cat" href="functions-cat.html">Functions .</a><a id="objects" href="objects.html">Objects</a></nav> -->
+   <nav class="footer-links"></nav>
+   <p class="third">&copy;2025 <a href="/" title="bylucas">bylucas . </a><a class="modal-button" href="javascript:;">Contact . </a><a href="/privacy.html">Privacy</a></p>
  </footer>
 
  <div class="popup-wrapper">
@@ -302,10 +287,17 @@ console.log('12', name &gt; 'Claire');
 </div>
 
 </div>
+<script>
+  const linkTitle = 'Common String Methods'
+  const categoryTitle = 'Basics'
+</script>
+<script src="../js/basics.js"></script>
+
 <script src="../../js/prism.js"></script>
 <script src="../../js/app.js"></script>
 <script src="../../js/javascript.js"></script>
 <script src="../../js/contact.js"></script>
+
 </body>
 
 </html>

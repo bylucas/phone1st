@@ -1,0 +1,1 @@
+const docTitle=linkTitle,bottomLinks=document.querySelector(".related-wrap");basicLinks.forEach((t=>{if(t!==docTitle){let e=`<div class="related-post">\n    <h3><a href="${t.toLowerCase().split(" ").join("-")}.html">${t}</a></h3>\n    </div>`;bottomLinks.innerHTML+=e}}));
